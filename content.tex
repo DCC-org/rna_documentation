@@ -1,0 +1,54 @@
+\chapter*{Danksagung}
+
+\newpage
+
+\tableofcontents
+\listoffigures
+\begingroup
+\let\clearpage\relax
+\lstlistoflistings{}
+\listoftables
+\endgroup
+
+\chapter{Einführung}
+\label{chap:einfuehrung}
+
+\chapter{Fazit}
+
+%\appendix
+
+\printglossaries%
+
+\begingroup
+\tolerance1000
+\emergencystretch0.5em
+\printbibliography[heading=bibnumbered]
+\endgroup
+
+\chapter{Anhang}
+
+\input{figures.tex}
+\FloatBarrier%
+\input{listings.tex}
+\FloatBarrier%
+\input{tables.tex}
+
+\chapter{Erklärung}
+Hiermit erklären wir, dass wir die Arbeit selbstständig verfasst und keine
+anderen als die angegebenen Quellen und Hilfsmittel benutzt haben. Diese Arbeit
+wurde keinem anderen Prüfungsausschuss in gleicher oder vergleichbarer Form
+vorgelegt.
+
+\vspace{10ex}
+{\centering
+\renewcommand{\arraystretch}{0.9}
+\begin{tabular}{p{0.25\textwidth}p{0.05\textwidth}p{0.25\textwidth}p{0.05\textwidth}p{0.25\textwidth}}
+  \dotfill                    & & \dotfill                      & & \dotfill \\
+  \centering\footnotesize{Tim Meusel}& & \centering\footnotesize{Marcel Reuter}& & \centering\footnotesize{Nikolai Luis}%
+\end{tabular}
+}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "thesis-de"
+%%% End:

@@ -1,0 +1,141 @@
+\documentclass[numbers=noendperiod,titlepage=false,DIV=11,12pt]{scrreprt}
+\usepackage{etoolbox}
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=new]{german}
+\def\puppet{Partnerfirma}
+\def\supervisor{Betreuer}
+\def\proj{Projektleiter}
+\def\xsubtitle{Projektdokumentation}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{calc}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{placeins}
+\usepackage{setspace}
+\usepackage{graphicx}
+%%\usepackage{svg}
+\setmainfont[Mapping=tex-text,Ligatures=TeX]{TeX Gyre Pagella}
+\setstretch{1.09}
+\setmonofont[Scale=0.95]{Inconsolata}
+\setkomafont{disposition}{\bfseries}
+\setkomafont{descriptionlabel}{\bfseries}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\usepackage{microtype}
+\usepackage{outlines}
+\usepackage{titling}
+\usepackage{textcase}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small,breaklines=true}
+\usepackage[titles]{tocloft}
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\usepackage{siunitx}
+\sisetup{per-mode=symbol,binary-units=true}
+\usepackage{csquotes}
+\usepackage[unicode=true]{hyperref}
+\usepackage[toc,numberedsection,xindy]{glossaries}
+\usepackage[newfloat,chapter]{minted}
+\usepackage{hyphenat}
+%%\ifluatex\usepackage{pdftexcmds}\makeatletter\let\pdfstrcmp\pdf@strcmp\let\pdffilemoddate\pdf@filemoddate\makeatother\fi
+\makeglossaries
+\input{glossary.tex}
+
+\addbibresource{biblatex.bib}
+
+\DefineBibliographyStrings{german}{%
+  references = {Quellennachweis},
+}
+
+\renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
+\renewcommand{\lstlistingname}{Quelltext}
+\renewcommand{\listingname}{Quelltext}
+
+\setlength{\cftfignumwidth}{3em}
+\setlength{\cfttabnumwidth}{3em}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+\setlength{\droptitle}{0ex}
+\renewcommand{\arraystretch}{1.5}
+
+\newcommand{\spacedlowsmallcaps}[1]{\textsc{\MakeTextLowercase{#1}}}
+\def\autortag#1{\hspace*{\fill}{\mbox{\hspace{1em}\scriptsize[#1]}}}
+\def\tm{\autortag{TM}}
+\def\nl{\autortag{NL}}
+\def\mr{\autortag{MR}}
+\def\all{\autortag{TM,~NL,~MR}}
+
+
+\graphicspath{{../figures/}}
+
+\renewcommand{\subtitle}[1]{%
+    \posttitle{%
+        \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}
+}
+
+\title{Data Warehousing for Cloud Computing Metrics}
+\subtitle{\xsubtitle}
+\date{\today}
+\author{%
+    Tim Meusel
+    \and
+    Nikolai Luis
+    \and
+    Marcel Reuter%
+}
+
+\lstdefinelanguage{Clojure}{
+    morekeywords={streams,where,service,email,and,tags,metric},
+    morestring=[b]",
+    morestring=[b]',
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+~\\[1cm]
+\begin{center}
+\includegraphics[width=6cm]{figures/dcc_logo.png}
+\end{center}
+\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+  \centering
+  \raisebox{-0.5\height}{\includegraphics[width=6cm]{figures/puppet.png}}
+  &
+    \centering
+    \raisebox{-0.5\height}{\includegraphics[width=7cm]{figures/hhek-big.jpg}}
+    \tabularnewline[5ex]
+    \centering
+    \parbox{\maxof{\widthof{\spacedlowsmallcaps{\puppet}}}{\widthof{David Schmitt}}}{%
+    \noindent\spacedlowsmallcaps{\puppet} \\
+  Steve Quin\\
+  David Schmitt
+  }
+  &
+    \centering
+    \parbox{\widthof{Dirk Stegemann}}{%
+    \noindent\spacedlowsmallcaps{\supervisor} \\
+  Dirk Stegemann
+  }
+\end{tabular}
+
+\newpage
+
+\thispagestyle{empty}
+
+\widowpenalty10000
+\clubpenalty10000
+
+\input{content.tex}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:
