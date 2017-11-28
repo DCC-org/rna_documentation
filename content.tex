@@ -25,6 +25,29 @@ von Dell mit der Modell-Version PowerEdge R720xd zur Verfügung. Die Umsetzung
 und verwendete Software ist den Studentengruppen selbst überlassen und frei
 wählbar.
 
+\chapter{Basisinstallation}
+\label{chap:basisinstallation}
+Zur Installation der benötigten Dienste und virtuelle Instanzen stand dem
+Projektteam ein physischer Root-Server von dem Hersteller DELL zur Verfügung.
+Die Hardware des Servers war bereits vollständig zusammengesetzt und zur
+Installation eines Betriebssystems bereit. Bevor dieses installiert werden
+konnte musste zunächst das RAID\hyp{}Control eingerichtet werden. Dieses
+erstellt zu Beginn eine vom Projektteam definierte Festplattenstruktur. Dabei
+wurde festgelegt, dass RAID10 für den logischen Zusammenschluss der physischen
+Festplatten genutzt wird. Dabei spiegeln sich die 16 genutzten Festplatten
+dauerhaft gegenseitig, sodass im Falle eines Ausfalles einer Festplatte, die
+darauf gespeicherten Inhalte weiterhin zur Verfügung stehen.
+
+Anschließend konnte das Linux Betriebssystem ArchLinux über einen
+USB\hyp{}Stick auf dem Serversystem installiert werden. Um ein Betriebssystem
+von einem USB\hyp{}Stick zu installieren muss der verwendete USB\hyp{}Stick
+für eine Installation von diesem vorbereitet werden. Das Projektteam nutze
+dazu die Software DD. Diese benötigt ein Image Dokument des zu installierendem
+Betriebssystem, welches das Projektteam von der Hersteller\hyp{}Webseite von
+ArchLinux heruntergeladen hat. Somit konnte während dem Boot\hyp{}Vorgangs des
+pysischen Servers angegeben werden, dass sich die zu installierenden Inhalte
+auf dem USB\hyp{}Stick befinden.
+
 \chapter{Fazit}
 
 %\appendix
