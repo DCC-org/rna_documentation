@@ -13,6 +13,36 @@
 \chapter{Einführung}
 \label{chap:einfuehrung}
 
+\label{Vorbereitung}
+Bereits zu Beginn des Projektes, wurde festgelegt, welche Server welche
+Aufgaben ausführen sollen. Dabei wurde definiert, das zwei Virtuelle Maschine
+jeweils einen DomainController (DC01, DC02) installiert haben müssen. Die 
+vorhandene Domäne \texttt{mikado.spiel} soll weiterverwendet werden.
+
+Für die Virtualisierung der Maschinen, wurde auf dem HyperVisor mit dem 
+Befehl \texttt{pacman -S libvirt} der Virtualisierungsdienst installiert.
+Zusätzlich zu diesem musste eine Virtuelle Netzwerkkarte erstellt werden,
+damit die virtuellen Maschinen über einen Netzwerkanbindung verfügen.
+Auf dem jeweiligen Client, welche die Virtuellen Maschinen verwalten möchte,
+muss über \texttt{pacman -S virt-manager} heruntergeladen und installiert
+werden.
+
+
+\label{Samba}
+Als Active Domain Controller, wird ein Samba Server auf einem ArchLinux
+System installiert. Dies ist eine Open Source Software, welche unter der
+\texttt{GNU General Public Licenses} Das entsprechende Paket kann hier mit dem Befehl
+\texttt{pacman -S samba} installiert werden. Um den Samba Server installieren
+zu können, muss zuneächst geprüft werden, das kein Samba Dienst bereits
+installiert und ausgeführt wird. Anschließend muss in der \texttt{hosts} Datei
+des Domain Controllers die Einträge für den DC Server für sich selber
+vervollständigt werden.
+
+\label {Bind}
+Die Software Bind wird für die generelle Namesauflösung innerhalb der Domäne
+benötigt. Sie wird in der Regel immer zusammen mit dem ActiveDirectory
+verwendet und installiert. Das Package hierzu muss gesondert mit dem oben
+stehenden Befehl heruntergeladen werden.
 \chapter{Fazit}
 
 %\appendix
