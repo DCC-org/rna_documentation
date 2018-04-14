@@ -126,27 +126,22 @@ verwendet:
 
 Die Aufteilung sieht anschließend wie folgt aus:
 
-\begin{itemize}
-\item
-  Leitung 192.168.0.0 -- 192.168.0.255
-\end{itemize}
-
-\begin{itemize}
-\item
-  Entwicklung 192.168.1.0 -- 192.168.1.255
-\item
-  Einkauf 192.168.2.0 -- 192.168.2.255
-\item
-  Disposition 192.168.3.0 -- 192.168.3.255
-\item
-  Produktion 192.168.4.0 -- 192.168.4.255
-\item
-  Konstruktion 192.168.5.0 -- 192.168.5.255
-\item
-  Buchhaltung und Rechnungswesen 192.168.6.0 -- 192.168.6.255
-\item
-  Verkauf 192.168.7.0 -- 192.168.7.255
-\end{itemize}
+\begin{center}
+  \begin{tabular}{lll}
+    \toprule
+    Abteilung                     & Netzadresse & Broadcastadresse  \\
+    \midrule
+    Leitung                       & 192.168.0.0 & 192.168.0.255     \\
+    Einkauf                       & 192.168.2.0 & 192.168.2.255     \\
+    Disposition                   & 192.168.3.0 & 192.168.3.255     \\
+    Produktion                    & 192.168.4.0 & 192.168.4.255     \\
+    Konstruktion                  & 192.168.5.0 & 192.168.5.255     \\
+    Buchhaltung / Rechnungswesen  & 192.168.6.0 & 192.168.6.255     \\
+    Verkauf                       & 192.168.7.0 & 192.168.7.255     \\
+    \bottomrule
+  \end{tabular}
+  \captionof{table}{IP-Addressen Setup}
+\end{center}
 
 Die Administrations Rechner, erhalten ein separates Netzwerk, in dem
 ebenfalls die entsprechenden Windows Server vorhanden sein werden.
