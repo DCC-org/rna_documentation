@@ -305,8 +305,7 @@ Erläuterungen hierzu kann im DNS Kapitel entnommen werden. Abschließend wird
 eine Übersicht der Installationsroutine angezeigt, welche mit „Installieren''
 bestätigt werden kann.
 
-\hypertarget{dns-dienst}{%
-\section{DNS-Dienst}\label{dns-dienst}}
+\section{DNS-Dienst}\label{dns-dienst}
 
 Bereits während der Installation des Domain Controllers, stellt Windows
 sicher, ob ein DNS Server installiert werden soll. Jeder DC sollte in der
@@ -314,8 +313,7 @@ Regel auch ein DNS Server sein, damit neue Einträge unmittelbar direkt
 übertragen werden können und der DNS Dienst immer den aktuellsten Stand
 der Umgebung kennt.
 
-\hypertarget{dhcp-dienst}{%
-\section{DHCP-Dienst}\label{dhcp-dienst}}
+\section{DHCP-Dienst}\label{dhcp-dienst}
 
 Die Installation des DHCP Dienstes, kann über den Server-Manager unter
 dem Punkt Verwalten \textgreater{} Rollen und Funktionen hinzufügen
@@ -338,8 +336,7 @@ beginnt nun mit der Installation des DHCP Servers.
 Nachdem der Server neugestartet wurde, ist der DHCP Server aktiv und
 muss abschließend noch Konfiguriert werden.
 
-\hypertarget{datei-dienst}{%
-\section{Datei-Dienst}\label{datei-dienst}}
+\section{Datei-Dienst}\label{datei-dienst}
 
 Der Dateidienst, spielt gerade in größeren Unternehmen eine wichtige
 Rolle, da viele Benutzer Dateien mit anderen Benutzern teilen oder zur
@@ -359,11 +356,9 @@ auch Problemlos nachträglich installiert werden.
 Die Installation ist nun abgeschlossen und der Dateidienst, sowie die
 Freigaben können konfiguriert werden.
 
-\hypertarget{umsetzen-der-anforderungen}{%
-\chapter{Umsetzen der Anforderungen}\label{umsetzen-der-anforderungen}}
+\chapter{Umsetzen der Anforderungen}\label{umsetzen-der-anforderungen}
 
-\hypertarget{einrichtung-dhcp-dienst}{%
-\section{Einrichtung DHCP Dienst}\label{einrichtung-dhcp-dienst}}
+\section{Einrichtung DHCP Dienst}\label{einrichtung-dhcp-dienst}
 
 Bereits nach der Installation, zeigt der Server Manager an, dass weitere
 Konfigurationsschritte für den DHCP Server notwendig sind. So muss
@@ -481,8 +476,7 @@ der Primäre DHCP Server nicht mehr antwortet.
 Der DHCP Server ist nun vollständig Konfiguriert und kann nun verwendet
 werden.
 
-\hypertarget{test-des-failovers}{%
-\subsection{Test des Failovers}\label{test-des-failovers}}
+\subsection{Test des Failovers}\label{test-des-failovers}
 
 Um den Test des DHCP Failovers überprüfen zu können, wurde zunächst der
 Windows 7 Client, welcher innerhalb des Netzwerks ist gestartet und
@@ -512,8 +506,7 @@ der Primäre Server nicht erreichbar ist und vom Sekundären Server die IP
 Adresse, sowie die Leasetime erhalten. Der Sekundäre Server hat somit
 die Aufgaben des Primären DHCP Servers übernommen.
 
-\hypertarget{einrichtung-dns-dienst}{%
-\section{Einrichtung DNS Dienst}\label{einrichtung-dns-dienst}}
+\section{Einrichtung DNS Dienst}\label{einrichtung-dns-dienst}
 
 Bereits während der Installation des Active Directory Domänendienst wird
 der DNS Dienst angelegt und bereits vorkonfiguriert. Er ist so
@@ -544,9 +537,8 @@ Sekundäre Zone. Eine Sekundäre Zone wird meist dann verwendet, wenn eine
 Domäne auf eine andere Domäne Zugreifen muss. Die Sekundäre Zone
 erstellt eine Kopie dieser und legt sie auf den Server ab.
 
-\hypertarget{dateidienstfreigaben-einrichten}{%
 \section{Dateidienst/Freigaben
-einrichten}\label{dateidienstfreigaben-einrichten}}
+einrichten}\label{dateidienstfreigaben-einrichten}
 
 Das Anlegen von neuen Freigaben ist Assistentengesteuert, damit hier die
 Anpassungen alle auf einmal durchgeführt werden können. Um eine Freigabe
@@ -697,8 +689,7 @@ Ordners anlegen und verwalten. Der Nutzer erhält auch nur auf diesen
 Ordner die Berechtigungen. Andere Ordner kann der Nutzer nicht sehen
 oder verändern.
 
-\hypertarget{ressourcen-manager}{%
-\subsection{Ressourcen-Manager}\label{ressourcen-manager}}
+\subsection{Ressourcen-Manager}\label{ressourcen-manager}
 
 Über den Ressourcen Manager des Dateidienstes, hat der Administrator die
 Möglichkeit, verschiedene Kontingente zuzuweisen oder angepasste
@@ -717,9 +708,8 @@ Zeitplan festgelegt werden, indem das System diese Ordner überprüft.
 
 \includegraphics[width=6.3in,height=2.63333in]{figures/image8.png}
 
-\hypertarget{active-directory-domuxe4nendienst}{%
 \section{Active Directory
-Domänendienst}\label{active-directory-domuxe4nendienst}}
+Domänendienst}\label{active-directory-domuxe4nendienst}
 
 Nachdem die Grundinstallation abgeschlossen wurde, kann mit der
 eigentlichen Konfiguration begonnen werden. Bereits nach der Basis
@@ -778,9 +768,8 @@ wird der DNS Server des Windows Servers innerhalb der IP Konfiguration
 hinterlegt. Der Windows Server 2016 wird dabei mehrmals neugestartet und
 in die Domäne eingebunden.
 
-\hypertarget{edv-struktur-im-active-directory}{%
 \subsection{EDV-Struktur im Active
-Directory}\label{edv-struktur-im-active-directory}}
+Directory}\label{edv-struktur-im-active-directory}
 
 Der Aufbau des Active Directory, sollte im Regelfall analog der
 Unternehmensstruktur aufgeteilt sein. Innerhalb des ADs werden diese in
@@ -815,8 +804,7 @@ Gruppenrichtlinien auf einzelne Abteilungen beschränkt werden können. Um
 erweiterbare Funktionen einblenden lassen zu können, empfiehlt es sich
 unter dem Punkt Ansicht die Erweiterten Features zu aktivieren.
 
-\hypertarget{replikation}{%
-\subsection{Replikation}\label{replikation}}
+\subsection{Replikation}\label{replikation}
 
 Innerhalb einer Domäne sollte es immer zwei DomainController, sowie zwei
 DHCP Server geben. Falls einer der beiden Server ausfällt, können sich
