@@ -114,3 +114,14 @@ And you maybe need to install it first:
 ```
 sudo pacman -Syu pandoc
 ```
+
+### Reformat a block
+
+We try to not use more than 80 chars in one line. vim allows you to easily
+reformat a block. Enter the visual mode with v, mark the paragraph, press gqq.
+This requires the following in `~/.vim/ftplugin/tex.vim`:
+
+```vim
+setl lbr
+set colorcolumn=80
+```

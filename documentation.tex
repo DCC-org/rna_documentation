@@ -1,4 +1,5 @@
 \documentclass[numbers=noendperiod,titlepage=false,DIV=11,12pt]{scrreprt}
+\usepackage{pdfpages}
 \usepackage{etoolbox}
 \usepackage{polyglossia}
 \setdefaultlanguage[spelling=new]{german}
@@ -94,11 +95,11 @@
 \thispagestyle{empty}
 ~\\[1cm]
 \begin{center}
-\begin{tabularx}
-\includegraphics[width=6cm]{figures/hhek-big.jpg} \\
-Betreuer \\
-Wolfgang Dreser \\
-\end{tabularx}
+  \begin{tabular}{c}
+    \includegraphics[width=6cm]{figures/hhek-big.jpg} \\
+    Betreuer \\
+    Wolfgang Dreser \\
+  \end{tabular}
 \end{center}
 
 \newpage
