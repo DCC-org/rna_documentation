@@ -99,72 +99,73 @@ dieser Dokumentation wurde eigenständig durchgeführt.
 
 \chapter{Vorbereitung}\label{vorbereitung}
 
-Damit die Umsetzung, der Testumgebung reibungslos durchgeführt werden
-konnte, muss zuvor geplant werden, wie beispielsweise das DHCP-Konzept,
-der DNS-Namensraum oder das Windows Domänen Konzept aussieht. Bereits
-hier können zusammen mit dem Auftraggeber etwaige Fehler festgestellt
-und beseitig werden. Es dient jedoch in erster Linie, auf Kundenwünsche
-einzugehen, sowie effizient mit der vorhandenen Hardware zu planen.
+Um eine vollständige und schnelle Umsetzung des Projektes zu gewährleisten
+wurde zunächst eine Testumgebung aufgebaut. Des Weiteren wurde zu Beginn ein
+Konzept erarbeitet, welches die DNS Namenkonvention und die DHCP Vorgaben
+beinhaltet. Dieses Konzept wurde abschließend dem zuständigen Lehrer, in diesem
+Projekt als Rolle des Auftraggebers, vorgelegt und abgenommen. Eine
+vorausschauende Planung und Konzeptionierung zusammen mit dem Auftraggeber
+bringt den Vorteil, dass Fehler frühzeitig identifiziert und verbessert werden
+können, sowie eine effiziente Hardware Planung.
 
 \section{DHCP-Konzept}\label{dhcp-konzept}
 
-Die Firma Mikado, besitzen insgesamt acht Abteilungen, welche insgesamt
-max. 100 Mitarbeiter beinhalten, sowie ca. 50 Client-PCs. Pro Abteilung
-wird ein Netzwerkdrucker vorgesehen. Zum aktuellen Zeitpunkt, verwendet
-die Firma ein Class C Ipv4 Netz, welches beibehalten werden soll. Die
-Aufteilung der IP Adressen für die Clients, sowie den Netzwerkdruckern,
-sollen über einen DHCP Server vergeben werden. Dabei wird das folgende
-DHCP Konzept verwendet:
+Die Firma Mikado besitzt insgesamt acht Abteilungen, welche insgesamt maximal
+100 Mitarbeiter beinhalten. Aktuell geh\"oren 50 Client-PCs zum Inventar. Pro
+Abteilung wird ein Netzwerkdrucker vorgesehen. Zum aktuellen Zeitpunkt
+verwendet die Firma ein Class C Ipv4 Netz, welches beibehalten werden soll. Die
+Aufteilung der IP Adressen für die Clients, sowie den Netzwerkdruckern, soll
+über einen DHCP Server vergeben werden. Dabei wird das folgende DHCP Konzept
+verwendet:
 
-\begin{itemize}
-\item
-  Jede Abteilung erhält einen eignen Adressbereich, in dem max. 2540
+\begin{outline}
+  \1 Jede Abteilung erhält einen eignen Adressbereich, in dem maximal 251
   Hosts verwendet werden können
-\item
-  Netzwerkdrucker erhalten den Ende eines jenen Netzwerkbereichs
-\end{itemize}
+  \1 Netzwerkdrucker erhalten den Ende eines jeden Netzwerkbereichs
+\end{outline}
 
+Der aktuelle Standard in der Wirtschaft ist aktuell, keine Subnetzmetze mit
+einer Subnetzmaske kleiner 24 zu nutzen (Ausnahme sind Transfernetze).
+Wird ein gr\"o\ss{}eresNetz ben\"otigt, so sollte es ein vielfaches eines Class
+C Netz sein. Von den 256 Adressen entf\a"llt eine f\"ur die Broadcastadresse,
+eine f\"ur die Netzadresse, eine f\"ur das Gateway und zwei f\"ur die VRRP
+Adressen.
 Die Aufteilung sieht anschließend wie folgt aus:
 
-\begin{itemize}
-\item
-  Leitung 192.168.0.0 -- 192.168.0.255
-\end{itemize}
+\begin{center}
+  \begin{tabular}{lll}
+    \toprule
+    Abteilung                     & Netzadresse & Broadcastadresse  \\
+    \midrule
+    Leitung                       & 192.168.0.0 & 192.168.0.255     \\
+    Einkauf                       & 192.168.2.0 & 192.168.2.255     \\
+    Disposition                   & 192.168.3.0 & 192.168.3.255     \\
+    Produktion                    & 192.168.4.0 & 192.168.4.255     \\
+    Konstruktion                  & 192.168.5.0 & 192.168.5.255     \\
+    Buchhaltung / Rechnungswesen  & 192.168.6.0 & 192.168.6.255     \\
+    Verkauf                       & 192.168.7.0 & 192.168.7.255     \\
+    \bottomrule
+  \end{tabular}
+  \captionof{table}{IP-Addressen Setup}
+\end{center}
 
-\begin{itemize}
-\item
-  Entwicklung 192.168.1.0 -- 192.168.1.255
-\item
-  Einkauf 192.168.2.0 -- 192.168.2.255
-\item
-  Disposition 192.168.3.0 -- 192.168.3.255
-\item
-  Produktion 192.168.4.0 -- 192.168.4.255
-\item
-  Konstruktion 192.168.5.0 -- 192.168.5.255
-\item
-  Buchhaltung und Rechnungswesen 192.168.6.0 -- 192.168.6.255
-\item
-  Verkauf 192.168.7.0 -- 192.168.7.255
-\end{itemize}
-
-Die Administrations Rechner, erhalten ein separates Netzwerk, in dem
+Die Rechner der Administratoren erhalten ein separates Netzwerk, in dem
 ebenfalls die entsprechenden Windows Server vorhanden sein werden.
 
 \section{DNS-Namensraum}\label{dns-namensraum}
 
-Die Firma Mikado hat bereits den Domänennamen „Mikado.Spiel`` erworben
-und kann für die Domänen Struktur verwendet werden. Mikado ist in diesem
-Fall die Second-Level-Domäne der DNS Namensauflösung und Spiel die
-First-Level-Domäne. Es können weitere Subdomänen (third-level-domänen)
-wie beispielsweise Verkauf, Konstruktion oder Einkauf hinzugefügt
-werden. Die DNS Namensauflösung ist für die Auflösung eines FQDNs in
-eine IP Adresse. Jeder Rechnername, in der internen Domäne ist ebenfalls
-im DNS eingetragen und kann von diesem aufgelöst werden. Der Windows
-Server 2016, welcher den Domain Controller besitzt, ist gleichzeitig
-auch ein DNS Server, damit die entsprechenden Einträge unmittelbar durch
-den DomainController an den DNS Server weitergeben werden können. Die
-Auflösung der IP Adresse, bei diesem Server dann wie folgt:
+Die Firma Mikado hat bereits den Domänennamen mikado.spiel erworben. Dieser
+kann für die Domänen Struktur verwendet werden. \ mikado ist in diesem Fall die
+Second-Level-Domain der DNS Namensauflösung und spiel die First-Level-Domain.
+Es können weitere Subdomains (Third\hyp{}Level\hyp{}Domains) wie beispielsweise
+verkauf, konstruktion oder einkauf hinzugefügt werden. Die DNS Namensauflösung
+ist für die Auflösung von FQDNs in eine IP Adresse und umgekehrt. Jeder
+Rechnername in der internen Domäne ist ebenfalls im DNS eingetragen und kann
+von diesem aufgelöst werden. Der Windows Server 2016, welcher den Domain
+Controller besitzt, ist gleichzeitig auch ein DNS Server. Dadurch k\"onnen die
+entsprechenden Einträge unmittelbar durch den Domain Controller an den DNS
+Server weitergeben werden. Die Auflösung der IP Adresse, bei diesem Server dann
+wie folgt:
 
 W16dc01.mikado.spiel
 
@@ -173,68 +174,62 @@ W16dc01.mikado.spiel
 \subsection{Namenskonzept User}\label{namenskonzept-user}
 
 Um eine Eindeutigkeit der User herzustellen, empfiehlt es sich hier die
-Personalnummer des Anwenders zu verwenden. Innerhalb der AD Struktur,
-darf es keine doppelten Benutzernamen vorhanden sein, da ansonsten die
-Anmeldung an der Domäne nicht funktionieren würde. Die Personalnummer,
-wird in der Regel jedem Nutzer bei Beginn der Tätigkeit innerhalb der
-Firma vergeben, da diese ebenfalls für die Buchhaltung entsprechend
-verwendet werden kann.
+Personalnummer des Anwenders zu verwenden. Innerhalb der AD Struktur darf es
+kein doppelter Benutzernamen vorhanden sein, da ansonsten die Anmeldung an der
+Domäne nicht funktioniert. Die Personalnummer wird in der Regel jedem Nutzer
+bei Begin der Tätigkeit innerhalb der Firma vergeben, da diese ebenfalls für
+die Buchhaltung entsprechend verwendet werden kann.
 
 Eine Kombination aus Nachname, Vorname oder Nachame\_Vorname wird nicht
-verwendet, da es vorkommen kann, dass es Doppelnamen innerhalb der Firma
-gibt.
+verwendet, da es vorkommen kann, dass es Doppelnamen innerhalb der Firma gibt.
+Das gleiche gillt f\"ur die eMail\hyp{}Adresse.
 
 \subsection{Bezeichnung Hardwarekomponenten}
 
-Da wie auch die Nutzernamen die Hardwarekomponenten ebenfalls eine
-Eindeutigkeit haben müssen, empfiehlt es sich folgendes Konzept zu
-verwenden:
+Neben den eindeutigen Benutzernamen müssen auch die verwendeten
+Hardwarekomponenten einen eindeutigen Bezeichner besitzen. Dabei wird folgendes
+Konzept zur Nutzung empfohlen:
 
-\begin{itemize}
-\item
-  Rechner erhalten eine PC{[}fortlaufende Nummer{]}
-\item
-  Drucker erhalten eine DR{[}fortlaufende Nummer{]}
-\end{itemize}
+\begin{outline}
+  \1 Rechner erhalten den Prefix PC gefolgt von einer fortlaufenden Nummer
+  \1 Drucker erhalten den Prefix DR gefolgt von einer fortlaufenden Nummer
+\end{outline}
 
-Die Namensgebung der entsprechenden Rechner, Drucker oder Server ist in
-erster Linie wichtig für die Zuordnung der DNS Namen, damit hier der
-Rechnername etc. vollständig aufgelöst wird. Ebenfalls kann die
-Serverbezeichnung helfen, festzustellen welche Funktion ein Server hat.
-Für die Firma Mikado wird folgende Namensgebung bei den Servern
-verwendet:
+Die Namensgebung der entsprechenden Rechner, Drucker oder Server ist in erster
+Linie wichtig für die Zuordnung der DNS Namen, damit hier die Namensaufl\"osung
+zuverl\"assig klappt. Ebenfalls kann die Serverbezeichnung helfen,
+festzustellen welche Funktion ein Server hat. Für die Firma Mikado wird
+folgende Namensgebung bei den Servern verwendet:
 
-\begin{itemize}
-\item
-  w16dc01
-\item
-  w12r2dc02
-\end{itemize}
+\begin{outline}
+  \1 w16dc01
+  \1 w12r2dc02
+\end{outline}
 
-Der erste Teil des Namens für den Server gibt an, um welches
-Betriebssystem es sich auf dieser Maschine handelt. So kann hier
-unmittelbar festgestellt werden, ob eine Version in geraumer Zeit
-veralten könnte. Das hintere Segment, gibt die Funktion des Servers
-wieder. So sind beide Server Domain Controller (Abk. DC) und nach der
-Reihenfolge nummeriert. Ein Linux Server wird entsprechende wie folgt
-gekennzeichnet:
-
-\begin{itemize}
-\item
-  li{[}dc,samba{]}{[}01,02{]}
-\end{itemize}
+Der erste Teil des Namens für den Server gibt an, um welches Betriebssystem es
+sich auf dieser Maschine handelt. So kann hier unmittelbar festgestellt werden,
+ob eine Version seit geraumer Zeit veraltet ist. Das hintere Segment gibt die
+Funktion des Servers wieder. So sind beide Server Domain Controller (Abkürzung
+DC) und nach der Reihenfolge nummeriert. Ein Linux Server wird mit li
+geprefixt. Danach folgt ebenfalls die Rolle (zum Beispiel dc oder fileserver),
+gefolgt von einer Numerierung.
 
 \subsection{EDV-Struktur Active Directory}
 
-Die EDV Struktur, wird gegliedert wie die Aufteilung der einzelnen
-Abteilungen. So erhält jede Abteilung eine eigene Organisationseinheit.
-Dies macht es im späteren Verlauf einfacher Anwender bestimmte Rechte
-zuzuweisen oder aber auch IP Adressen zuzuweisen, da diese auf die
-Organisationseinheiten fest zugewiesen werden können.
+Die EDV Struktur wird gegliedert wie die Aufteilung der einzelnen Abteilungen.
+So erhält jede Abteilung eine eigene Organisationseinheit. Dies macht es im
+sp\"ateren Verlauf einfacher dem Anwender bestimmte Rechte oder aber auch IP
+Adressen zuzuweisen, da diese auf die Organisationseinheiten fest zugewiesen
+werden können.
 
 Im folgenden Abbild ist der Aufbau dargestellt:
 
-\includegraphics[width=2.77083in,height=1.69792in]{figures/image1.png}
+\begin{figure}[adstructure]
+  \centering
+  \includegraphics{figures/image1.png}
+  \caption{Gliederung der OUs im Active Directory}
+  \label{figure:adstructure}
+\end{figure}
 
 Die Aufteilung in Standorte ist nicht erforderlich, da die Firma Mikado
 nur den Hauptsitz in Köln besitzt.
@@ -243,7 +238,7 @@ nur den Hauptsitz in Köln besitzt.
 
 Die Installation der Testumgebung, wird in einem Hypervisor auf einer
 Physikalischen Maschine getestet, da diese Anwendungen im Testbetrieb
-keine Großen Anforderungen haben. Das Basis Betriebssystem ist ein
+keine großen Anforderungen haben. Das Basis Betriebssystem ist ein
 HyperVisor Server, welcher von Microsoft kostenlos zur Verfügung
 gestellt wird. Auf diesem können unterschiedliche virtuelle Maschinen
 angelegt werden, welche Ressourcen des HostSystem verwenden werden.
@@ -554,7 +549,7 @@ Domäne auf eine andere Domäne Zugreifen muss. Die Sekundäre Zone
 erstellt eine Kopie dieser und legt sie auf den Server ab.
 
 \hypertarget{dateidienstfreigaben-einrichten}{%
-\ection{Dateidienst/Freigaben
+\section{Dateidienst/Freigaben
 einrichten}\label{dateidienstfreigaben-einrichten}}
 
 Das Anlegen von neuen Freigaben ist Assistentengesteuert, damit hier die
