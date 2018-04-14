@@ -99,18 +99,20 @@ dieser Dokumentation wurde eigenständig durchgeführt.
 
 \chapter{Vorbereitung}\label{vorbereitung}
 
-Damit die Umsetzung, der Testumgebung reibungslos durchgeführt werden
-konnte, muss zuvor geplant werden, wie beispielsweise das DHCP-Konzept,
-der DNS-Namensraum oder das Windows Domänen Konzept aussieht. Bereits
-hier können zusammen mit dem Auftraggeber etwaige Fehler festgestellt
-und beseitig werden. Es dient jedoch in erster Linie, auf Kundenwünsche
-einzugehen, sowie effizient mit der vorhandenen Hardware zu planen.
+Um eine vollständige und schnelle Umsetzung des Projektes zu gewährleisten
+wurde zunächst eine Testumgebung aufgebaut. Des Weiteren wurde zu Beginn ein
+Konzept erarbeitet, welches zum Beispiel die DNS Namenkonvention oder die
+DHCP Vorgaben beinhaltet. Dieses Konzept wurde abschließend dem zuständigen
+Lehrer, in diesem Projekt als Rolle des Auftraggebers, vorgelegt und
+abgenommen. Eine vorausschauende Planung und Konzeptionierung zusammen mit dem
+Auftraggeber bringt den Vorteil, dass Fehler frühzeitig identifiziert und
+verbessert werden können, sowie eine effiziente Hardware Planung.
 
 \section{DHCP-Konzept}\label{dhcp-konzept}
 
 Die Firma Mikado, besitzen insgesamt acht Abteilungen, welche insgesamt
-max. 100 Mitarbeiter beinhalten, sowie ca. 50 Client-PCs. Pro Abteilung
-wird ein Netzwerkdrucker vorgesehen. Zum aktuellen Zeitpunkt, verwendet
+maximal 100 Mitarbeiter beinhalten, sowie ca. 50 Client-PCs. Pro Abteilung
+wird ein Netzwerkdrucker vorgesehen. Zum aktuellen Zeitpunkt verwendet
 die Firma ein Class C Ipv4 Netz, welches beibehalten werden soll. Die
 Aufteilung der IP Adressen für die Clients, sowie den Netzwerkdruckern,
 sollen über einen DHCP Server vergeben werden. Dabei wird das folgende
@@ -118,7 +120,7 @@ DHCP Konzept verwendet:
 
 \begin{itemize}
 \item
-  Jede Abteilung erhält einen eignen Adressbereich, in dem max. 2540
+  Jede Abteilung erhält einen eignen Adressbereich, in dem maximal 2540
   Hosts verwendet werden können
 \item
   Netzwerkdrucker erhalten den Ende eines jenen Netzwerkbereichs
@@ -173,12 +175,12 @@ W16dc01.mikado.spiel
 \subsection{Namenskonzept User}\label{namenskonzept-user}
 
 Um eine Eindeutigkeit der User herzustellen, empfiehlt es sich hier die
-Personalnummer des Anwenders zu verwenden. Innerhalb der AD Struktur,
-darf es keine doppelten Benutzernamen vorhanden sein, da ansonsten die
-Anmeldung an der Domäne nicht funktionieren würde. Die Personalnummer,
-wird in der Regel jedem Nutzer bei Beginn der Tätigkeit innerhalb der
-Firma vergeben, da diese ebenfalls für die Buchhaltung entsprechend
-verwendet werden kann.
+Personalnummer oder auch die eMail-Adresse des Anwenders zu verwenden.
+Innerhalb der AD Struktur, darf es keine doppelten Benutzernamen vorhanden
+sein, da ansonsten die Anmeldung an der Domäne nicht funktionieren würde. Die
+Personalnummer, wird in der Regel jedem Nutzer bei Beginn der Tätigkeit
+innerhalb der Firma vergeben, da diese ebenfalls für die Buchhaltung
+entsprechend verwendet werden kann.
 
 Eine Kombination aus Nachname, Vorname oder Nachame\_Vorname wird nicht
 verwendet, da es vorkommen kann, dass es Doppelnamen innerhalb der Firma
@@ -186,9 +188,9 @@ gibt.
 
 \subsection{Bezeichnung Hardwarekomponenten}
 
-Da wie auch die Nutzernamen die Hardwarekomponenten ebenfalls eine
-Eindeutigkeit haben müssen, empfiehlt es sich folgendes Konzept zu
-verwenden:
+Neben den eindeutigen Benutzernamen müssen auch die verwendeten 
+Hardwarekomponenten eine Eindeutigkeit besitzen. Dabei wird folgendes Konzept
+zur Nutzung empfohlen:
 
 \begin{itemize}
 \item
@@ -214,8 +216,8 @@ verwendet:
 Der erste Teil des Namens für den Server gibt an, um welches
 Betriebssystem es sich auf dieser Maschine handelt. So kann hier
 unmittelbar festgestellt werden, ob eine Version in geraumer Zeit
-veralten könnte. Das hintere Segment, gibt die Funktion des Servers
-wieder. So sind beide Server Domain Controller (Abk. DC) und nach der
+veralten könnte. Das hintere Segment gibt die Funktion des Servers
+wieder. So sind beide Server Domain Controller (Abkürzung DC) und nach der
 Reihenfolge nummeriert. Ein Linux Server wird entsprechende wie folgt
 gekennzeichnet:
 
@@ -228,9 +230,9 @@ gekennzeichnet:
 
 Die EDV Struktur, wird gegliedert wie die Aufteilung der einzelnen
 Abteilungen. So erhält jede Abteilung eine eigene Organisationseinheit.
-Dies macht es im späteren Verlauf einfacher Anwender bestimmte Rechte
-zuzuweisen oder aber auch IP Adressen zuzuweisen, da diese auf die
-Organisationseinheiten fest zugewiesen werden können.
+Dies macht es im späteren Verlauf einfacher dem Anwender bestimmte Rechte
+oder aber auch IP Adressen zuzuweisen, da diese auf die Organisationseinheiten
+fest zugewiesen werden können.
 
 Im folgenden Abbild ist der Aufbau dargestellt:
 
@@ -243,7 +245,7 @@ nur den Hauptsitz in Köln besitzt.
 
 Die Installation der Testumgebung, wird in einem Hypervisor auf einer
 Physikalischen Maschine getestet, da diese Anwendungen im Testbetrieb
-keine Großen Anforderungen haben. Das Basis Betriebssystem ist ein
+keine großen Anforderungen haben. Das Basis Betriebssystem ist ein
 HyperVisor Server, welcher von Microsoft kostenlos zur Verfügung
 gestellt wird. Auf diesem können unterschiedliche virtuelle Maschinen
 angelegt werden, welche Ressourcen des HostSystem verwenden werden.
