@@ -154,18 +154,18 @@ ebenfalls die entsprechenden Windows Server vorhanden sein werden.
 
 \section{DNS-Namensraum}\label{dns-namensraum}
 
-Die Firma Mikado hat bereits den Domänennamen „Mikado.Spiel`` erworben
-und kann für die Domänen Struktur verwendet werden. Mikado ist in diesem
-Fall die Second-Level-Domäne der DNS Namensauflösung und Spiel die
-First-Level-Domäne. Es können weitere Subdomänen (third-level-domänen)
-wie beispielsweise Verkauf, Konstruktion oder Einkauf hinzugefügt
-werden. Die DNS Namensauflösung ist für die Auflösung eines FQDNs in
-eine IP Adresse. Jeder Rechnername, in der internen Domäne ist ebenfalls
-im DNS eingetragen und kann von diesem aufgelöst werden. Der Windows
-Server 2016, welcher den Domain Controller besitzt, ist gleichzeitig
-auch ein DNS Server, damit die entsprechenden Einträge unmittelbar durch
-den DomainController an den DNS Server weitergeben werden können. Die
-Auflösung der IP Adresse, bei diesem Server dann wie folgt:
+Die Firma Mikado hat bereits den Domänennamen mikado.spiel erworben. Dieser
+kann für die Domänen Struktur verwendet werden. mikado ist in diesem Fall die
+Second-Level-Domain der DNS Namensauflösung und spiel die First-Level-Domain.
+Es können weitere Subdomains (Third\hyp{}Level\hyp{}Domains) wie beispielsweise
+verkauf, konstruktion oder einkauf hinzugefügt werden. Die DNS Namensauflösung
+ist für die Auflösung von FQDNs in eine IP Adresse und umgekehrt. Jeder
+Rechnername in der internen Domäne ist ebenfalls im DNS eingetragen und kann
+von diesem aufgelöst werden. Der Windows Server 2016, welcher den Domain
+Controller besitzt, ist gleichzeitig auch ein DNS Server. Dadurch k\"onnen die
+entsprechenden Einträge unmittelbar durch den Domain Controller an den DNS
+Server weitergeben werden. Die Auflösung der IP Adresse, bei diesem Server dann
+wie folgt:
 
 W16dc01.mikado.spiel
 
