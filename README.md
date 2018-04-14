@@ -100,3 +100,17 @@ and the corresponding latex code:
 \label{figure:ssduserstory}
 \end{figure}
 ```
+
+### Convert a docx to latex
+
+This works well with pandoc:
+
+```sh
+pandoc --extract-media media --standalone --output RNA.latex RNA.docx
+```
+
+And you maybe need to install it first:
+
+```
+sudo pacman -Syu pandoc
+```
