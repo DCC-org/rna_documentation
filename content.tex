@@ -247,13 +247,13 @@ angelegt werden, welche Ressourcen des HostSystem verwenden werden.
 \section{Windows Server 2016}\label{windows-server-2016}}
 
 Für die Installation des Windows Server 2016 Datacenter, wird in dem
-HyperVisor zunächst eine leere Virtuelle Maschine angelegt. Diese kann
+HyperVisor zunächst eine leere virtuelle Maschine angelegt. Diese kann
 anschließend mit dem Image für Windows Server 2016 installiert werden.
 Bei der Installation des Servers, wird eine grafische Benutzeroberfläche
 verwendet, da auch unerfahrene Informationstechniker diese bedienen
-sollen. Innerhalb der Testumgebung sollen die Virtuellen Maschinen eine
-Festplattengröße von ca. 75GB und einer Arbeitsspeicher Größe von 6 GB
-nicht überschreiten. Die Virtuellen Maschinen können im Falle eines
+sollen. Innerhalb der Testumgebung sollen die virtuellen Maschinen eine
+Festplattengröße von ca. 75GB und einer Arbeitsspeicher Größe von sechs GB
+nicht überschreiten. Die virtuellen Maschinen können im Falle eines
 Übergangs in den Produktivbetrieb mit weiteren Ressourcen ausgestattet
 werden. Nach der erfolgreichen Installation und Neustart des Servers,
 muss erstmalig ein Administrator Kennwort festgelegt werden. Dieses muss
@@ -272,13 +272,13 @@ folgende Anforderungen besitzen:
 
 Nachdem die Basis Installation nun erfolgt ist, muss der Windows Server
 2016 für die Rolle als Domain Controller vorbereitet werden. Hierzu wird
-zunächst eine Statische IP Adresse vergeben, da innerhalb der Domäne ein
+zunächst eine statische IP Adresse vergeben, da innerhalb der Domäne ein
 separater DHCP Server auf einem Windows Server 2012R2 im späteren
 Verlauf installiert wird. Desweiteren muss der Rechnername angepasst
 werden, da Windows während der Installationsroutine eine für den Server
 festgelegten Namen vordefiniert. Um im Nachhinein die Unterscheidung der
 Server zu verbessern, muss hier ein eindeutiger und aussagekräftiger
-Name verwendet werden. Der Server benötigt hiernach einen Neustart.
+Name verwendet werden. Der Server muss anschließend neugestartet werden.
 
 \hypertarget{active-directory}{%
 \section{Active Directory}\label{active-directory}}
@@ -298,9 +298,9 @@ kann, bedarf es folgende weitere Funktionen:
 
 \includegraphics[width=2.57618in,height=1.01822in]{figures/image2.png}
 
-Mit der Schaltfläche Features hinzufügen, werden diese Funktionen für
+Mit der Schaltfläche Features hinzufügen, werden anschließend Funktionen für
 die Installationsroutine zugefügt. Nach klicken auf „weiter`` wird die
-Meldung ausgegeben, das der AD-Domänendienst einen DNS Server innerhalb
+Meldung ausgegeben, dass der AD-Domänendienst einen DNS Server innerhalb
 des Netzwerks benötigt, sollte dieser nicht vorhanden sein, so wird er
 auf der gleichen Maschine zusätzlich installiert. Der DNS Server wird
 benötigt da dieser für die Auflösung der Rechnernamen und Druckernamen
@@ -312,8 +312,8 @@ werden kann.
 \hypertarget{dns-dienst}{%
 \section{DNS-Dienst}\label{dns-dienst}}
 
-Bereits während der Installation des Domain Controllers, fragt Windows
-ab, ob ein DNS Server installiert werden soll. Jeder DC sollte in der
+Bereits während der Installation des Domain Controllers, stellt Windows
+sicher, ob ein DNS Server installiert werden soll. Jeder DC sollte in der
 Regel auch ein DNS Server sein, damit neue Einträge unmittelbar direkt
 übertragen werden können und der DNS Dienst immer den aktuellsten Stand
 der Umgebung kennt.
