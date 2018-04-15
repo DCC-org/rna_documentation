@@ -821,72 +821,80 @@ dem Punkt Ansicht die Erweiterten Features zu aktivieren.
 
 \subsection{Replikation}\label{replikation}
 
-Innerhalb einer Dom\"ane sollte es immer zwei DomainController, sowie zwei
-DHCP Server geben. Falls einer der beiden Server ausf\"allt, k\"onnen sich
-die Nutzer weiterhin Anmelden und erhalten weiterhin eine IP Adresse.
+Innerhalb einer Dom\"ane sollte es immer zwei DomainController, sowie zwei DHCP
+Server geben. Falls einer der beiden Server ausf\"allt, k\"onnen sich die
+Nutzer weiterhin Anmelden und erhalten weiterhin eine IP Adresse.
 
 Damit ein zus\"atzlicher Server in die Dom\"ane integriert werden kann, muss
-zun\"achst eine zus\"atzliche Maschine bspw. Windows Server 2012 R2
-aufgesetzt werden. Nachdem der Server installiert wurde, kann unter
-Server-Manager der Domain Controller, wie der erste DC installiert
-werden. Domain Controller sind innerhalb einer Dom\"ane gleichberechtigt,
-so kann jeder Server die gleichen Aufgaben des anderen \"ubernehmen.
+zun\"achst eine zus\"atzliche Maschine aufgesetzt werden. Hier wurde sich f\"ur
+einen Windows Server 2012 R2 entschieden. Nachdem der Server installiert wurde,
+kann unter Server-Manager der Domain Controller, wie der erste DC installiert
+werden. Domain Controller sind innerhalb einer Dom\"ane gleichberechtigt, so
+kann jeder Server die gleichen Aufgaben des anderen \"ubernehmen.
 
-Nachdem die Installation der ActiveDirectory Dom\"anendienste
-abgeschlossen wurde, muss dieser zun\"achst zum DomainController
-heraufgestuft werden. Wichtig ist hierbei, dass die Option
-Dom\"anencontroller zu einer vorhanden Dom\"ane hinzuf\"ugen ausgew\"ahlt sein
-muss, damit der DC in die vorhandenen Mikado Dom\"ane zugef\"ugt wird.
+Nachdem die Installation der ActiveDirectory Dom\"anendienste abgeschlossen
+wurde, muss dieser zun\"achst zum Domain Controller heraufgestuft werden.
+Wichtig ist hierbei, dass die Option \enquote{Dom\"anencontroller zu einer
+vorhanden Dom\"ane hinzuf\"ugen} ausgew\"ahlt sein muss, damit der DC in die
+vorhandenen Mikado Dom\"ane zugef\"ugt wird.
 
-Damit die Dom\"ane ausgew\"ahlt werden kann, kann Rechts auf \enquote{ausw\"ahlen}
-geklickt werden. Es \"offnet sich ein Windows Anmeldefenster, wo die
-Anmeldeinformationen von einer Dom\"ane Administrator eingetragen werden
-m\"ussen. Wichtig ist hier, dass ein Benutzer eingetragen wird, welcher
-die Berechtigung hat, Computer oder Server in die Dom\"ane aufnehmen zu
-d\"urfen. Anschließend werden die Dom\"anen Informationen abgefragt und
-angezeigt.
+Damit die Dom\"ane ausgew\"ahlt werden kann, kann Rechts auf
+\enquote{ausw\"ahlen} geklickt werden. Es \"offnet sich ein Windows
+Anmeldefenster, wo die Anmeldeinformationen von einem Dom\"anen Administrator
+eingetragen werden m\"ussen. Wichtig ist hier, dass ein Benutzer eingetragen
+wird, welcher die Berechtigung hat, Computer oder Server in die Dom\"ane
+aufnehmen zu d\"urfen. Anschließend werden die Dom\"anen Informationen
+abgefragt und angezeigt:
 
-\includegraphics[width=5.6875in,height=2.45833in]{figures/image10.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[max width=\textwidth]{figures/image10.png}
+  \caption{Hinzuf\"ugen eines DCs zu einer vorhandenen Dom\"ane}
+  \label{figure:add2domain}
+\end{figure}
 
 Nachdem die Dom\"ane ausgew\"ahlt wurde, kann mit \enquote{weiter} best\"atigt
-werden. Jeder Domain Controller, sollte gleichzeitig ein DNS Server
-beinhalten, sowie ein Globaler Katalog sein, damit hier abfragen
-schneller durchgef\"uhrt werden k\"onnen. Der DNS Server auf dem zweiten
-DomainController, kann zudem innerhalb der DHCP Konfiguration als
-Sekund\"arer DNS Server eingetragen werden. Auch hier muss wieder ein
-Wiederherstellungskennwort eingetragen werden, welches im Falle vom
-versehentlichen L\"oschen von Ordnern oder AD Strukturen ben\"otigt wird.
+werden. Jeder Domain Controller, sollte gleichzeitig ein DNS Server beinhalten,
+sowie ein Globaler Katalog sein, damit hier abfragen schneller durchgef\"uhrt
+werden k\"onnen. Der DNS Server auf dem zweiten DomainController, kann zudem
+innerhalb der DHCP Konfiguration als Sekund\"arer DNS Server eingetragen
+werden. Auch hier muss wieder ein Wiederherstellungskennwort eingetragen
+werden, welches im Falle vom versehentlichen L\"oschen von Ordnern oder AD
+Strukturen ben\"otigt wird.
 
 Als n\"achsten Schritt muss die DNS Delegierung, sowie ausgew\"ahlt werden,
 von welchem DC repliziert werden soll. Da es zum aktuellen Zeitpunkt,
 bereits einen DC (w16dc01) gibt, kann dieser nachfolgend ausgew\"ahlt und
 mit \enquote{weiter} best\"atigt werden:
 
-\includegraphics[width=5.8125in,height=1.3125in]{figures/image11.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[max width=\textwidth]{figures/image11.png}
+  \caption{Auswahl der Replikationsquellen f\"ur einen neuen DC}
+  \label{figure:dcreplication}
+\end{figure}
 
-Wie auch bei dem ersten DC, werden auf dem zweiten DC Ordner f\"ur die
-Protokollierung, sowie die Datenbank angelegt. Abschließend, gibt die
+Wie auch bei dem ersten DC, werden auf dem zweiten DC Verzeichnisse f\"ur die
+Protokollierung, sowie die Datenbank angelegt. Abschließend gibt die
 Installationsroutine die Übersicht f\"ur die anstehenden Änderungen. Mit
-klicken auf Installieren, wird der DC Konfiguriert und der Windows
+klicken auf \enquote{Installieren}, wird der DC Konfiguriert und der Windows
 Server einmal neugestartet.
 
-Die Replikation ist nun abgeschlossen. Alle Änderungen, welche fortan
-auf dem DC01 durchgef\"uhrt werden, werden innerhalb weniger Sekunden auf
-den DC02 repliziert. Sollte eine Replizierung der Daten aussetzen, so
-ruft der DC02 automatisch nach einer Stunde die Informationen ab.
+Die Replikation ist nun abgeschlossen. Alle \"Anderungen, welche fortan auf dem
+DC01 durchgef\"uhrt werden, werden innerhalb weniger Sekunden auf den DC02
+repliziert. Sollte eine Replizierung der Daten aussetzen, so ruft der DC02
+automatisch nach einer Stunde die Informationen ab.
 
 Nachdem der Server erneut gestartet wurde, kann die Anmeldung mit dem
 Administrator vom DC01 durchgef\"uhrt werden.
 
-\hypertarget{benutzerkonten-erstellen}{%
-\subsection{Benutzerkonten
-erstellen}\label{benutzerkonten-erstellen}}
+\subsection{Benutzerkonten erstellen}\label{benutzerkonten-erstellen}
 
 Benutzer k\"onnen \"uber die Active Directory Benutzer und
 Computerverwaltungs\"ubersicht manuell hinzugef\"ugt werden. Hierzu kann
-innerhalb einer OU mit Rechtsklick \textgreater{}Neu \textgreater{}
-Benutzer ein Benutzer hinzugef\"ugt werden. Der Benutzer wird nun direkt
-in die richtige OU angelegt.
+innerhalb einer OU mit Rechtsklick \textgreater{}Neu \textgreater{} Benutzer
+ein Benutzer hinzugef\"ugt werden. Der Benutzer wird nun direkt in die richtige
+OU angelegt.
 
 In dem dann neu er\"offneten Fenster muss nun ein Vorname, Nachname und
 Benutzername festgelegt werden. Der Benutzername muss innerhalb einer
