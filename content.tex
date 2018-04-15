@@ -1044,28 +1044,27 @@ einen Sicheren String umgewandelt werden.
 
 \subsection{Anmeldeskript}
 
-Ein AnmeldeSkript wird w\"ahrend der Anmeldung eines Nutzers geladen und
-angewendet. In einem solchen, k\"onnen beispielsweise Netzlaufwerke,
-Drucker oder Freigaben eingef\"ugt sein. Es gibt verschiedene
-M\"oglichkeiten, Benutzern ein Anmeldeskript zur Verf\"ugung zu stellen. Der
-einfachste Weg, w\"are \"uber eine Gruppenrichtlinie das Anmeldeskript zur
-Verf\"ugung zu stellen. Es kann jedoch auch unmittelbar direkt an das
-Benutzerprofil beigef\"ugt oder an einen Computer zugewiesen werden.
+Ein Anmeldeskript wird w\"ahrend der Anmeldung eines Nutzers geladen und
+angewendet. Im schript k\"onnen Netzlaufwerke, Drucker oder Freigaben
+eingef\"ugt sein. Es gibt verschiedene M\"oglichkeiten, Benutzern ein
+Anmeldeskript zur Verf\"ugung zu stellen. Der einfachste Weg w\"are \"uber
+eine Gruppenrichtlinie das Anmeldeskript zur Verf\"ugung zu stellen. Es kann
+jedoch auch unmittelbar direkt an das Benutzerprofil beigef\"ugt oder an einen
+Computer zugewiesen werden.
 
-Das Anmeldeskript als solches ist immer in einem Freigegeben Ordner
-\enquote{Netlogon} auf einem DC gespeichert, wo der Nutzer hinterlegt ist.
-Innerhalb des Benutzerprofil oder Gruppenrichtlinie, wird anschließend
-nur der Name des Skripts hinterlegt. Das ActiveDirectory erg\"anzt
-eigenst\"andig den Pfad zu diesem Skript.
+Das Anmeldeskript ist immer in einem freigegeben Ordner \enquote{Netlogon} auf
+einem DC gespeichert, wo der Nutzer hinterlegt ist. Innerhalb des
+Benutzerprofil oder Gruppenrichtlinie, wird anschließend nur der Name des
+Skripts hinterlegt. Das ActiveDirectory erg\"anzt eigenst\"andig den Pfad zu
+diesem Skript.
 
-Zus\"atzlich zum Anmelden eines Benutzers, kann ein Skript auch beim
-Abmelden, starten oder Herunterfahren des Computers. Es spielt keine
-Rolle, wie viele Anmeldeskripte einem Benutzer zugewiesen wurden.
-Windows arbeitet alle Skripte nacheinander ab.
+Zus\"atzlich zum Anmelden eines Benutzers, kann ein Skript auch beim Abmelden,
+starten oder Herunterfahren des Computers. Es spielt keine Rolle, wie viele
+Anmeldeskripte einem Benutzer zugewiesen wurden. Windows arbeitet alle Skripte
+nacheinander ab.
 
-Die Anmeldeskripte, werden nach dem Hinterlegen im Netlogon Ordner auf
-die anderen DCs repliziert, sodass alle DCs die gleichen Skripte
-besitzen.
+Die Anmeldeskripte werden nach dem Hinterlegen im Netlogon Verzeichnis auf die
+anderen DCs repliziert, sodass alle DCs die gleichen Skripte besitzen.
 
 \hypertarget{servergespeicherte-benutzerprofile}{%
 \subsection{Servergespeicherte
