@@ -355,89 +355,86 @@ k\"onnen konfiguriert werden.
 
 \section{Einrichtung DHCP Dienst}\label{einrichtung-dhcp-dienst}
 
-Bereits nach der Installation, zeigt der Server Manager an, dass weitere
+Bereits nach der Installation zeigt der Server Manager an, dass weitere
 Konfigurationsschritte f\"ur den DHCP Server notwendig sind. So muss
-beispielsweise der DHCP Server innerhalb der Dom\"ane autorisiert werden,
-damit die Clients eine entsprechende IP Adresse abrufen k\"onnen.
-Zus\"atzlich muss das DHCP verschiedene Sicherheitsgruppen anlegen, die
-der DHCP Server ben\"otigt. Nach klicken auf \enquote{weiter} werden
-Anmeldeinformationen f\"ur die Dom\"ane abgefragt. Hier muss ein Dom\"anen
-Administrator eingetragen sein, da nur dieser entsprechende
-Autorisierungen des DHCP Servers durchf\"uhren darf. Windows f\"ullt diesen,
-da der DHCP Server auf der gleichen Virtuellen Maschine wie der
-Domaincontroller installiert ist, standardm\"aßig mit dem Administrator
-aus, da dieser bereits w\"ahrend der Installationsroutine als Dom\"anen
-Administrator hinzugef\"ugt wurde. Der Nutzer hat die M\"oglichkeit,
-alternative Anmeldeinformationen anzugeben. Die Autorisierung des DHCP
-Servers ist n\"otigt, falls mehrere DHCP Server innerhalb einer Dom\"ane
-arbeiten, da andernfalls es Konflikte zwischen diesen bei der Vergabe
-der IP Adressen geben k\"onnte.
+beispielsweise der DHCP Server innerhalb der Dom\"ane autorisiert werden, damit
+die Clients eine entsprechende IP Adresse abrufen k\"onnen.  Zus\"atzlich muss
+das DHCP verschiedene Sicherheitsgruppen anlegen, die der DHCP Server
+ben\"otigt. Nach klicken auf \enquote{weiter} werden Anmeldeinformationen f\"ur
+die Dom\"ane abgefragt. Hier muss ein Dom\"anen Administrator eingetragen sein,
+da nur dieser entsprechende Autorisierungen des DHCP Servers durchf\"uhren
+darf. Windows f\"ullt diesen, da der DHCP Server auf der gleichen Virtuellen
+Maschine wie der Domaincontroller installiert ist, standardm\"aßig mit dem
+Administrator aus, da dieser bereits w\"ahrend der Installationsroutine als
+Dom\"anen Administrator hinzugef\"ugt wurde. Der Nutzer hat die M\"oglichkeit,
+alternative Anmeldeinformationen anzugeben. Die Autorisierung des DHCP Servers
+ist n\"otigt, falls mehrere DHCP Server innerhalb einer Dom\"ane arbeiten, da
+andernfalls es Konflikte zwischen diesen bei der Vergabe der IP Adressen geben
+k\"onnte.
 
 Mit klicken auf \enquote{Commit ausf\"uhren} wird die Autorisierung, sowie das
 Anlegen der entsprechenden Sicherheitsgruppen im Active Directory
 durchgef\"uhrt.
 
-Im Anschluss erh\"alt der Administrator eine Zusammenfassung der
-Konfiguration, ob die Konfiguration durchgelaufen ist.
+Im Anschluss erh\"alt der Administrator eine Zusammenfassung der Konfiguration,
+ob die Konfiguration durchgelaufen ist.
 
 Die Grundkonfiguration des DHCP Server ist abgeschlossen. Als n\"achsten
-Schritten m\"ussen nun innerhalb des DHCP Servers Bereiche definiert
-werden. Hierzu muss zun\"achst unter Tools \textgreater{} DHCP die
-Verwaltungskonsole des DHCP aufgerufen werden, da nur in dieser Bereiche
-und Konfigurationen durchgef\"uhrt werden k\"onnen.
+Schritten m\"ussen nun innerhalb des DHCP Servers Bereiche definiert werden.
+Hierzu muss zun\"achst unter Tools \hyp{}\textgreater{} DHCP die
+Verwaltungskonsole des DHCP aufgerufen werden, da nur in dieser Bereiche und
+Konfigurationen durchgef\"uhrt werden k\"onnen.
 
-Um einen Bereich zu konfigurieren, muss zun\"achst im DHCP Verwaltungstool
-der DHCP Server ausgew\"ahlt werden. Anschließend gibt es die Auswahl
-zwischen IPv4 oder IPv6. Die Firma Mikado verwendet IPv4, weshalb hier
-der Bereich auf IPv4 beschr\"ankt werden kann. Mit Rechtsklick auf IPv4
-\"offnet sich ein Untermen\"u, wo \enquote{neuer Bereich} ausgew\"ahlt wird. Es
-\"offnet sich ein Bereitstellungs-assistent, welcher den Administrator
-durch die Konfiguration leitet. Mit klicken auf \enquote{weiter}, muss zun\"achst
-ein Name f\"ur den Bereich und eine Beschreibung festgelegt werden. Sobald
-diese definiert wurde, muss die Start und End IP Adresse definiert
-werden, sowie die Subnetzl\"ange.
+Um einen Bereich zu konfigurieren, muss zun\"achst im DHCP Verwaltungstool der
+DHCP Server ausgew\"ahlt werden. Anschließend gibt es die Auswahl zwischen IPv4
+oder IPv6. Die Firma Mikado verwendet IPv4, weshalb hier der Bereich auf IPv4
+beschr\"ankt werden kann. Mit Rechtsklick auf IPv4 \"offnet sich ein
+Untermen\"u, wo \enquote{neuer Bereich} ausgew\"ahlt wird. Es \"offnet sich ein
+Bereitstellungs-assistent, welcher den Administrator durch die Konfiguration
+leitet. Mit klicken auf \enquote{weiter}, muss zun\"achst ein Name f\"ur den
+Bereich und eine Beschreibung festgelegt werden. Sobald diese definiert wurde,
+muss die Start und End IP Adresse definiert werden, sowie die Subnetzl\"ange.
 
-Sollte ein IP Adressen Netzwerk viele IP Adressen beinhalten, so schl\"agt
-der Assistent vor, die IP Adressen in Bereichsgruppen aufzuteilen.
+Sollte ein IP Adressen Netzwerk viele IP Adressen beinhalten, so schl\"agt der
+Assistent vor, die IP Adressen in Bereichsgruppen aufzuteilen.
 
-Nach best\"atigen der IP Adressen, wird abgefragt, ob IP Adressen
-ausgenommen werden sollen. Beispielsweise bei Servern oder Applikationen
-die immer die gleiche IP Adresse ben\"otigen. Sollten hier keine Ausnahmen
-definiert werden m\"ussen, wird anschließend die Lease Time abgefragt. Die
-Lease Time bestimmt, wie lange eine IP Adresse f\"ur einen Client g\"ultig
-sein darf. Sobald die Lease Time abl\"auft, f\"ur der Client erneut eine
-DHCP Anfrage durch, um erneut die IP Adresse f\"ur sich zu reservieren. Da
-es sich bei der Firma Mikado um festdefinierte PCs handelt, empfiehlt es
-sich hier die Lease Time auf den Standardwert von 8 Tage belassen.
-Sollte beispielsweise die Firma Mikado eine WLAN Infrastruktur, f\"ur
-Kunden anbieten, so sollte die Lease Time f\"ur diesen Bereich auf wenige
-Stunden herabgesetzt werden.
+Nach best\"atigen der IP Adressen wird abgefragt, ob IP Adressen ausgenommen
+werden sollen. Beispielsweise bei Servern oder Applikationen die immer die
+gleiche IP Adresse ben\"otigen. Sollten hier keine Ausnahmen definiert werden
+m\"ussen, wird anschließend die Lease Time abgefragt. Die Lease Time bestimmt,
+wie lange eine IP Adresse f\"ur einen Client g\"ultig sein darf. Sobald die
+Lease Time abl\"auft, f\"uhrt der Client erneut eine DHCP Anfrage durch, um
+erneut die IP Adresse f\"ur sich zu reservieren. Da es sich bei der Firma
+Mikado um fest definierte PCs handelt, empfiehlt es sich hier die Lease Time
+auf den Standardwert von 8 Tage belassen. Sollte beispielsweise die Firma
+Mikado eine WLAN Infrastruktur f\"ur Kunden anbieten, so sollte die Lease Time
+f\"ur diesen Bereich auf wenige Stunden herabgesetzt werden. Hinweis: Das WLAN
+sollte aus Sicherheitsgr\"unden eine eigene Layer 2 Domäne bekommen.
 
-Eine kurze Lease Time sollte ebenfalls verwendet werden, wenn der DHCP
-Server nur einen sehr beschr\"ankten Raum f\"ur IP Adressen besitzt. Sollte
-der DHCP Server keine IP Adressen mehr vergeben k\"onnen, weil
-beispielsweise alle vergeben sind, so k\"onnen keine neuen Ger\"ate mit der
-Infrastruktur kommunizieren.
+Eine kurze Lease Time sollte ebenfalls verwendet werden, wenn der DHCP Server
+nur einen sehr beschr\"ankten Raum f\"ur IP Adressen besitzt. Sollte der DHCP
+Server keine IP Adressen mehr vergeben k\"onnen, weil beispielsweise alle
+vergeben sind, so k\"onnen keine neuen Ger\"ate mit der Infrastruktur
+kommunizieren.
 
-Im n\"achsten Schritt wird abgefragt, ob die DHCP Optionen aktiviert
-werden sollen. Diese definieren, das Standardgateway, den DNS Server,
-sowie den WIN Server f\"ur diesen Bereich, welche in der DHCP Abfrage dem
-Client zugeschickt wird.
+Im n\"achsten Schritt wird abgefragt, ob die DHCP Optionen aktiviert werden
+sollen. Diese definieren das Standardgateway, den DNS Server, sowie den WINS
+Server f\"ur diesen Bereich, welche in der DHCP Abfrage dem Client zugeschickt
+wird.
 
 Sobald das Standardgateway abgefragt wurde, werden nachtr\"aglich noch die
-Einstellungen f\"ur die Dom\"ane sowie den DNS Server und den WinSServer
-abgefragt. Abschließend muss entschieden werden, ob dieser Bereich
-bereits aktiviert wird oder nachtr\"aglich aktiviert werden muss. Sobald
-dies best\"atigt wurde ist der Bereich fertig konfiguriert.
+Einstellungen f\"ur die Dom\"ane sowie den DNS Server und den WINS Server
+abgefragt. Abschließend muss entschieden werden, ob dieser Bereich bereits
+aktiviert wird oder nachtr\"aglich aktiviert werden muss. Sobald dies
+best\"atigt wurde, ist der Bereich fertig konfiguriert.
 
 Diese Einstellung muss nun f\"ur jede Abteilung, sowie f\"ur die Server IP
 Range definiert werden.
 
-Bei der Server IP Range ist besonders, dass hier entsprechend die Server
-eine Manuelle IP Adressen erhalten, bzw. aus der Adressvergabe des DHCP
-Server ausgenommen werden. Die Administrationsrechner erhalten ebenfalls
-eine fest zugewiesene IP Adresse und sind in dem gleichen IP Bereich wie
-die Server.
+Bei der Server IP Range ist besonders, dass hier entsprechend die Server eine
+Manuelle IP Adressen erhalten, beziehungsweise aus der Adressvergabe des DHCP
+Server ausgenommen werden. Die Administrationsrechner erhalten ebenfalls eine
+fest zugewiesene IP Adresse und sind in dem gleichen IP Bereich wie die Server.
 
 Der Aufbau des DHCP Bereiche sieht nun wie folgt aus:
 
