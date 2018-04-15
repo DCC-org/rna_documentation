@@ -125,3 +125,13 @@ This requires the following in `~/.vim/ftplugin/tex.vim`:
 setl lbr
 set colorcolumn=80
 ```
+
+### Quote something
+
+That's pretty easy:
+
+```latex
+\enquote{stuff we want to quote}
+```
+
+Requires csquotes and polyglossia. Language needs to be defined.
