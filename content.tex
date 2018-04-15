@@ -476,14 +476,18 @@ werden.
 \subsection{Test des Failovers}\label{test-des-failovers}
 
 Um den Test des DHCP Failovers \"uberpr\"ufen zu k\"onnen, wurde zun\"achst der
-Windows 7 Client, welcher innerhalb des Netzwerks ist gestartet und
-anschließend die Eingabeaufforderung gestartet, zudem wurden beide DC
-mit entsprechender DHCP Rolle gestartet.
+Windows 7 Client, welcher innerhalb des Netzwerks ist, gestartet und
+anschließend die Eingabeaufforderung gestartet. Zudem wurden beide DC mit
+entsprechender DHCP Rolle gestartet.
 
-Innerhalb der Eingabeaufforderung, wird nun folgender Befehl eingegeben
+Innerhalb der Eingabeaufforderung wird nun folgender Befehl eingegeben
 damit die aktuelle IP Konfiguration ausgegeben wird:
 
-Ip config /all
+\begin{listing}[ht]
+  \inputminted[fontsize=\small]{text}{listings/ipconfig.txt}
+  \caption{Ausgabe der IP Konfiguration auf einem Windows 7}
+  \label{lst:ipconfig}
+\end{listing}
 
 Die Eingabeaufforderung, zeigt folgendes Ergebnis:
 
