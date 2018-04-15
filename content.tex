@@ -445,30 +445,30 @@ Der Aufbau des DHCP Bereiche sieht nun wie folgt aus:
   \label{figure:dnsstructure}
 \end{figure}
 
-Bereiche, welche deaktiviert sind erhalten an dem Ordnersymbol einen
-kleinen roten Pfeil nach unten. Besondere Bereiche oder Bereiche, welche
-eine Ausnahme oder eine Aktion erfordern, haben ein weißes
-Ausrufezeichen. Aktivierte Bereiche, wie zum Beispiel der Bereich
-Leitung erh\"alt keine besonderen Symbole.
+Bereiche, welche deaktiviert sind, erhalten an dem Ordnersymbol einen kleinen
+roten Pfeil nach unten. Besondere Bereiche oder Bereiche, welche eine Ausnahme
+oder eine Aktion erfordern, haben ein weißes Ausrufezeichen. Aktivierte
+Bereiche, wie zum Beispiel der Bereich \enquote{Leitung} erh\"alt keine
+besonderen Symbole.
 
-Bei dem Anlegen der einzelnen Bereiche wird ebenfalls festgelegt, das
-bei neuen Lease Abrufen der Clients, diese automatisch als DNS Eintr\"age
-(A-Eintr\"age) festgelegt werden. Dies kann jedoch deaktiviert werden. Um
-einen Bereich zu ver\"andern, kann mit einem Rechtsklick die Eigenschaften
-wie IP Adressbereich etc. abge\"andert werden. Ebenfalls kann hier unter
-dem Reiter DNS auch ein DHCP Namensschutz eingerichtet werden. Dies
+Bei dem Anlegen der einzelnen Bereiche wird ebenfalls festgelegt, dass bei
+neuen Lease Abrufen der Clients, diese automatisch als DNS Eintr\"age (A
+Records, optional PTR Records) festgelegt werden. Dies kann jedoch deaktiviert
+werden. Um einen Bereich zu ver\"andern, kann mit einem Rechtsklick die
+Eigenschaften wie IP Adressbereich etc. \ abge\"andert werden. Ebenfalls kann
+hier unter dem Reiter DNS auch ein DHCP Namensschutz eingerichtet werden. Dies
 sorgt daf\"ur, das bereits vorhandene DNS Eintr\"age \"uberschrieben werden
 k\"onnen.
 
-Innerhalb eines Bereiches k\"onnen Reservierungen f\"ur beispielsweise
-Drucker festgelegt werden. Hierzu muss ein entsprechender Bereich
-aufgeklappt und anschließend mit Rechtsklick auf Reservierungen die
-Reservierung hinzugef\"ugt werden.
+Innerhalb eines Bereiches k\"onnen Reservierungen f\"ur beispielsweise Drucker
+festgelegt werden. Hierzu muss ein entsprechender Bereich aufgeklappt und
+anschließend mit Rechtsklick auf Reservierungen die Reservierung hinzugef\"ugt
+werden.
 
 Da innerhalb einer Dom\"ane immer ein DHCP Server erreichbar sein sollte,
-sollte unter den Eigenschaften des IPv4 ein Sekund\"arer DHCP Server
-eingetragen werden. Dieser \"ubernimmt die Aufgaben und Bereiche, falls
-der Prim\"are DHCP Server nicht mehr antwortet.
+sollte unter den Eigenschaften des IPv4 ein sekund\"arer DHCP Server
+eingetragen werden. Dieser \"ubernimmt die Aufgaben und Bereiche, falls der
+Prim\"are DHCP Server nicht mehr antwortet.
 
 Der DHCP Server ist nun vollst\"andig Konfiguriert und kann nun verwendet
 werden.
