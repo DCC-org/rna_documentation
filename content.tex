@@ -586,7 +586,7 @@ darstellen.
 Der Assistent gibt zu jedem Profil auf der rechten Seite eine kurze
 Beschreibung mit, um was es sich bei diesem Profil handelt. F\"ur die Firma
 Mikado m\"ussen mehrere SMB Freigaben angelegt werden, weshalb hier
-SMB-Freigabe -- Erweitert ausgew\"ahlt wird.
+\enquote{SMB-Freigabe -- Erweitert} ausgew\"ahlt wird.
 
 Im n\"achsten Schritt wird nun der Server ausgew\"ahlt, auf dem die Freigabe
 durchgef\"uhrt werden soll, sowie der Speicherort. Da innerhalb der
@@ -603,13 +603,17 @@ Ablage f\"ur die Abteilung besitzt.
 Der Server zeigt nach der Eingabe des Namens unmittelbar den Lokalen, wie auch
 den Remotepfad zu dieser Freigabe an:
 
-Lokaler Pfad zur Freigabe:
+\begin{listing}[ht]
+  \inputminted[fontsize=\small]{text}{listings/share1.txt}
+  \caption{Lokaler Pfad zur Freigabe}
+  \label{lst:share2}
+\end{listing}
 
-C:\textbackslash{}Shares\textbackslash{}Leitung
-
-Remote Pfad zur Freigabe:
-
-\textbackslash{}\textbackslash{}w16dc01\textbackslash{}Leitung
+\begin{listing}[ht]
+  \inputminted[fontsize=\small]{text}{listings/share2.txt}
+  \caption{Remote Pfad zur Freigabe}
+  \label{lst:share2}
+\end{listing}
 
 Nachdem der Freigabename definiert wurde, werden weitere \enquote{andere
 Einstellungen} abgefragt. Diese k\"onnen f\"ur die Abteilungsfreigabeordner
