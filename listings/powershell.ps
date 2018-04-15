@@ -1,0 +1,6 @@
+$password = "XTi114!" | ConvertTo-SecureString -AsPlainText -Force
+New-ADUser -Name 'Nikolai Luis' -SamAccountName 00003 -UserPrincipalName 00003 \
+-DisplayName 'Nikolai Luis' -GivenName Nikolai -Surname Louis -Path \
+"OU=Benutzer,OU=Leitung,OU=Mitarbeiter,DC=Mikado,DC=Spiel" -AccountPassword \
+$Password -ChangePasswordAtLogon $True -Enabled $True -ProfilePath \
+\\w16dc01\profiles$\00003 -hmdir \\w16dc01\home$\00003

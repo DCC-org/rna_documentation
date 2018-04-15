@@ -1024,32 +1024,25 @@ wird er \"uber den DHCP Server in die Zone aufgenommen und hinterlegt.
 
 \subsection{Skript zum Anlegen von Nutzern, Computern}
 
-Anlegen von Nutzern oder Computern und Zuweisung f\"ur deren Richtlinie,
-kann entweder manuell durchgef\"uhrt werden oder aber mittels Script~\cite{Microsoft_technet}
-ausgef\"uhrt werden. Zus\"atzlich zu diesem Skript, gibt es ebenfalls noch
-das Anmeldeskript, worauf nachtr\"aglich im n\"achsten Kapitel eingegangen
-wird.
+Anlegen von Nutzern oder Computern und Zuweisung f\"ur deren Richtlinie, kann
+entweder manuell durchgef\"uhrt werden oder aber mittels Script ausgef\"uhrt
+werden~\cite{Microsoft_technet}. Zus\"atzlich zu diesem Skript, gibt es
+ebenfalls noch das Anmeldeskript, worauf nachtr\"aglich im n\"achsten Kapitel
+eingegangen wird.
 
-\$password = „XTi114!`` \textbar{} ConvertTo-SecureString -AsPlainText
--Force
+\begin{listing}[ht]
+  \inputminted[fontsize=\small]{powershell}{listings/powershell.ps}
+  \caption{Powershell Script zum ANlegen von AD Nutzern}
+  \label{lst:powershell}
+\end{listing}
 
-New-ADUser -Name 'Nikolai Luis' -SamAccountName 00003 -UserPrincipalName
-00003 -DisplayName 'Nikolai Luis' -GivenName Nikolai -Surname Louis
--Path „OU=Benutzer,OU=Leitung,OU=Mitarbeiter,DC=Mikado,DC=Spiel``
--AccountPassword \$Password -ChangePasswordAtLogon \$True -Enabled
-\$True -ProfilePath
-\textbackslash{}\textbackslash{}w16dc01\textbackslash{}profiles\$\textbackslash{}00003
--hmdir
-\textbackslash{}\textbackslash{}w16dc01\textbackslash{}home\$\textbackslash{}00003
+Das oben stehende PowerShell Skript, f\"ugt einen vordefinierten Benutzer an
+die angegebene OU und DC ein. Er erh\"alt ein Passwort \enquote{XTi114!},
+welches nach der Anmeldung direkt ge\"andert werden muss. Bedingt dadurch das
+die PS Eingabe keine Klartext Passw\"orter verwenden kann, muss dieses zuvor in
+einen Sicheren String umgewandelt werden.
 
-Das oben stehende PowerShell Skript, f\"ugt einen vordefinierten Benutzer
-an die angegebene OU und DC ein. Er erh\"alt ein Passwort \enquote{XTi114!}
-welches nach der Anmeldung direkt ge\"andert werden muss. Bedingt dadurch
-das die PS Eingabe keine Klartext Passw\"orter verwenden kann, muss dieses
-zuvor in einen Sicheren String umgewandelt werden.
-
-\hypertarget{anmeldeskript}{%
-\subsection{Anmeldeskript}\label{anmeldeskript}}
+\subsection{Anmeldeskript}
 
 Ein AnmeldeSkript wird w\"ahrend der Anmeldung eines Nutzers geladen und
 angewendet. In einem solchen, k\"onnen beispielsweise Netzlaufwerke,
