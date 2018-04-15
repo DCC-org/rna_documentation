@@ -799,7 +799,7 @@ nun wie folgt aus:
 \begin{figure}[H]
   \centering
   \includegraphics[width=2.98958in,height=4.58333in]{figures/image9.png}
-  \caption{Struktur im Active Directory}\label{figure:adstructure}
+  \caption{Struktur im Active Directory}\label{figure:adstructure2}
 \end{figure}
 
 Jede Abteilung hat eine einzelne Organisationseinheit zugewiesen bekommen.
@@ -1307,7 +1307,7 @@ Druckertreiberaktualisierungen k\"onnen so zentral gesteuert werden.
 \begin{figure}[h]
   \centering
   \includegraphics[width=2.04167in,height=1.75in]{figures/image19.png}
-  \caption{Ansicht der Druckverwaltung}\label{figure:newroles}
+  \caption{Ansicht der Druckverwaltung}\label{figure:printer}
 \end{figure}
 
 Über Rechtsklick, k\"onnen unter \enquote{Drucker hinzuf\"ugen} weitere Drucker
@@ -1317,7 +1317,7 @@ eigenst\"andig das Netzwerk, nach dem angegeben Druckern.
 \begin{figure}[h]
   \centering
   \includegraphics[width=4.84375in,height=0.72917in]{figures/image20.png}
-  \caption{\"Ubesicht \"uber alle Drucker}\label{figure:newroles}
+  \caption{\"Ubesicht \"uber alle Drucker}\label{figure:moreprinterwtf}
 \end{figure}
 
 \section{Gruppenrichtlinien}
@@ -1457,7 +1457,7 @@ Richtlinie aktiviert werden:
 \begin{figure}[h]
   \centering
   \includegraphics[width=6.3in,height=2.23548in]{figures/image24.png}
-  \caption{Konfiguration f\"ur Wechselmedienzugriff}\label{figure:passwordfoo2143}
+  \caption{Konfiguration f\"ur Wechselmedienzugriff}\label{figure:ptj}
 \end{figure}
 
 Sollte diese Regel aktiviert werden, sind alle Wechseldatentr\"ager an diesem
@@ -1471,27 +1471,28 @@ werden, falls kein Anmeldeskript oder Skript beim An- oder Abmelden hinterlegt
 ist, da dieses andernfalls nicht ausgef\"uhrt werden kann. Sollte kein
 Anmeldeskript oder sonstige Skripte vorhanden sein, die eine
 Eingabeaufforderung bed\"urfen, kann diese Richtlinie unter
-Benutzerkonfiguration \textgreater{} Administrative Vorlage \textgreater{}
-System \textgreater{} Zugriff auf Eingabeaufforderung verhindern aktiviert
-werden.
+Benutzerkonfiguration \hyp{}\textgreater{} Administrative Vorlage
+\hyp{}\textgreater{} System \hyp{}\textgreater{} Zugriff auf
+Eingabeaufforderung verhindern aktiviert werden.
 
 Zuweisen von Laufwerken und Druckern, kann ebenfalls \"uber eine
 Gruppenrichtlinie festgelegt werden.
 
-\hypertarget{zugriff-auf-systemadministration}{%
-\subsection{Zugriff auf
-Systemadministration}\label{zugriff-auf-systemadministration}}
+\subsection{Zugriff auf Systemadministration}
 
 Um den Zugriff auf Systemeinstellungen zu verbieten, damit hier keine
 Änderungen an dem Computersystem vorgenommen werden kann, wird diese
-Konfigurationsm\"oglichkeit, f\"ur jeden Benutzer deaktiviert. Damit kann
-ein Benutzer die Systemsteuerung, sowie Informationen zu Konfiguration
-des Computers nicht mehr abrufen oder ver\"andern. Diese Richtlinie kann
-innerhalb der Gruppenrichtlinie unter Benutzerkonfiguration
-\textgreater{} Administrative Vorlagen \textgreater{} Systemsteuerung
-aktiviert werden.
+Konfigurationsm\"oglichkeit f\"ur jeden Benutzer deaktiviert. Damit kann ein
+Benutzer die Systemsteuerung, sowie Informationen zu Konfiguration des
+Computers nicht mehr abrufen oder ver\"andern. Diese Richtlinie kann innerhalb
+der Gruppenrichtlinie unter Benutzerkonfiguration \hyp{}\textgreater{} Administrative
+Vorlagen \hyp{}\textgreater{} Systemsteuerung aktiviert werden.
 
-\includegraphics[width=6.3in,height=2.58125in]{figures/image25.png}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=6.3in,height=2.58125in]{figures/image25.png}
+  \caption{GPO Editor f\"ur Zugriff auf die Systemsteuerung}\label{figure:passwordfoo546456}
+\end{figure}
 
 \hypertarget{datenaustausch}{%
 \section{Datenaustausch}\label{datenaustausch}}
