@@ -221,7 +221,7 @@ Im folgenden Abbild ist der Aufbau dargestellt:
 
 \begin{figure}[H]
   \centering
-  \includegraphics{figures/image1.png}
+  \includegraphics[max width=\textwidth]{figures/image1.png}
   \caption{Gliederung der OUs im Active Directory}
   \label{figure:adstructure}
 \end{figure}
@@ -285,7 +285,7 @@ kann, bedarf es folgende weitere Funktionen:
 
 \begin{figure}[H]
   \centering
-  \includegraphics{figures/image2.png}
+  \includegraphics[max width=\textwidth]{figures/image2.png}
   \caption{Rollen- und Funktionsverwaltung}
   \label{figure:functions}
 \end{figure}
@@ -440,7 +440,7 @@ Der Aufbau des DHCP Bereiche sieht nun wie folgt aus:
 
 \begin{figure}[H]
   \centering
-  \includegraphics{figures/image3.png}
+  \includegraphics[max width=\textwidth]{figures/image3.png}
   \caption{Gliederung der DNS Struktur f\"ur IPv4 Adressen}
   \label{figure:dnsstructure}
 \end{figure}
@@ -493,7 +493,7 @@ Die Eingabeaufforderung, zeigt folgendes Ergebnis:
 
 \begin{figure}[H]
   \centering
-  \includegraphics{figures/image4.png}
+  \includegraphics[max width=\textwidth]{figures/image4.png}
   \caption{IP Konfiguration aller Interfaces}
   \label{figure:ipconfig}
 \end{figure}
@@ -507,7 +507,7 @@ aus:
 
 \begin{figure}[H]
   \centering
-  \includegraphics{figures/image5.png}
+  \includegraphics[max width=\textwidth]{figures/image5.png}
   \caption{IP Konfiguration eines Interfaces}
   \label{figure:ipconfig2}
 \end{figure}
@@ -557,7 +557,7 @@ unter Aufgaben eine neue Freigabe ausgew\"ahlt werden:
 
 \begin{figure}[H]
   \centering
-  \includegraphics{figures/image6.png}
+  \includegraphics[max width=\textwidth]{figures/image6.png}
   \caption{Erstellen von neuen Freigaben}
   \label{figure:sharemanager}
 \end{figure}
@@ -676,7 +676,7 @@ angelegt. Das Ergebnis sollte wie folgt aussehen:
 
 \begin{figure}[H]
   \centering
-  \includegraphics{figures/image7.png}
+  \includegraphics[max width=\textwidth]{figures/image7.png}
   \caption{\"Ubersicht der einzelnen Aufgaben beim erstellen einer neuen Freigabe}
   \label{figure:shares}
 \end{figure}
@@ -738,63 +738,61 @@ mit weiter best\"atigt werden.
 Im nachfolgenden Dialog k\"onnen Dom\"anencontrolleroptionen eingestellt
 werden. Dabei muss nun f\"ur die Gesamtstrukturfunktionsebene, sowie der
 Dom\"anenfunktionsebene der \"alteste DC definiert werden. Da innerhalb der
-Testumgebung sowohl ein DC auf einem Windows Server 2012R2 und einer auf
-Windows Server 2016 installiert werden muss, muss hier Windows Server
-2012R2 ausgew\"ahlt werden. Dies kann nachtr\"aglich nicht nach unten
-korrigiert werden.
+Testumgebung sowohl ein DC auf einem Windows Server 2012 R2 und einer auf
+Windows Server 2016 installiert werden muss, muss hier Windows Server 2012 R2
+ausgew\"ahlt werden. Dies kann nachtr\"aglich nicht nach unten korrigiert
+werden.
 
-Der Kontrollk\"astchen bei DNS Server sollte gesetzt werden, da jeder DC
-auch DNS Server sein kann. Da es sich hierbei um den ersten DC in der
-Gesamtstruktur handelt, muss dieser ebenfalls als Globaler Katalog
-definiert werden.
+Der Kontrollk\"astchen bei DNS Server sollte gesetzt werden, da jeder DC auch
+DNS Server sein kann. Da es sich hierbei um den ersten DC in der Gesamtstruktur
+handelt, muss dieser ebenfalls als Globaler Katalog definiert werden.
 
-Der Globale Katalog dient f\"ur dom\"anen\"ubergreifende Suchfunktionen f\"ur AD
-Objekte. Er speichert ausgew\"ahlte Attribute aller Objekte aus allen
+Der Globale Katalog dient f\"ur dom\"anen\"ubergreifende Suchfunktionen f\"ur
+AD Objekte. Er speichert ausgew\"ahlte Attribute aller Objekte aus allen
 Dom\"anen.
 
-Abschließend muss hier ein Wiederherstellungskennwort definiert werden,
-welches ben\"otigt wird falls AD-Objekte gel\"oscht wurden um diese
-wiederherzustellen. Das Kennwort muss nach dem booten in den
-Verzeichnisdienst Wiederherstellungsmodus eingegeben werden. Ohne dieses
-k\"onnen gel\"oschte AD-Objekte nicht wiederhergestellt werden.
+Abschließend muss hier ein Wiederherstellungskennwort definiert werden, welches
+ben\"otigt wird falls AD-Objekte gel\"oscht wurden um diese wiederherzustellen.
+Das Kennwort muss nach dem booten in den Verzeichnisdienst
+Wiederherstellungsmodus eingegeben werden. Ohne dieses k\"onnen gel\"oschte
+AD-Objekte nicht wiederhergestellt werden.
 
-Windows schl\"agt anschließend einen NetBIOS --Dom\"anennamen vor, welcher
-sich aus dem ersten Bestandteil des FQDNs zusammensetzt. Dieser kann
-muss jedoch nicht angepasst werden.
+Windows schl\"agt anschließend einen NetBIOS Dom\"anennamen vor, welcher sich
+aus dem ersten Bestandteil des FQDNs zusammensetzt. Dieser kann, muss jedoch
+nicht angepasst werden.
 
-Nach erneutem best\"atigen auf \enquote{weiter}, werden die Speicherorte f\"ur die
-AD DS Datenbanken, sowie Protokolldateien abgefragt. Diese k\"onnen
+Nach erneutem best\"atigen auf \enquote{weiter}, werden die Speicherorte f\"ur
+die AD DS Datenbanken, sowie Protokolldateien abgefragt. Diese k\"onnen
 ebenfalls bei Bedarf angepasst werden. Die n\"achste Seite, zeigt nun eine
 Gesamt\"ubersicht der Änderungen an, welche zuvor definiert worden sind.
-Ebenfalls kann hieraus ein PowerShell Skript erzeugt werden, welches
-ggf. angepasst werden kann.
+Ebenfalls kann hieraus ein PowerShell Skript erzeugt werden, welches ggf.
+angepasst werden kann.
 
 Abschließend \"uberpr\"uft die Installationsroutine ein letztes Mal, ob alle
-Einstellungen und Anforderungen erf\"ullt sind. Dabei werden bereits
-einige Warnung angezeigt, welche ignoriert werden k\"onnen. Sobald die
+Einstellungen und Anforderungen erf\"ullt sind. Dabei werden bereits einige
+Warnung angezeigt, welche ignoriert werden k\"onnen. Sobald die
 Installationsroutine mit \enquote{installieren} durchgelaufen ist, wird der
-Lokale Administrator des Windows Servers automatisch Mitglied der
-Gruppen Organisations-, Schema- und Dom\"anen-Admins und hat somit die
-Berechtigung Änderungen und Anpassungen durchf\"uhren zu d\"urfen. Ebenso
-wird der DNS Server des Windows Servers innerhalb der IP Konfiguration
-hinterlegt. Der Windows Server 2016 wird dabei mehrmals neugestartet und
-in die Dom\"ane eingebunden.
+Lokale Administrator des Windows Servers automatisch Mitglied der Gruppen
+Organisations-, Schema- und Dom\"anen-Admins und hat somit die Berechtigung
+Änderungen und Anpassungen durchf\"uhren zu d\"urfen. Ebenso wird der DNS
+Server des Windows Servers innerhalb der IP Konfiguration hinterlegt. Der
+Windows Server 2016 wird dabei mehrmals neugestartet und in die Dom\"ane
+eingebunden.
 
-\subsection{EDV-Struktur im Active
-Directory}\label{edv-struktur-im-active-directory}
+\subsection{EDV-Struktur im Active Directory}
 
 Der Aufbau des Active Directory, sollte im Regelfall analog der
 Unternehmensstruktur aufgeteilt sein. Innerhalb des ADs werden diese in
 Organisationseinheiten aufgeteilt. Letztendlich k\"onnen solche
-Organisationseinheiten auch Standorte wiederspiegeln.
-Organisationseinheiten sollen bei den Verwaltungsaufgaben helfen. Jeder
-Angelegte Benutzer, welcher keiner Organisationseinheit hinterlegt wurde
-wird in den Container \enquote{User} abgelegt. Bei mehreren Hundert Nutzern
-w\"aren diese alle in dem User Container enthalten. Dies k\"onnte jedoch
-gerade in Bezug auf die Rechte vergabe Probleme verursachen, da
-unterschiedliche Nutzer auch unterschiedliche Berechtigungen erhalten.
-So k\"onnte man je Organisationseinheit unterschiedliche Berechtigungen
-zuweisen ohne jeden Nutzer einzeln ver\"andern zu m\"ussen.
+Organisationseinheiten auch Standorte wiederspiegeln.  Organisationseinheiten
+sollen bei den Verwaltungsaufgaben helfen. Jeder Angelegte Benutzer, welcher
+keiner Organisationseinheit hinterlegt wurde wird in den Container
+\enquote{User} abgelegt. Bei mehreren Hundert Nutzern w\"aren diese alle in dem
+User Container enthalten. Dies k\"onnte jedoch gerade in Bezug auf die Rechte
+vergabe Probleme verursachen, da unterschiedliche Nutzer auch unterschiedliche
+Berechtigungen erhalten.  So k\"onnte man je Organisationseinheit
+unterschiedliche Berechtigungen zuweisen ohne jeden Nutzer einzeln ver\"andern
+zu m\"ussen.
 
 Um neue Organisationseinheiten hinzuf\"ugen zu k\"onnen, muss auf die Dom\"ane
 mit Rechtsklick \textgreater{} Neu \textgreater{} Organisationseinheit
