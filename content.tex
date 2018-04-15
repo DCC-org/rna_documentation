@@ -283,8 +283,8 @@ Server zeigt eine Auflistung aller Rollen und Funktionen an. Sobald eine Rolle
 ausgewählt wurde, weist der Server auf weitere Funktionen hin, die benötigt
 werden, damit diese ausgewählte Rolle verwendet werden kann.
 
-Damit die Rolle „Active Directory-Domänendienste'' installiert werden kann,
-bedarf es folgende weitere Funktionen:
+Damit die Rolle \enquote{Active Directory-Domänendienste} installiert werden
+kann, bedarf es folgende weitere Funktionen:
 
 \begin{figure}[H]
   \centering
@@ -293,15 +293,15 @@ bedarf es folgende weitere Funktionen:
   \label{figure:functions}
 \end{figure}
 
-Mit der Schaltfläche „Features hinzufügen'', werden anschließend Funktionen für
-die Installationsroutine zugefügt. Nach klicken auf „weiter'' wird die Meldung
-ausgegeben, dass der AD-Domänendienst einen DNS Server innerhalb des Netzwerks
-benötigt. Sofern dieser nicht vorhanden sein, wird er auf der gleichen Maschine
-zusätzlich installiert. Der DNS Server wird benötigt da dieser für die
-Auflösung der Rechnernamen und Druckernamen zuständig ist. Weitere
-Erläuterungen hierzu kann im DNS Kapitel entnommen werden. Abschließend wird
-eine Übersicht der Installationsroutine angezeigt, welche mit „Installieren''
-bestätigt werden kann.
+Mit der Schaltfläche \enquote{Features hinzufügen}, werden anschließend
+Funktionen für die Installationsroutine zugefügt. Nach klicken auf
+\enquote{weiter} wird die Meldung ausgegeben, dass der AD-Domänendienst einen
+DNS Server innerhalb des Netzwerks benötigt. Sofern dieser nicht vorhanden
+sein, wird er auf der gleichen Maschine zusätzlich installiert. Der DNS Server
+wird benötigt da dieser für die Auflösung der Rechnernamen und Druckernamen
+zuständig ist. Weitere Erläuterungen hierzu kann im DNS Kapitel entnommen
+werden. Abschließend wird eine Übersicht der Installationsroutine angezeigt,
+welche mit \enquote{Installieren} bestätigt werden kann.
 
 \section{DNS-Dienst}\label{dns-dienst}
 
@@ -318,7 +318,7 @@ dem Punkt Verwalten \textgreater{} Rollen und Funktionen hinzufügen
 ausgewählt werden. Wie auch bei der Installation des Active Directorys,
 zeigt auch hier die Installationsroutine weitere Tools an, die für die
 Verwendung des DHCP Servers empfohlen werden. Diese können über den
-Punkt „Funktionen hinzufügen`` ausgewählt werden. Nach Bestätigung auf
+Punkt \enquote{Funktionen hinzuf\"ugen} ausgewählt werden. Nach Bestätigung auf
 weiter, zeigt die Installationsroutine Informationen über das DHCP an.
 Zusätzlich erhält der Benutzer Hinweise das beispielsweise der aktuelle
 Server auf dem der DHCP Server installiert werden soll eine statische IP
@@ -328,7 +328,7 @@ Installationsroutine die Übersicht der Installation an. Hierbei kann
 ebenfalls ausgewählt werden, ob der Server selbständig Neustarts
 durchführen soll. Da es sich hierbei aktuell um eine Testumgebung
 handelt, kann dieses Kontrollkästchen aktiviert werden. Zum Schluss muss
-die Installation mit „installieren`` bestätigt werden. Der Server
+die Installation mit \enquote{installieren} bestätigt werden. Der Server
 beginnt nun mit der Installation des DHCP Servers.
 
 Nachdem der Server neugestartet wurde, ist der DHCP Server aktiv und
@@ -363,7 +363,7 @@ Konfigurationsschritte für den DHCP Server notwendig sind. So muss
 beispielsweise der DHCP Server innerhalb der Domäne autorisiert werden,
 damit die Clients eine entsprechende IP Adresse abrufen können.
 Zusätzlich muss das DHCP verschiedene Sicherheitsgruppen anlegen, die
-der DHCP Server benötigt. Nach klicken auf „weiter`` werden
+der DHCP Server benötigt. Nach klicken auf \enquote{weiter} werden
 Anmeldeinformationen für die Domäne abgefragt. Hier muss ein Domänen
 Administrator eingetragen sein, da nur dieser entsprechende
 Autorisierungen des DHCP Servers durchführen darf. Windows füllt diesen,
@@ -376,7 +376,7 @@ Servers ist nötigt, falls mehrere DHCP Server innerhalb einer Domäne
 arbeiten, da andernfalls es Konflikte zwischen diesen bei der Vergabe
 der IP Adressen geben könnte.
 
-Mit klicken auf „Commit ausführen`` wird die Autorisierung, sowie das
+Mit klicken auf \enquote{Commit ausführen} wird die Autorisierung, sowie das
 Anlegen der entsprechenden Sicherheitsgruppen im Active Directory
 durchgeführt.
 
@@ -393,9 +393,9 @@ Um einen Bereich zu konfigurieren, muss zunächst im DHCP Verwaltungstool
 der DHCP Server ausgewählt werden. Anschließend gibt es die Auswahl
 zwischen IPv4 oder IPv6. Die Firma Mikado verwendet IPv4, weshalb hier
 der Bereich auf IPv4 beschränkt werden kann. Mit Rechtsklick auf IPv4
-öffnet sich ein Untermenü, wo „neuer Bereich`` ausgewählt wird. Es
+öffnet sich ein Untermenü, wo \enquote{neuer Bereich} ausgewählt wird. Es
 öffnet sich ein Bereitstellungs-assistent, welcher den Administrator
-durch die Konfiguration leitet. Mit klicken auf „weiter``, muss zunächst
+durch die Konfiguration leitet. Mit klicken auf \enquote{weiter}, muss zunächst
 ein Name für den Bereich und eine Beschreibung festgelegt werden. Sobald
 diese definiert wurde, muss die Start und End IP Adresse definiert
 werden, sowie die Subnetzlänge.
@@ -528,7 +528,7 @@ Jede Domäne sollte einen DNS Server haben. Gibt es innerhalb einer
 Domäne unter Domänen, so muss dem DNS Server der obergeordneten Domäne
 dies mitteilen, damit dieser den DNS Server kennt. DNS Server arbeiten
 in der Regel nach dem Prinzip, wissen wo etwas zu finden ist. Sollte der
-DNS Server beispielsweise keinen Eintrag in der eigenen „Datenbank``
+DNS Server beispielsweise keinen Eintrag in der eigenen \enquote{Datenbank}
 finden, so prüft er hier die obergeordnete DNS Struktur, ob ihm dieser
 Name bekannt ist. DNS Server haben mehrere Zonen, eine Primäre und eine
 Sekundäre Zone. Eine Sekundäre Zone wird meist dann verwendet, wenn eine
@@ -601,12 +601,12 @@ Remote Pfad zur Freigabe:
 
 \textbackslash{}\textbackslash{}w16dc01\textbackslash{}Leitung
 
-Nachdem der Freigabename definiert wurde, werden weitere „andere
-Einstellungen`` abgefragt. Diese können für die Abteilungsfreigabeordner
+Nachdem der Freigabename definiert wurde, werden weitere \enquote{andere
+Einstellungen} abgefragt. Diese können für die Abteilungsfreigabeordner
 auf dem Standard belassen werden. Im späteren Verlauf werden noch zwei
-Ordner „Profiles\$`` und „Home\$`` angelegt. Bei diesen beiden Freigaben
+Ordner \enquote{Profiles\$} und \enquote{Home\$} angelegt. Bei diesen beiden Freigaben
 handelt es sich um die Servergespeicherten Profile. Dabei ist hier die
-Besonderheit, das bei dem Punkt „andere Einstellungen`` das
+Besonderheit, das bei dem Punkt \enquote{andere Einstellungen} das
 Zwischenspeichern der Freigabe zulassen deaktiviert ist, sowie das \$ am
 Ende des Freigabenamens vorhanden ist. Nur mit diesem \$ Zeichen, wird
 diese Freigabe nicht für die Benutzer sichtbar sein.
@@ -637,7 +637,7 @@ diese Freigabe erhalten sollen, wird folgende Berechtigung festgelegt:
 \end{itemize}
 
 Ändern, sowie Vollzugriff erhalten die Benutzer in diesem Falle nicht.
-Nach bestätigen auf „weiter``, wird diese zuvor hinzugefügte Gruppe den
+Nach bestätigen auf \enquote{weiter}, wird diese zuvor hinzugefügte Gruppe den
 Berechtigungen hinzugefügt. Im nächsten Schritt, wird die
 Ordnerverwaltungseigenschaft für den Verwendungszweck des Freigegeben
 Ordners festgelegt. Dies wird wie eine Klassifizierungsregel innerhalb
@@ -661,7 +661,7 @@ nicht lange dauern. Benutzer sollen in der Regel Daten, die sie während
 der Arbeit brauchen auf dem Abteilungslaufwerk ablegen.
 
 Abschließend erhält der Administrator eine Übersicht über die
-Freigabeeigenschaften. Sobald nun auf „erstellen`` geklickt wird, wird
+Freigabeeigenschaften. Sobald nun auf \enquote{erstellen} geklickt wird, wird
 der Freigabe Ordner auf dem Server mit den entsprechenden Berechtigungen
 angelegt. Das Ergebnis sollte wie folgt aussehen:
 
@@ -672,7 +672,7 @@ abschließen des Assistenten weiterhin bearbeitet und angepasst werden.
 
 Damit Servergespeicherte Profile innerhalb einer Freigabe abgelegt
 werden können, muss zunächst wie oben beschrieben jeweils eine Freigabe
-für „profiles\$`` und eines für „home\$`` angelegt werden.
+für \enquote{profiles\$} und eines für \enquote{home\$} angelegt werden.
 
 Hier sollte die Berechtigung auf eine bestimmte Benutzergruppe limitiert
 werden. Sinnvoll erscheint es hier eine Sicherheitsgruppe über das AD
@@ -711,12 +711,12 @@ Domänendienst}\label{active-directory-domuxe4nendienst}
 
 Nachdem die Grundinstallation abgeschlossen wurde, kann mit der
 eigentlichen Konfiguration begonnen werden. Bereits nach der Basis
-Installation, makelt der Windows Server „Konfiguration erforderlich`` an
+Installation, makelt der Windows Server \enquote{Konfiguration erforderlich} an
 und zeigt einen Link um den Server zum DomainController (DC)
 heraufzustufen. Anschließend muss die Art des Domänencontrollers
 festgelegt werden. Da es sich hierbei um eine neue Gesamtstruktur mit
-neuem DC handelt, muss hier „Neue Gesamtstruktur hinzufügen`` ausgewählt
-werden. Der DC benötigt nun die Stammdomäne, welche „Mikado.Spiel``
+neuem DC handelt, muss hier \enquote{Neue Gesamtstruktur hinzufügen} ausgewählt
+werden. Der DC benötigt nun die Stammdomäne, welche \enquote{Mikado.Spiel}
 lautet. Dies kann der Fully Qualified Domain Name sein, muss mindestens
 jedoch eine Second-Level-Domain sein. Anschließend muss mit weiter
 bestätigt werden.
@@ -748,7 +748,7 @@ Windows schlägt anschließend einen NetBIOS --Domänennamen vor, welcher
 sich aus dem ersten Bestandteil des FQDNs zusammensetzt. Dieser kann
 muss jedoch nicht angepasst werden.
 
-Nach erneutem bestätigen auf „weiter``, werden die Speicherorte für die
+Nach erneutem bestätigen auf \enquote{weiter}, werden die Speicherorte für die
 AD DS Datenbanken, sowie Protokolldateien abgefragt. Diese können
 ebenfalls bei Bedarf angepasst werden. Die nächste Seite, zeigt nun eine
 Gesamtübersicht der Änderungen an, welche zuvor definiert worden sind.
@@ -758,7 +758,7 @@ ggf. angepasst werden kann.
 Abschließend überprüft die Installationsroutine ein letztes Mal, ob alle
 Einstellungen und Anforderungen erfüllt sind. Dabei werden bereits
 einige Warnung angezeigt, welche ignoriert werden können. Sobald die
-Installationsroutine mit „installieren`` durchgelaufen ist, wird der
+Installationsroutine mit \enquote{installieren} durchgelaufen ist, wird der
 Lokale Administrator des Windows Servers automatisch Mitglied der
 Gruppen Organisations-, Schema- und Domänen-Admins und hat somit die
 Berechtigung Änderungen und Anpassungen durchführen zu dürfen. Ebenso
@@ -775,7 +775,7 @@ Organisationseinheiten aufgeteilt. Letztendlich können solche
 Organisationseinheiten auch Standorte wiederspiegeln.
 Organisationseinheiten sollen bei den Verwaltungsaufgaben helfen. Jeder
 Angelegte Benutzer, welcher keiner Organisationseinheit hinterlegt wurde
-wird in den Container „User`` abgelegt. Bei mehreren Hundert Nutzern
+wird in den Container \enquote{User} abgelegt. Bei mehreren Hundert Nutzern
 wären diese alle in dem User Container enthalten. Dies könnte jedoch
 gerade in Bezug auf die Rechte vergabe Probleme verursachen, da
 unterschiedliche Nutzer auch unterschiedliche Berechtigungen erhalten.
@@ -821,7 +821,7 @@ heraufgestuft werden. Wichtig ist hierbei, dass die Option
 Domänencontroller zu einer vorhanden Domäne hinzufügen ausgewählt sein
 muss, damit der DC in die vorhandenen Mikado Domäne zugefügt wird.
 
-Damit die Domäne ausgewählt werden kann, kann Rechts auf „auswählen``
+Damit die Domäne ausgewählt werden kann, kann Rechts auf \enquote{auswählen}
 geklickt werden. Es öffnet sich ein Windows Anmeldefenster, wo die
 Anmeldeinformationen von einer Domäne Administrator eingetragen werden
 müssen. Wichtig ist hier, dass ein Benutzer eingetragen wird, welcher
@@ -831,7 +831,7 @@ angezeigt.
 
 \includegraphics[width=5.6875in,height=2.45833in]{figures/image10.png}
 
-Nachdem die Domäne ausgewählt wurde, kann mit „weiter`` bestätigt
+Nachdem die Domäne ausgewählt wurde, kann mit \enquote{weiter} bestätigt
 werden. Jeder Domain Controller, sollte gleichzeitig ein DNS Server
 beinhalten, sowie ein Globaler Katalog sein, damit hier abfragen
 schneller durchgeführt werden können. Der DNS Server auf dem zweiten
@@ -843,7 +843,7 @@ versehentlichen Löschen von Ordnern oder AD Strukturen benötigt wird.
 Als nächsten Schritt muss die DNS Delegierung, sowie ausgewählt werden,
 von welchem DC repliziert werden soll. Da es zum aktuellen Zeitpunkt,
 bereits einen DC (w16dc01) gibt, kann dieser nachfolgend ausgewählt und
-mit „weiter`` bestätigt werden:
+mit \enquote{weiter} bestätigt werden:
 
 \includegraphics[width=5.8125in,height=1.3125in]{figures/image11.png}
 
@@ -877,13 +877,13 @@ Domäne eindeutig sein und besteht bei der Firma Mikado als 5 stellige
 Personalnummer. Eine Personalnummer darf nie doppelt vergeben werden, da
 diese zusätzlich in der Buchhaltung als Referenz für den Mitarbeiter
 verwendet wird. Nachdem diese Informationen eingetragen wurden, muss mit
-„weiter`` bestätigt werden. Es folgt die Abfrage nach dem
+\enquote{weiter} bestätigt werden. Es folgt die Abfrage nach dem
 Benutzerkennwort, womit sich dieser an einem Rechner oder Domäne
-anmelden kann. Das Kontrollkästchen bei „Benutzer muss Kennwort bei der
-nächsten Anmeldung ändern`` sollte angehakt sein, damit der Anwender ein
+anmelden kann. Das Kontrollkästchen bei \enquote{Benutzer muss Kennwort bei der
+nächsten Anmeldung ändern} sollte angehakt sein, damit der Anwender ein
 eigenes von ihm definierte Kennwort erstellen kann. Hier kann man
 beispielsweise nun ein Kennwort verwenden, welches der
-Standardrichtlinien entspricht. Als Beispiel wäre hier „Mikado2018!``
+Standardrichtlinien entspricht. Als Beispiel wäre hier \enquote{Mikado2018!}
 möglich, da es sowohl klein-, Großbuchstaben, sowie Sonderzeichen und
 Zahlen enthält.
 
@@ -894,7 +894,7 @@ dieses ist keine Anmeldung an der Domäne möglich.
 Sollte es sich bei dem angelegten Nutzer um einen Service Account
 handeln, beispielsweise FTP Zugriff oder sonstiges, empfiehlt es sich
 hier, das Kennwort nicht ablaufen zu lassen, sowie das Kontrollhäckchen
-bei „Benutzer muss Kennwort bei der nächsten Anmeldung ändern``
+bei \enquote{Benutzer muss Kennwort bei der nächsten Anmeldung ändern}
 rauszunehmen, da andernfalls die Funktion dieses Service Accounts
 eingeschränkt sein könnte.
 
@@ -1016,7 +1016,7 @@ New-ADUser -Name 'Nikolai Luis' -SamAccountName 00003 -UserPrincipalName
 \textbackslash{}\textbackslash{}w16dc01\textbackslash{}home\$\textbackslash{}00003
 
 Das oben stehende PowerShell Skript, fügt einen vordefinierten Benutzer
-an die angegebene OU und DC ein. Er erhält ein Passwort „XTi114!``
+an die angegebene OU und DC ein. Er erhält ein Passwort \enquote{XTi114!}
 welches nach der Anmeldung direkt geändert werden muss. Bedingt dadurch
 das die PS Eingabe keine Klartext Passwörter verwenden kann, muss dieses
 zuvor in einen Sicheren String umgewandelt werden.
@@ -1033,7 +1033,7 @@ Verfügung zu stellen. Es kann jedoch auch unmittelbar direkt an das
 Benutzerprofil beigefügt oder an einen Computer zugewiesen werden.
 
 Das Anmeldeskript als solches ist immer in einem Freigegeben Ordner
-„Netlogon`` auf einem DC gespeichert, wo der Nutzer hinterlegt ist.
+\enquote{Netlogon} auf einem DC gespeichert, wo der Nutzer hinterlegt ist.
 Innerhalb des Benutzerprofil oder Gruppenrichtlinie, wird anschließend
 nur der Name des Skripts hinterlegt. Das ActiveDirectory ergänzt
 eigenständig den Pfad zu diesem Skript.
@@ -1072,7 +1072,7 @@ der Verwaltungskonsole des Active Directorys, die Benutzereigenschaften
 aufgerufen werden. Diese Einstellungen können bereits während des
 Anlegens oder mittels Anlegeskript erzeugt werden.
 
-Unter dem Reiter „Profil``, kann unter Profilpfad der Pfad zu der
+Unter dem Reiter \enquote{Profil}, kann unter Profilpfad der Pfad zu der
 Freigabe eingetragen werden. Wichtig ist hierbei die Variable
 \%username\%. Damit weiß das Active Directory, das diese Stelle durch
 den Benutzernamen, in unserem Fall die Personalnummer ersetzt werden
@@ -1124,7 +1124,7 @@ anschließend über Rechtsklick Eigenschaften bearbeitet werden.
 
 Unter den Eigenschaften, kann nun das Ziel sowie Einstellungen
 vorgenommen werden. Unter dem Punkt Ziel muss zunächst als Zielordner:
-``Einen Ordner für jeden Benutzer im Stammpfad erstellen`` ausgewählt
+\enquote{Einen Ordner für jeden Benutzer im Stammpfad erstellen} ausgewählt
 sein. Anschließend wird das Stammverzeichnis unter Angabe des UNC-Pfads
 festgelegt. Unmittelbar nach Eingabe des UNC-Pfads, zeigt das Fenster
 bereits eine Vorschau des Pfades zu diesem Nutzer an:
@@ -1138,9 +1138,9 @@ ein Nachteil für den Administrator sein, da dieser im Falle einer
 Problemlösung innerhalb des Profils den Besitz übernehmen muss und
 anschließend wieder zurückschreiben muss. Sollten dabei Fehler
 unterlaufen, so könnte der Benutzer nicht mehr auf diese Daten
-zugreifen. Die Einstellung „Den Inhalt von
+zugreifen. Die Einstellung \enquote{Den Inhalt von
 \textless{}Ordnername\textgreater{} an den neuen Speicherort
-verschieben`` sollte aktiviert werden, da durch diesen der Ordner auf
+verschieben} sollte aktiviert werden, da durch diesen der Ordner auf
 dem Rechner gelöscht und an den zuvor definierten Speicherort verschoben
 wird. Sollte diese Option nicht aktiviert sein, so verbleibt eine Kopie
 des Ordners auf dem Rechner. Im letzten Abschnitt kann festgelegt
@@ -1150,9 +1150,9 @@ Zum Abschluss sollten die Einstellungen wie folgt aussehen:
 
 \includegraphics[width=4.05208in,height=3.46875in]{figures/image15.png}
 
-Nach Klicken auf „ok`` wird eine Fehlermeldung ausgegeben, die für
+Nach Klicken auf \enquote{ok} wird eine Fehlermeldung ausgegeben, die für
 ältere Betriebssysteme entscheiden ist. Diese kann jedoch bei Verwendung
-von Windows 7 oder neuer ignoriert und mit „Ja`` bestätigt werden. Die
+von Windows 7 oder neuer ignoriert und mit \enquote{Ja} bestätigt werden. Die
 zuvor eingestellten Anpassungen, müssen nun für die restlichen Ordner
 ebenfalls durchgeführt werden, damit die Ordnerumleitung auch auf die
 restlichen Aktiviert wird.
@@ -1165,7 +1165,7 @@ Nachträglich müssen noch weitere Computerkonfigurationen vorgenommen
 werden, damit auch der Computer für Servergespeicherte Profile
 konfiguriert ist. So müssen beispielsweise Einstellungen vorgenommen
 werden, das der Computer auf das Netzwerk wartet, oder aber das die
-Sicherheitsgruppe „Administrator`` dem Servergespeichertem Profil
+Sicherheitsgruppe \enquote{Administrator} dem Servergespeichertem Profil
 hinzugefügt wird, damit hier bei einer Problemlösung am Benutzerprofil
 der Profilbesitzer nicht gewechselt werden muss.
 
@@ -1258,8 +1258,8 @@ Abschließend sehen die Kontingenteinträge wie folgt aus:
 \includegraphics[width=5.15625in,height=0.5625in]{figures/image17.png}
 
 Um eine Weiche Kontingentgrenze zu definieren, muss entsprechend in der
-Abbildung xy die Eigenschaft „Benutzerdefinierte Kontingentgrenze
-definieren`` ausgewählt sein. Sobald auf Benutzerdefinierte Eigenschaft
+Abbildung xy die Eigenschaft \enquote{Benutzerdefinierte Kontingentgrenze
+definieren} ausgewählt sein. Sobald auf Benutzerdefinierte Eigenschaft
 geklickt wird, öffnet sich ein neues Fenster, wo die Grenzen, wie
 weiche- oder harte Kontingentgrenze, sowie deren Aktion ausgewählt und
 definiert werden kann.
@@ -1289,7 +1289,7 @@ Zentral gesteuert werden.
 
 \includegraphics[width=2.04167in,height=1.75in]{figures/image19.png}
 
-Über Rechtsklick, können unter „Drucker hinzufügen`` weitere Drucker
+Über Rechtsklick, können unter \enquote{Drucker hinzufügen} weitere Drucker
 hinzugefügt werden. Diese können anschließend über die GPO dem Benutzer
 zur Verfügung gestellt werden. Der Netzwerkdruckerassistent durchsucht
 eigenständig das Netzwerk, nach dem angegeben Druckern.
@@ -1393,7 +1393,7 @@ Die Anpassung des Lokalen Administrator eines Clients, kann ebenfalls
 muss unter Benutzerkonfiguration \textgreater{} Einstellungen
 \textgreater{} Systemsteuerungseinstellungen \textgreater{} Lokale
 Benutzer und Gruppe zunächst mit Rechtsklick Neu \textgreater{} Lokaler
-Benutzer hinzugefügt werden. Unter dem Drop Down Menü „Benutzername``
+Benutzer hinzugefügt werden. Unter dem Drop Down Menü \enquote{Benutzername}
 kann der Administrator (integriert) ausgewählt werden und wie unten
 stehend umbenannt werden.
 
@@ -1475,10 +1475,10 @@ folgende Anforderungen definiert worden:
 Die Abteilungsleiter untereinander uneingeschränkt Daten austauschen
 können.
 
-Hierzu muss zunächst eine Sicherheitsgruppe „LGsAbteilungsleiter``
+Hierzu muss zunächst eine Sicherheitsgruppe \enquote{LGsAbteilungsleiter}
 erstellt werden, damit nicht jeder Mitarbeiter einzelnen in die Freigabe
 ausgewählt werden muss. Anschließend muss eine Freigabe erstellt werden
-„ExchangeAbt`` auf die die Sicherheitsgruppe Lese, sowie
+\enquote{ExchangeAbt} auf die die Sicherheitsgruppe Lese, sowie
 Schreibberechtigung besitzt. Dieses Laufwerk kann nun über eine
 Zusätzliche Gruppenrichtlinie an die Abteilungsleitern über die
 Sicherheitsgruppe zugewiesen werden.
@@ -1488,15 +1488,15 @@ Mitarbeiter einstellen können, diese die Daten jedoch nur abrufen
 können.
 
 Hierzu muss zunächst eine Sicherheitsgruppe für die Mitarbeiter
-„LGsMitarbeiter`` erstellt werden und zusätzlich eine Freigabe, welche
-„Auftraege`` lautet. Auf diese Freigabe muss nun die Sicherheitsgruppe
-„LGsAbteilungsleiter`` lese, sowie schreibberechtigung besitzen.
-Mitarbeiter erhalten hier mit der Sicherheitsgruppe „ LGsMitarbeiter``
+\enquote{LGsMitarbeiter} erstellt werden und zusätzlich eine Freigabe, welche
+\enquote{Auftraege} lautet. Auf diese Freigabe muss nun die Sicherheitsgruppe
+\enquote{LGsAbteilungsleiter} lese, sowie schreibberechtigung besitzen.
+Mitarbeiter erhalten hier mit der Sicherheitsgruppe \enquote{LGsMitarbeiter}
 nur Leseberechtigung.
 
 Dies kann ebenfalls in umgekehrter Reihenfolge für Aufträge gemacht
 werden, welche Mitarbeiter den Abteilungsleitern lesend zur Verfügung
-stellen. Eine zusätzliche Freigabe „beaAuftraege`` wird benötigt.
+stellen. Eine zusätzliche Freigabe \enquote{beaAuftraege} wird benötigt.
 
 Die Zuweisung der Laufwerksbuchstaben für die Clients, kann über eine
 separate oder zuvor erstellte Gruppenrichtlinie zugewiesen werden. Die
@@ -1510,7 +1510,7 @@ Hinzugefügt werden.
 
 Hier hat der Administrator nun die Möglichkeit, den Speicherort für
 diese Freigabe festzulegen. Die Zuweisung der GPo als solches, wird über
-die Sicherheitsrichtlinie „LGsMitarbeiter`` und „LGsAbteilungsleiter``
+die Sicherheitsrichtlinie \enquote{LGsMitarbeiter} und \enquote{LGsAbteilungsleiter}
 durchgeführt.
 
 \chapter{Fazit}
