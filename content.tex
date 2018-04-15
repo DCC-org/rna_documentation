@@ -1267,10 +1267,10 @@ Harte Kontingentgrenze:
 
 Abschließend sehen die Kontingenteintr\"age wie folgt aus:
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
   \includegraphics[width=5.15625in,height=0.5625in]{figures/image17.png}
-  \caption{Kontingenteintr\"age}\label{figure:gporedirect4}
+  \caption{kontingenteintr\"age}\label{figure:gporedirect4}
 \end{figure}
 
 Um eine Weiche Kontingentgrenze zu definieren, muss die Eigenschaft
@@ -1279,40 +1279,48 @@ Sobald auf Benutzerdefinierte Eigenschaft geklickt wird, \"offnet sich ein
 neues Fenster, wo die Grenzen, wie weiche- oder harte Kontingentgrenze, sowie
 deren Aktion ausgew\"ahlt und definiert werden kann.
 
-\hypertarget{einrichten-von-druckern}{%
-\section{Einrichten von Druckern}\label{einrichten-von-druckern}}
+\section{Einrichten von Druckern}
 
-Innerhalb einer Dom\"ane kann es einen Druck -- und Dokumentenserver
-geben. Dieser stellt den Clients Drucker oder Dokumente zur Verf\"ugung.
-Hierbei handelt es sich um eine Rolle, welche innerhalb des
-Server-Managers hinzugef\"ugt werden muss.
+Innerhalb einer Dom\"ane kann es einen Druck- und Dokumentenserver geben.
+Dieser stellt den Clients Drucker oder Dokumente zur Verf\"ugung. Hierbei
+handelt es sich um eine Rolle, welche innerhalb des Server-Managers
+hinzugef\"ugt werden muss.
 
-\includegraphics[width=5.30208in,height=3.52083in]{figures/image18.png}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=5.30208in,height=3.52083in]{figures/image18.png}
+  \caption{\"Ubersicht f\"ur neue Rollen}\label{figure:newroles}
+\end{figure}
 
-Sollte es innerhalb der Dom\"ane Unix Systeme, wie Ubuntu oder ArchLinux
-geben, so sollte hier der Punkt LPD-Dienst aktiviert werden.
+Sollte es innerhalb der Dom\"ane Unix Systeme, wie Ubuntu oder Archlinux geben,
+so sollte hier der Punkt LPD-Dienst aktiviert werden.
 
 Nachdem die Rolle hinzugef\"ugt wurde, kann diese \"uber die Druckverwaltung
 administriert werden.
 
-Ein Druckerserver bietet die M\"oglichkeit, Netzwerkdrucker und deren
-Treiber zur Verf\"ugung zu stellen, so muss ein Client, welcher den
-Drucker \"uber ein Anmeldeskript zugewiesen bekommt die Installation nicht
-manuell anstoßen und Windows muss nicht die Windows Updates f\"ur die
-Druckertreiber durchsuchen. Druckertreiberaktualisierungen k\"onnen so
-Zentral gesteuert werden.
+Ein Druckerserver bietet die M\"oglichkeit, Netzwerkdrucker und deren Treiber
+zur Verf\"ugung zu stellen, so muss ein Client, welcher den Drucker \"uber ein
+Anmeldeskript zugewiesen bekommt die Installation nicht manuell anstoßen und
+Windows muss nicht die Windows Updates f\"ur die Druckertreiber durchsuchen.
+Druckertreiberaktualisierungen k\"onnen so zentral gesteuert werden.
 
-\includegraphics[width=2.04167in,height=1.75in]{figures/image19.png}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=2.04167in,height=1.75in]{figures/image19.png}
+  \caption{Ansicht der Druckverwaltung}\label{figure:newroles}
+\end{figure}
 
 Über Rechtsklick, k\"onnen unter \enquote{Drucker hinzuf\"ugen} weitere Drucker
 hinzugef\"ugt werden. Diese k\"onnen anschließend \"uber die GPO dem Benutzer
 zur Verf\"ugung gestellt werden. Der Netzwerkdruckerassistent durchsucht
 eigenst\"andig das Netzwerk, nach dem angegeben Druckern.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=4.84375in,height=0.72917in]{figures/image20.png}
+  \caption{\"Ubesicht \"uber alle Drucker}\label{figure:newroles}
+\end{figure}
 
-\includegraphics[width=4.84375in,height=0.72917in]{figures/image20.png}
-
-\hypertarget{gruppenrichtlinien}{%
-\section{Gruppenrichtlinien}\label{gruppenrichtlinien}}
+\section{Gruppenrichtlinien}
 
 Gruppenrichtlinien bestehen aus zwei Teilen und sind ein m\"achtiges
 Verwaltungs. Der erste Teil, besteht aus der Computerkonfiguration.
