@@ -224,7 +224,7 @@ werden können.
 
 Im folgenden Abbild ist der Aufbau dargestellt:
 
-\begin{figure}[adstructure]
+\begin{figure}[H]
   \centering
   \includegraphics{figures/image1.png}
   \caption{Gliederung der OUs im Active Directory}
@@ -236,90 +236,84 @@ nur den Hauptsitz in Köln besitzt.
 
 \chapter{Installation}
 
-Die Installation der Testumgebung, wird in einem Hypervisor auf einer
-Physikalischen Maschine getestet, da diese Anwendungen im Testbetrieb
-keine großen Anforderungen haben. Das Basis Betriebssystem ist ein
-HyperVisor Server, welcher von Microsoft kostenlos zur Verfügung
-gestellt wird. Auf diesem können unterschiedliche virtuelle Maschinen
-angelegt werden, welche Ressourcen des HostSystem verwenden werden.
+Die Installation der Testumgebung wird in einem Hypervisor auf einer
+Physikalischen Maschine getestet, da diese Anwendungen im Testbetrieb keine
+großen Anforderungen haben. Das Basis Betriebssystem ist ein Hypervisor Server,
+welcher von Microsoft kostenlos zur Verfügung gestellt wird. Auf diesem können
+unterschiedliche virtuelle Maschinen angelegt werden, welche Ressourcen des
+Hostsystems verwenden werden.
 
-\hypertarget{windows-server-2016}{%
-\section{Windows Server 2016}\label{windows-server-2016}}
+\section{Windows Server 2016}\label{windows-server-2016}
 
-Für die Installation des Windows Server 2016 Datacenter, wird in dem
-HyperVisor zunächst eine leere Virtuelle Maschine angelegt. Diese kann
-anschließend mit dem Image für Windows Server 2016 installiert werden.
-Bei der Installation des Servers, wird eine grafische Benutzeroberfläche
-verwendet, da auch unerfahrene Informationstechniker diese bedienen
-sollen. Innerhalb der Testumgebung sollen die Virtuellen Maschinen eine
-Festplattengröße von ca. 75GB und einer Arbeitsspeicher Größe von 6 GB
-nicht überschreiten. Die Virtuellen Maschinen können im Falle eines
-Übergangs in den Produktivbetrieb mit weiteren Ressourcen ausgestattet
-werden. Nach der erfolgreichen Installation und Neustart des Servers,
-muss erstmalig ein Administrator Kennwort festgelegt werden. Dieses muss
-folgende Anforderungen besitzen:
+Für die Installation des Windows Server 2016 Datacenter wird in dem Hypervisor
+zunächst eine leere virtuelle Maschine angelegt. Diese kann anschlie\ss{}end
+mit dem Image für Windows Server 2016 installiert werden. Bei der Installation
+des Servers wird eine grafische Benutzeroberfläche verwendet, da auch
+unerfahrene Informationstechniker diese bedienen sollen. Innerhalb der
+Testumgebung sollen die virtuellen Maschinen eine Festplattengröße von 75GB und
+einer Arbeitsspeicher Größe von sechs GB nicht überschreiten. Die virtuellen
+Maschinen können im Falle eines Übergangs in den Produktivbetrieb mit weiteren
+Ressourcen ausgestattet werden. Nach der erfolgreichen Installation und
+Neustart des Servers, muss erstmalig ein Administrator Kennwort festgelegt
+werden. Dieses muss folgende Anforderungen besitzen:
 
-\begin{itemize}
-\item
-  Sonderzeichen
-\item
-  Großbuchstaben
-\item
-  Zahlen
-\item
-  Kleinbuchstaben
-\end{itemize}
+\begin{outline}
+  \1 Sonderzeichen
+  \1 Großbuchstaben
+  \1 Zahlen
+  \1 Kleinbuchstaben
+\end{outline}
 
 Nachdem die Basis Installation nun erfolgt ist, muss der Windows Server
 2016 für die Rolle als Domain Controller vorbereitet werden. Hierzu wird
-zunächst eine Statische IP Adresse vergeben, da innerhalb der Domäne ein
+zunächst eine statische IP Adresse vergeben, da innerhalb der Domäne ein
 separater DHCP Server auf einem Windows Server 2012R2 im späteren
 Verlauf installiert wird. Desweiteren muss der Rechnername angepasst
-werden, da Windows während der Installationsroutine eine für den Server
+werden, da Windows während der Installationsroutine einen für den Server
 festgelegten Namen vordefiniert. Um im Nachhinein die Unterscheidung der
 Server zu verbessern, muss hier ein eindeutiger und aussagekräftiger
-Name verwendet werden. Der Server benötigt hiernach einen Neustart.
+Name verwendet werden. Der Server muss anschließend neugestartet werden.
 
-\hypertarget{active-directory}{%
-\section{Active Directory}\label{active-directory}}
+\section{Active Directory}\label{active-directory}
 
-Um eine Rolle auf einem Windows Server installieren zu können, muss
-diese über den Server-Manager hinzugefügt werden. Über den Punkt
-Verwalten \textgreater{} Rollen und Funktionen hinzufügen, können dem
-Server neue Rollen zugewiesen werden. Rollen oder Funktionen können
-entweder auf einer virtuellen Festplatte oder aber innerhalb des
-Computers installiert werden. Der Server zeigt eine Auflistung aller
-Rollen und Funktionen an. Sobald eine Rolle ausgewählt wurde, weist der
-Server auf weitere Funktionen hin, die benötigt werden, damit diese
-ausgewählte Rolle verwendet werden kann.
+Um eine Rolle auf einem Windows Server installieren zu können, muss diese über
+den Server-Manager hinzugefügt werden. Über den Punkt Verwalten
+\hyp{}\textgreater{} Rollen und Funktionen hinzufügen, können dem Server neue
+Rollen zugewiesen werden. Rollen oder Funktionen können entweder auf einer
+virtuellen Festplatte oder aber innerhalb des Computers installiert werden. Der
+Server zeigt eine Auflistung aller Rollen und Funktionen an. Sobald eine Rolle
+ausgewählt wurde, weist der Server auf weitere Funktionen hin, die benötigt
+werden, damit diese ausgewählte Rolle verwendet werden kann.
 
-Damit die Rolle „Active Directory-Domänendienste`` installiert werden
-kann, bedarf es folgende weitere Funktionen:
+Damit die Rolle „Active Directory-Domänendienste'' installiert werden kann,
+bedarf es folgende weitere Funktionen:
 
-\includegraphics[width=2.57618in,height=1.01822in]{figures/image2.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics{figures/image2.png}
+  \caption{Rollen- und Funktionsverwaltung}
+  \label{figure:functions}
+\end{figure}
 
-Mit der Schaltfläche Features hinzufügen, werden diese Funktionen für
-die Installationsroutine zugefügt. Nach klicken auf „weiter`` wird die
-Meldung ausgegeben, das der AD-Domänendienst einen DNS Server innerhalb
-des Netzwerks benötigt, sollte dieser nicht vorhanden sein, so wird er
-auf der gleichen Maschine zusätzlich installiert. Der DNS Server wird
-benötigt da dieser für die Auflösung der Rechnernamen und Druckernamen
-zuständig ist. Weitere Erläuterungen hierzu kann im DNS Kapitel
-entnommen werden. Abschließend wird eine Übersicht der
-Installationsroutine angezeigt, welche mit „Installieren`` bestätigt
-werden kann.
+Mit der Schaltfläche „Features hinzufügen'', werden anschließend Funktionen für
+die Installationsroutine zugefügt. Nach klicken auf „weiter'' wird die Meldung
+ausgegeben, dass der AD-Domänendienst einen DNS Server innerhalb des Netzwerks
+benötigt. Sofern dieser nicht vorhanden sein, wird er auf der gleichen Maschine
+zusätzlich installiert. Der DNS Server wird benötigt da dieser für die
+Auflösung der Rechnernamen und Druckernamen zuständig ist. Weitere
+Erläuterungen hierzu kann im DNS Kapitel entnommen werden. Abschließend wird
+eine Übersicht der Installationsroutine angezeigt, welche mit „Installieren''
+bestätigt werden kann.
 
-\hypertarget{dns-dienst}{%
-\section{DNS-Dienst}\label{dns-dienst}}
+\section{DNS-Dienst}\label{dns-dienst}
 
-Bereits während der Installation des Domain Controllers, fragt Windows
-ab, ob ein DNS Server installiert werden soll. Jeder DC sollte in der
+Bereits während der Installation des Domain Controllers, stellt Windows
+sicher, ob ein DNS Server installiert werden soll. Jeder DC sollte in der
 Regel auch ein DNS Server sein, damit neue Einträge unmittelbar direkt
 übertragen werden können und der DNS Dienst immer den aktuellsten Stand
 der Umgebung kennt.
 
-\hypertarget{dhcp-dienst}{%
-\section{DHCP-Dienst}\label{dhcp-dienst}}
+\section{DHCP-Dienst}\label{dhcp-dienst}
 
 Die Installation des DHCP Dienstes, kann über den Server-Manager unter
 dem Punkt Verwalten \textgreater{} Rollen und Funktionen hinzufügen
@@ -342,8 +336,7 @@ beginnt nun mit der Installation des DHCP Servers.
 Nachdem der Server neugestartet wurde, ist der DHCP Server aktiv und
 muss abschließend noch Konfiguriert werden.
 
-\hypertarget{datei-dienst}{%
-\section{Datei-Dienst}\label{datei-dienst}}
+\section{Datei-Dienst}\label{datei-dienst}
 
 Der Dateidienst, spielt gerade in größeren Unternehmen eine wichtige
 Rolle, da viele Benutzer Dateien mit anderen Benutzern teilen oder zur
@@ -363,11 +356,9 @@ auch Problemlos nachträglich installiert werden.
 Die Installation ist nun abgeschlossen und der Dateidienst, sowie die
 Freigaben können konfiguriert werden.
 
-\hypertarget{umsetzen-der-anforderungen}{%
-\chapter{Umsetzen der Anforderungen}\label{umsetzen-der-anforderungen}}
+\chapter{Umsetzen der Anforderungen}\label{umsetzen-der-anforderungen}
 
-\hypertarget{einrichtung-dhcp-dienst}{%
-\section{Einrichtung DHCP Dienst}\label{einrichtung-dhcp-dienst}}
+\section{Einrichtung DHCP Dienst}\label{einrichtung-dhcp-dienst}
 
 Bereits nach der Installation, zeigt der Server Manager an, dass weitere
 Konfigurationsschritte für den DHCP Server notwendig sind. So muss
@@ -485,8 +476,7 @@ der Primäre DHCP Server nicht mehr antwortet.
 Der DHCP Server ist nun vollständig Konfiguriert und kann nun verwendet
 werden.
 
-\hypertarget{test-des-failovers}{%
-\subsection{Test des Failovers}\label{test-des-failovers}}
+\subsection{Test des Failovers}\label{test-des-failovers}
 
 Um den Test des DHCP Failovers überprüfen zu können, wurde zunächst der
 Windows 7 Client, welcher innerhalb des Netzwerks ist gestartet und
@@ -516,8 +506,7 @@ der Primäre Server nicht erreichbar ist und vom Sekundären Server die IP
 Adresse, sowie die Leasetime erhalten. Der Sekundäre Server hat somit
 die Aufgaben des Primären DHCP Servers übernommen.
 
-\hypertarget{einrichtung-dns-dienst}{%
-\section{Einrichtung DNS Dienst}\label{einrichtung-dns-dienst}}
+\section{Einrichtung DNS Dienst}\label{einrichtung-dns-dienst}
 
 Bereits während der Installation des Active Directory Domänendienst wird
 der DNS Dienst angelegt und bereits vorkonfiguriert. Er ist so
@@ -548,9 +537,8 @@ Sekundäre Zone. Eine Sekundäre Zone wird meist dann verwendet, wenn eine
 Domäne auf eine andere Domäne Zugreifen muss. Die Sekundäre Zone
 erstellt eine Kopie dieser und legt sie auf den Server ab.
 
-\hypertarget{dateidienstfreigaben-einrichten}{%
 \section{Dateidienst/Freigaben
-einrichten}\label{dateidienstfreigaben-einrichten}}
+einrichten}\label{dateidienstfreigaben-einrichten}
 
 Das Anlegen von neuen Freigaben ist Assistentengesteuert, damit hier die
 Anpassungen alle auf einmal durchgeführt werden können. Um eine Freigabe
@@ -701,8 +689,7 @@ Ordners anlegen und verwalten. Der Nutzer erhält auch nur auf diesen
 Ordner die Berechtigungen. Andere Ordner kann der Nutzer nicht sehen
 oder verändern.
 
-\hypertarget{ressourcen-manager}{%
-\subsection{Ressourcen-Manager}\label{ressourcen-manager}}
+\subsection{Ressourcen-Manager}\label{ressourcen-manager}
 
 Über den Ressourcen Manager des Dateidienstes, hat der Administrator die
 Möglichkeit, verschiedene Kontingente zuzuweisen oder angepasste
@@ -721,9 +708,8 @@ Zeitplan festgelegt werden, indem das System diese Ordner überprüft.
 
 \includegraphics[width=6.3in,height=2.63333in]{figures/image8.png}
 
-\hypertarget{active-directory-domuxe4nendienst}{%
 \section{Active Directory
-Domänendienst}\label{active-directory-domuxe4nendienst}}
+Domänendienst}\label{active-directory-domuxe4nendienst}
 
 Nachdem die Grundinstallation abgeschlossen wurde, kann mit der
 eigentlichen Konfiguration begonnen werden. Bereits nach der Basis
@@ -782,9 +768,8 @@ wird der DNS Server des Windows Servers innerhalb der IP Konfiguration
 hinterlegt. Der Windows Server 2016 wird dabei mehrmals neugestartet und
 in die Domäne eingebunden.
 
-\hypertarget{edv-struktur-im-active-directory}{%
 \subsection{EDV-Struktur im Active
-Directory}\label{edv-struktur-im-active-directory}}
+Directory}\label{edv-struktur-im-active-directory}
 
 Der Aufbau des Active Directory, sollte im Regelfall analog der
 Unternehmensstruktur aufgeteilt sein. Innerhalb des ADs werden diese in
@@ -819,8 +804,7 @@ Gruppenrichtlinien auf einzelne Abteilungen beschränkt werden können. Um
 erweiterbare Funktionen einblenden lassen zu können, empfiehlt es sich
 unter dem Punkt Ansicht die Erweiterten Features zu aktivieren.
 
-\hypertarget{replikation}{%
-\subsection{Replikation}\label{replikation}}
+\subsection{Replikation}\label{replikation}
 
 Innerhalb einer Domäne sollte es immer zwei DomainController, sowie zwei
 DHCP Server geben. Falls einer der beiden Server ausfällt, können sich
