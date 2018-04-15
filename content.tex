@@ -1387,28 +1387,30 @@ ge\"andert werden:
 Nun ist die Kontorichtlinie f\"ur die Sicherheitsgruppe aktiv, f\"ur die diese
 Richtlinie zugewiesen ist.
 
-\hypertarget{anmelderichtlinien}{%
-\subsection{Anmelderichtlinien}\label{anmelderichtlinien}}
+\subsection{Anmelderichtlinien}
 
-Zus\"atzlich zu Kennwortrichtlinien, hat die Firma Mikado die Richtlinie,
-das sich die Mitarbeiter nur w\"ahrend der Arbeitszeit von Montag bis
-Freitag zwischen 08:00Uhr bis 18:00 Uhr im Netzwerk anmelden d\"urfen.
-Hierzu ist seitens des Domaincontroller zu Limitieren, das eine
-Anmeldung auch außerhalb dieser Zeiten durchgef\"uhrt werden kann. Diese
-Einstellung, wird nicht in einer Gruppenrichtlinie definiert, sondern
-f\"ur jeden Benutzer innerhalb der Active Directory-Benutzer und Computer
-verwaltungsoberfl\"ache festgelegt.
+Zus\"atzlich zu Kennwortrichtlinien, hat die Firma Mikado die Richtlinie, das
+sich die Mitarbeiter nur w\"ahrend der Arbeitszeit von Montag bis Freitag
+zwischen 08:00Uhr bis 18:00 Uhr im Netzwerk anmelden d\"urfen. Hierzu ist
+seitens des Domaincontroller zu limitieren, das eine Anmeldung auch außerhalb
+dieser Zeiten durchgef\"uhrt werden kann. Diese Einstellung wird nicht in einer
+Gruppenrichtlinie definiert, sondern f\"ur jeden Benutzer innerhalb der Active
+Directory-Benutzer und Computer verwaltungsoberfl\"ache festgelegt.
 
-Unter dem Reiter Konto \textgreater{} Anmeldezeiten, k\"onnen die
-Anmeldezeiten durch ausw\"ahlen festgelegt werden.
+Unter dem Reiter Konto \textgreater{} Anmeldezeiten, k\"onnen die Anmeldezeiten
+durch ausw\"ahlen festgelegt werden.
 
-\includegraphics[width=5.25in,height=3.30208in]{figures/image22.png}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=5.25in,height=3.30208in]{figures/image22.png}
+  \caption{Detailansicht der Anmeldezeiten}\label{figure:passwordfoo}
+\end{figure}
 
 Sollte ein Benutzer versuchen außerhalb dieser Zeiten eine Anmeldung
 durchzuf\"uhren, so erh\"alt er folgende Meldung:
 
-Das Konto sieht es nicht vor, dass Sie sich zu dieser Zeit anmelden.
-Wiederholen Sie diesen Vorgang sp\"ater.
+\enquote{Das Konto sieht es nicht vor, dass Sie sich zu dieser Zeit anmelden.
+Wiederholen Sie diesen Vorgang sp\"ater.}
 
 \hypertarget{administrator-account-umbenennen}{%
 \subsection{Administrator Account
