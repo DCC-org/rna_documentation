@@ -1323,30 +1323,27 @@ eigenst\"andig das Netzwerk, nach dem angegeben Druckern.
 \section{Gruppenrichtlinien}
 
 Gruppenrichtlinien bestehen aus zwei Teilen und sind ein m\"achtiges
-Verwaltungs. Der erste Teil, besteht aus der Computerkonfiguration.
-Diese zieht immer auf einem Computer, egal welcher Nutzer angemeldet
-ist. Der zweite Teil besteht aus der Benutzerkonfiguration, welche
-spezifisch f\"ur die Nutzer definiert werden k\"onnen. Ein kleines Beispiel
-soll dies verdeutlichen:
+Verwaltungstool. Der erste Teil besteht aus der Computerkonfiguration. Diese
+bezieht immer auf einem Computer, egal welcher Nutzer angemeldet ist. Der
+zweite Teil besteht aus der Benutzerkonfiguration, welche spezifisch f\"ur die
+Nutzer definiert werden k\"onnen. Ein kleines Beispiel soll dies verdeutlichen:
 
-Die Kennwortrichtlinie ist innerhalb der BenutzerKonfiguration so
-eingestellt, dass eine Komplexit\"at von 8 Zeichen ben\"otigt wird. Sobald
-ein Nutzer versucht das Kennwort auf dem Rechner anzupassen, kann dieser
-jedoch ein Kennwort mit nur einer L\"ange vergeben, da die
-Computerkonfiguration keine Richtlinie f\"ur das Kennwort vorgibt.
+Die Kennwortrichtlinie ist innerhalb der BenutzerKonfiguration so eingestellt,
+dass eine Komplexit\"at von 8 Zeichen ben\"otigt wird. Sobald ein Nutzer
+versucht das Kennwort auf dem Rechner anzupassen, kann dieser jedoch ein
+Kennwort mit nur einer L\"ange vergeben, da die Computerkonfiguration keine
+Richtlinie f\"ur das Kennwort vorgibt.
 
-Gruppenrichtlinien, werden immer an eine Sicherheitsgruppe gebunden,
-welche anschließend einem Benutzer zugewiesen werden kann. Standardm\"aßig
-sind keine Richtlinien oder Einschr\"ankungen festgelegt. Innerhalb einer
+Gruppenrichtlinien werden immer an eine Sicherheitsgruppe gebunden, welche
+anschließend einem Benutzer zugewiesen werden kann. Standardm\"aßig sind keine
+Richtlinien oder Einschr\"ankungen festgelegt. Innerhalb einer
 Sicherheitsgruppe, k\"onnen mehrere Gruppenrichtlinien zugewiesen sein.
-Wichtig ist hierbei die Verkn\"upfungsreihenfolge der einzelnen GPOs.
-Sollte in der ersten Gruppenrichtlinie etwas deaktiviert sein, jedoch in
-der zweiten aktiviert, so greift hier die Gruppenrichtlinie, welche an
-erster Stelle steht.
+Wichtig ist hierbei die Verkn\"upfungsreihenfolge der einzelnen GPOs. Sollte
+in der ersten Gruppenrichtlinie etwas deaktiviert sein, jedoch in der zweiten
+aktiviert, so greift hier die Gruppenrichtlinie, welche an erster Stelle steht.
 
-Unterschieden wird auch ob eine GPO erzwungen ist. Sollte eine GPO
-erzwungen werden, so greift stets die GPO wo diese Einstellung
-festgelegt wurde.
+Unterschieden wird auch ob eine GPO erzwungen ist. Sollte eine GPO erzwungen
+werden, so greift stets die GPO wo diese Einstellung festgelegt wurde.
 
 \hypertarget{kontorichtlinien}{%
 \section{Kontorichtlinien}\label{kontorichtlinien}}
