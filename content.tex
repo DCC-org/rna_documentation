@@ -784,35 +784,40 @@ eingebunden.
 Der Aufbau des Active Directory, sollte im Regelfall analog der
 Unternehmensstruktur aufgeteilt sein. Innerhalb des ADs werden diese in
 Organisationseinheiten aufgeteilt. Letztendlich k\"onnen solche
-Organisationseinheiten auch Standorte wiederspiegeln.  Organisationseinheiten
+Organisationseinheiten auch Standorte wiederspiegeln. Organisationseinheiten
 sollen bei den Verwaltungsaufgaben helfen. Jeder Angelegte Benutzer, welcher
-keiner Organisationseinheit hinterlegt wurde wird in den Container
+keiner Organisationseinheit hinterlegt wurde, wird in den Container
 \enquote{User} abgelegt. Bei mehreren Hundert Nutzern w\"aren diese alle in dem
 User Container enthalten. Dies k\"onnte jedoch gerade in Bezug auf die Rechte
 vergabe Probleme verursachen, da unterschiedliche Nutzer auch unterschiedliche
-Berechtigungen erhalten.  So k\"onnte man je Organisationseinheit
+Berechtigungen erhalten. So k\"onnte man je Organisationseinheit
 unterschiedliche Berechtigungen zuweisen ohne jeden Nutzer einzeln ver\"andern
 zu m\"ussen.
 
 Um neue Organisationseinheiten hinzuf\"ugen zu k\"onnen, muss auf die Dom\"ane
-mit Rechtsklick \textgreater{} Neu \textgreater{} Organisationseinheit
-geklickt werden. Anschließend kann ein Name f\"ur diese
-Organisationseinheit festgelegt werden, sowie festgelegt werden, ob die
-Gruppe gel\"oscht werden kann. Dies soll das versehentliche L\"oschen der
-Gruppe vorbeugen.
+mit Rechtsklick \hyp{}\textgreater{} Neu \hyp{}\textgreater{}
+Organisationseinheit geklickt werden. Anschließend kann ein Name f\"ur diese
+Organisationseinheit festgelegt werden. Außerdem wird festgelegt, ob die Gruppe
+gel\"oscht werden kann. Dies soll das versehentliche L\"oschen der Gruppe
+vorbeugen.
 
 Nachdem alle Organisationseinheiten definiert wurden, sieht die Struktur
 nun wie folgt aus:
 
-\includegraphics[width=2.98958in,height=4.58333in]{figures/image9.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[max width=\textwidth]{figures/image9.png}
+  \caption{Struktur im Active Directory}
+  \label{figure:adstructure}
+\end{figure}
 
-Jede Abteilung hat eine einzelne Organisationseinheit zugewiesen
-bekommen. Unter dieser Abtrennung, werden anschließend zwei zus\"atzliche
-Organisationseinheiten angelegt, welche unter Benutzer und Computer
+Jede Abteilung hat eine einzelne Organisationseinheit zugewiesen bekommen.
+Unter dieser Abtrennung werden anschließend zwei zus\"atzliche
+Organisationseinheiten angelegt, welche nach Benutzer und Computer
 unterschieden wird. Dies hat den Vorteil, dass im Sp\"ateren Verlauf die
 Gruppenrichtlinien auf einzelne Abteilungen beschr\"ankt werden k\"onnen. Um
-erweiterbare Funktionen einblenden lassen zu k\"onnen, empfiehlt es sich
-unter dem Punkt Ansicht die Erweiterten Features zu aktivieren.
+erweiterbare Funktionen einblenden lassen zu k\"onnen, empfiehlt es sich unter
+dem Punkt Ansicht die Erweiterten Features zu aktivieren.
 
 \subsection{Replikation}\label{replikation}
 
