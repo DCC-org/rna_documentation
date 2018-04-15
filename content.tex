@@ -91,7 +91,7 @@ Bereich der Serveradministration gestellt bekommen. Dieses wurde innerhalb
 eines Teams von zwei bis zu drei Leuten eigenständig erarbeitet. Die Hardware,
 worauf das Testszenario durchgef\"uhrt werden konnte, wurde von der Schule
 gestellt. Den Sch\"ulern wurde freigestellt, ob Sie diese verwenden oder eigene
-Mittel verwenden möchten.
+Mittel verwenden m\"ochten.
 
 Die Aufgabenstellung wurde \"uber Moodle zur Verf\"ugung gestellt und kann dem
 Anhang~\ref{pdf:requirements} entnommen werden. Die Arbeit und das Verfassen
@@ -106,7 +106,7 @@ beinhaltet. Dieses Konzept wurde abschließend dem zuständigen Lehrer, in diese
 Projekt als Rolle des Auftraggebers, vorgelegt und abgenommen. Eine
 vorausschauende Planung und Konzeptionierung zusammen mit dem Auftraggeber
 bringt den Vorteil, dass Fehler fr\"uhzeitig identifiziert und verbessert werden
-können, sowie eine effiziente Hardware Planung.
+k\"onnen, sowie eine effiziente Hardware Planung.
 
 \section{DHCP-Konzept}\label{dhcp-konzept}
 
@@ -118,7 +118,7 @@ Server vergeben werden. Dabei wird das folgende DHCP Konzept verwendet:
 
 \begin{outline}
   \1 Jede Abteilung erhält einen eignen Adressbereich, in dem maximal 251
-  Hosts verwendet werden können
+  Hosts verwendet werden k\"onnen
   \1 Netzwerkdrucker erhalten den Ende eines jeden Netzwerkbereichs
 \end{outline}
 
@@ -154,15 +154,15 @@ ebenfalls die entsprechenden Windows Server vorhanden sein werden.
 
 Die Firma Mikado hat bereits den Domänennamen mikado.spiel erworben. Dieser
 kann f\"ur die Domänen Struktur verwendet werden. \ mikado ist in diesem Fall die
-Second-Level-Domain der DNS Namensauflösung und spiel die First-Level-Domain.
-Es können weitere Subdomains (Third\hyp{}Level\hyp{}Domains) wie beispielsweise
-verkauf, konstruktion oder einkauf hinzugef\"ugt werden. Die DNS Namensauflösung
-ist f\"ur die Auflösung von FQDNs in eine IP Adresse und umgekehrt. Jeder
+Second-Level-Domain der DNS Namensaufl\"osung und spiel die First-Level-Domain.
+Es k\"onnen weitere Subdomains (Third\hyp{}Level\hyp{}Domains) wie beispielsweise
+verkauf, konstruktion oder einkauf hinzugef\"ugt werden. Die DNS Namensaufl\"osung
+ist f\"ur die Aufl\"osung von FQDNs in eine IP Adresse und umgekehrt. Jeder
 Rechnername in der internen Domäne ist ebenfalls im DNS eingetragen und kann
-von diesem aufgelöst werden. Der Windows Server 2016, welcher den Domain
+von diesem aufgel\"ost werden. Der Windows Server 2016, welcher den Domain
 Controller besitzt, ist gleichzeitig auch ein DNS Server. Dadurch k\"onnen die
 entsprechenden Einträge unmittelbar durch den Domain Controller an den DNS
-Server weitergeben werden. Die Auflösung der IP Adresse, bei diesem Server dann
+Server weitergeben werden. Die Aufl\"osung der IP Adresse, bei diesem Server dann
 wie folgt:
 
 W16dc01.mikado.spiel
@@ -218,7 +218,7 @@ Die EDV Struktur wird gegliedert wie die Aufteilung der einzelnen Abteilungen.
 So erhält jede Abteilung eine eigene Organisationseinheit. Dies macht es im
 sp\"ateren Verlauf einfacher dem Anwender bestimmte Rechte oder aber auch IP
 Adressen zuzuweisen, da diese auf die Organisationseinheiten fest zugewiesen
-werden können.
+werden k\"onnen.
 
 Im folgenden Abbild ist der Aufbau dargestellt:
 
@@ -230,14 +230,14 @@ Im folgenden Abbild ist der Aufbau dargestellt:
 \end{figure}
 
 Die Aufteilung in Standorte ist nicht erforderlich, da die Firma Mikado
-nur den Hauptsitz in Köln besitzt.
+nur den Hauptsitz in K\"oln besitzt.
 
 \chapter{Installation}
 
 Die Installation der Testumgebung wird in einem Hypervisor auf einer
 Physikalischen Maschine getestet, da diese Anwendungen im Testbetrieb keine
 großen Anforderungen haben. Das Basis Betriebssystem ist ein Hypervisor Server,
-welcher von Microsoft kostenlos zur Verf\"ugung gestellt wird. Auf diesem können
+welcher von Microsoft kostenlos zur Verf\"ugung gestellt wird. Auf diesem k\"onnen
 unterschiedliche virtuelle Maschinen angelegt werden, welche Ressourcen des
 Hostsystems verwenden werden.
 
@@ -248,9 +248,9 @@ zunächst eine leere virtuelle Maschine angelegt. Diese kann anschlie\ss{}end
 mit dem Image f\"ur Windows Server 2016 installiert werden. Bei der Installation
 des Servers wird eine grafische Benutzeroberfläche verwendet, da auch
 unerfahrene Informationstechniker diese bedienen sollen. Innerhalb der
-Testumgebung sollen die virtuellen Maschinen eine Festplattengröße von 75GB und
-einer Arbeitsspeicher Größe von sechs GB nicht \"uberschreiten. Die virtuellen
-Maschinen können im Falle eines Übergangs in den Produktivbetrieb mit weiteren
+Testumgebung sollen die virtuellen Maschinen eine Festplattengr\"oße von 75GB und
+einer Arbeitsspeicher Gr\"oße von sechs GB nicht \"uberschreiten. Die virtuellen
+Maschinen k\"onnen im Falle eines Übergangs in den Produktivbetrieb mit weiteren
 Ressourcen ausgestattet werden. Nach der erfolgreichen Installation und
 Neustart des Servers, muss erstmalig ein Administrator Kennwort festgelegt
 werden. Dieses muss folgende Anforderungen besitzen:
@@ -274,13 +274,13 @@ Name verwendet werden. Der Server muss anschließend neugestartet werden.
 
 \section{Active Directory}\label{active-directory}
 
-Um eine Rolle auf einem Windows Server installieren zu können, muss diese \"uber
+Um eine Rolle auf einem Windows Server installieren zu k\"onnen, muss diese \"uber
 den Server-Manager hinzugef\"ugt werden. Über den Punkt Verwalten
-\hyp{}\textgreater{} Rollen und Funktionen hinzuf\"ugen, können dem Server neue
-Rollen zugewiesen werden. Rollen oder Funktionen können entweder auf einer
+\hyp{}\textgreater{} Rollen und Funktionen hinzuf\"ugen, k\"onnen dem Server neue
+Rollen zugewiesen werden. Rollen oder Funktionen k\"onnen entweder auf einer
 virtuellen Festplatte oder aber innerhalb des Computers installiert werden. Der
 Server zeigt eine Auflistung aller Rollen und Funktionen an. Sobald eine Rolle
-ausgewählt wurde, weist der Server auf weitere Funktionen hin, die benötigt
+ausgewählt wurde, weist der Server auf weitere Funktionen hin, die ben\"otigt
 werden, damit diese ausgewählte Rolle verwendet werden kann.
 
 Damit die Rolle \enquote{Active Directory-Domänendienste} installiert werden
@@ -296,9 +296,9 @@ kann, bedarf es folgende weitere Funktionen:
 Mit der Schaltfläche \enquote{Features hinzuf\"ugen}, werden anschließend
 Funktionen f\"ur die Installationsroutine zugef\"ugt. Nach klicken auf
 \enquote{weiter} wird die Meldung ausgegeben, dass der AD-Domänendienst einen
-DNS Server innerhalb des Netzwerks benötigt. Sofern dieser nicht vorhanden
+DNS Server innerhalb des Netzwerks ben\"otigt. Sofern dieser nicht vorhanden
 sein, wird er auf der gleichen Maschine zusätzlich installiert. Der DNS Server
-wird benötigt da dieser f\"ur die Auflösung der Rechnernamen und Druckernamen
+wird ben\"otigt da dieser f\"ur die Aufl\"osung der Rechnernamen und Druckernamen
 zuständig ist. Weitere Erläuterungen hierzu kann im DNS Kapitel entnommen
 werden. Abschließend wird eine Übersicht der Installationsroutine angezeigt,
 welche mit \enquote{Installieren} bestätigt werden kann.
@@ -308,7 +308,7 @@ welche mit \enquote{Installieren} bestätigt werden kann.
 Bereits während der Installation des Domain Controllers, stellt Windows
 sicher, ob ein DNS Server installiert werden soll. Jeder DC sollte in der
 Regel auch ein DNS Server sein, damit neue Einträge unmittelbar direkt
-\"ubertragen werden können und der DNS Dienst immer den aktuellsten Stand
+\"ubertragen werden k\"onnen und der DNS Dienst immer den aktuellsten Stand
 der Umgebung kennt.
 
 \section{DHCP-Dienst}\label{dhcp-dienst}
@@ -317,7 +317,7 @@ Die Installation des DHCP Dienstes, kann \"uber den Server-Manager unter
 dem Punkt Verwalten \textgreater{} Rollen und Funktionen hinzuf\"ugen
 ausgewählt werden. Wie auch bei der Installation des Active Directorys,
 zeigt auch hier die Installationsroutine weitere Tools an, die f\"ur die
-Verwendung des DHCP Servers empfohlen werden. Diese können \"uber den
+Verwendung des DHCP Servers empfohlen werden. Diese k\"onnen \"uber den
 Punkt \enquote{Funktionen hinzuf\"ugen} ausgewählt werden. Nach Bestätigung auf
 weiter, zeigt die Installationsroutine Informationen \"uber das DHCP an.
 Zusätzlich erhält der Benutzer Hinweise das beispielsweise der aktuelle
@@ -336,13 +336,13 @@ muss abschließend noch Konfiguriert werden.
 
 \section{Datei-Dienst}\label{datei-dienst}
 
-Der Dateidienst, spielt gerade in größeren Unternehmen eine wichtige
+Der Dateidienst, spielt gerade in gr\"oßeren Unternehmen eine wichtige
 Rolle, da viele Benutzer Dateien mit anderen Benutzern teilen oder zur
 Verf\"ugung stellen wollen. Hierzu kann der von Windows eigene Dateidienst
 verwendet werden, da dieser mit Hilfe des Distributed File System und
-deren Verwaltungsoberfläche eine einfache Administration möglich ist.
+deren Verwaltungsoberfläche eine einfache Administration m\"oglich ist.
 
-Um den Windows Dateidienst verwenden zu können, muss dieser zunächst
+Um den Windows Dateidienst verwenden zu k\"onnen, muss dieser zunächst
 \"uber den Server-Manager hinzugef\"ugt werden. Die Firma Mikado braucht in
 erster Linie die Rolle als DFS-Namespace. Damit die Verwaltung des
 Dateidienstes dem Administrator vereinfacht wird, sollte zusätzlich zu
@@ -352,7 +352,7 @@ Installationsroutine mit installiert. Der Ressourcen Manager kann jedoch
 auch Problemlos nachträglich installiert werden.
 
 Die Installation ist nun abgeschlossen und der Dateidienst, sowie die
-Freigaben können konfiguriert werden.
+Freigaben k\"onnen konfiguriert werden.
 
 \chapter{Umsetzen der Anforderungen}\label{umsetzen-der-anforderungen}
 
@@ -361,20 +361,20 @@ Freigaben können konfiguriert werden.
 Bereits nach der Installation, zeigt der Server Manager an, dass weitere
 Konfigurationsschritte f\"ur den DHCP Server notwendig sind. So muss
 beispielsweise der DHCP Server innerhalb der Domäne autorisiert werden,
-damit die Clients eine entsprechende IP Adresse abrufen können.
+damit die Clients eine entsprechende IP Adresse abrufen k\"onnen.
 Zusätzlich muss das DHCP verschiedene Sicherheitsgruppen anlegen, die
-der DHCP Server benötigt. Nach klicken auf \enquote{weiter} werden
+der DHCP Server ben\"otigt. Nach klicken auf \enquote{weiter} werden
 Anmeldeinformationen f\"ur die Domäne abgefragt. Hier muss ein Domänen
 Administrator eingetragen sein, da nur dieser entsprechende
 Autorisierungen des DHCP Servers durchf\"uhren darf. Windows f\"ullt diesen,
 da der DHCP Server auf der gleichen Virtuellen Maschine wie der
 Domaincontroller installiert ist, standardmäßig mit dem Administrator
 aus, da dieser bereits während der Installationsroutine als Domänen
-Administrator hinzugef\"ugt wurde. Der Nutzer hat die Möglichkeit,
+Administrator hinzugef\"ugt wurde. Der Nutzer hat die M\"oglichkeit,
 alternative Anmeldeinformationen anzugeben. Die Autorisierung des DHCP
-Servers ist nötigt, falls mehrere DHCP Server innerhalb einer Domäne
+Servers ist n\"otigt, falls mehrere DHCP Server innerhalb einer Domäne
 arbeiten, da andernfalls es Konflikte zwischen diesen bei der Vergabe
-der IP Adressen geben könnte.
+der IP Adressen geben k\"onnte.
 
 Mit klicken auf \enquote{Commit ausf\"uhren} wird die Autorisierung, sowie das
 Anlegen der entsprechenden Sicherheitsgruppen im Active Directory
@@ -387,14 +387,14 @@ Die Grundkonfiguration des DHCP Server ist abgeschlossen. Als nächsten
 Schritten m\"ussen nun innerhalb des DHCP Servers Bereiche definiert
 werden. Hierzu muss zunächst unter Tools \textgreater{} DHCP die
 Verwaltungskonsole des DHCP aufgerufen werden, da nur in dieser Bereiche
-und Konfigurationen durchgef\"uhrt werden können.
+und Konfigurationen durchgef\"uhrt werden k\"onnen.
 
 Um einen Bereich zu konfigurieren, muss zunächst im DHCP Verwaltungstool
 der DHCP Server ausgewählt werden. Anschließend gibt es die Auswahl
 zwischen IPv4 oder IPv6. Die Firma Mikado verwendet IPv4, weshalb hier
 der Bereich auf IPv4 beschränkt werden kann. Mit Rechtsklick auf IPv4
-öffnet sich ein Untermen\"u, wo \enquote{neuer Bereich} ausgewählt wird. Es
-öffnet sich ein Bereitstellungs-assistent, welcher den Administrator
+\"offnet sich ein Untermen\"u, wo \enquote{neuer Bereich} ausgewählt wird. Es
+\"offnet sich ein Bereitstellungs-assistent, welcher den Administrator
 durch die Konfiguration leitet. Mit klicken auf \enquote{weiter}, muss zunächst
 ein Name f\"ur den Bereich und eine Beschreibung festgelegt werden. Sobald
 diese definiert wurde, muss die Start und End IP Adresse definiert
@@ -405,7 +405,7 @@ der Assistent vor, die IP Adressen in Bereichsgruppen aufzuteilen.
 
 Nach bestätigen der IP Adressen, wird abgefragt, ob IP Adressen
 ausgenommen werden sollen. Beispielsweise bei Servern oder Applikationen
-die immer die gleiche IP Adresse benötigen. Sollten hier keine Ausnahmen
+die immer die gleiche IP Adresse ben\"otigen. Sollten hier keine Ausnahmen
 definiert werden m\"ussen, wird anschließend die Lease Time abgefragt. Die
 Lease Time bestimmt, wie lange eine IP Adresse f\"ur einen Client g\"ultig
 sein darf. Sobald die Lease Time abläuft, f\"ur der Client erneut eine
@@ -418,8 +418,8 @@ Stunden herabgesetzt werden.
 
 Eine kurze Lease Time sollte ebenfalls verwendet werden, wenn der DHCP
 Server nur einen sehr beschränkten Raum f\"ur IP Adressen besitzt. Sollte
-der DHCP Server keine IP Adressen mehr vergeben können, weil
-beispielsweise alle vergeben sind, so können keine neuen Geräte mit der
+der DHCP Server keine IP Adressen mehr vergeben k\"onnen, weil
+beispielsweise alle vergeben sind, so k\"onnen keine neuen Geräte mit der
 Infrastruktur kommunizieren.
 
 Im nächsten Schritt wird abgefragt, ob die DHCP Optionen aktiviert
@@ -459,9 +459,9 @@ einen Bereich zu verändern, kann mit einem Rechtsklick die Eigenschaften
 wie IP Adressbereich etc. abgeändert werden. Ebenfalls kann hier unter
 dem Reiter DNS auch ein DHCP Namensschutz eingerichtet werden. Dies
 sorgt daf\"ur, das bereits vorhandene DNS Einträge \"uberschrieben werden
-können.
+k\"onnen.
 
-Innerhalb eines Bereiches können Reservierungen f\"ur beispielsweise
+Innerhalb eines Bereiches k\"onnen Reservierungen f\"ur beispielsweise
 Drucker festgelegt werden. Hierzu muss ein entsprechender Bereich
 aufgeklappt und anschließend mit Rechtsklick auf Reservierungen die
 Reservierung hinzugef\"ugt werden.
@@ -476,7 +476,7 @@ werden.
 
 \subsection{Test des Failovers}\label{test-des-failovers}
 
-Um den Test des DHCP Failovers \"uberpr\"ufen zu können, wurde zunächst der
+Um den Test des DHCP Failovers \"uberpr\"ufen zu k\"onnen, wurde zunächst der
 Windows 7 Client, welcher innerhalb des Netzwerks ist gestartet und
 anschließend die Eingabeaufforderung gestartet, zudem wurden beide DC
 mit entsprechender DHCP Rolle gestartet.
@@ -492,7 +492,7 @@ Die Eingabeaufforderung, zeigt folgendes Ergebnis:
 
 Der Primäre DHCP Server 10.0.2.15 hat dem Client die IP Adresse
 10.0.2.16 zugewiesen. Eine IP aus einem nicht reservierten Bereich. Um
-den Gegentest durchf\"uhren zu können, wird nun der DHCP-Dienst auf dem
+den Gegentest durchf\"uhren zu k\"onnen, wird nun der DHCP-Dienst auf dem
 Primären DHCP abgeschaltet und der Client neugestartet. Nach dem
 Neustart des Clients, wurde erneut der oben stehende Befehl abgesetzt.
 Das Ergebnis sieht danach wie folgt aus:
@@ -509,8 +509,8 @@ die Aufgaben des Primären DHCP Servers \"ubernommen.
 Bereits während der Installation des Active Directory Domänendienst wird
 der DNS Dienst angelegt und bereits vorkonfiguriert. Er ist so
 eingestellt, dass dieser automatisch aktualisiert wird. Zusätzlich zu
-den automatischen Aktualisierungen, können manuelle Einträge als Host A
-Eintrag hinzugef\"ugt werden. Diese Einträge können \"uber den DNS-Manager
+den automatischen Aktualisierungen, k\"onnen manuelle Einträge als Host A
+Eintrag hinzugef\"ugt werden. Diese Einträge k\"onnen \"uber den DNS-Manager
 verwaltet werden. Es gibt zwei Arten der DNS Einträge:
 
 \begin{itemize}
@@ -539,8 +539,8 @@ erstellt eine Kopie dieser und legt sie auf den Server ab.
 einrichten}\label{dateidienstfreigaben-einrichten}
 
 Das Anlegen von neuen Freigaben ist Assistentengesteuert, damit hier die
-Anpassungen alle auf einmal durchgef\"uhrt werden können. Um eine Freigabe
-hinzuf\"ugen zu können, muss zunächst im Server Manager \textgreater{}
+Anpassungen alle auf einmal durchgef\"uhrt werden k\"onnen. Um eine Freigabe
+hinzuf\"ugen zu k\"onnen, muss zunächst im Server Manager \textgreater{}
 Datei- und Speicherdienste \textgreater{} Freigaben unter Aufgaben eine
 neue Freigabe ausgewählt werden:
 
@@ -550,7 +550,7 @@ Zum aktuellen Zeitpunkt, besitzt der Server zwei Freigaben. Diese wurden
 während der Installation des ActiveDirectorys angelegt. NetLogon soll
 dabei f\"ur Anmeldeskripte zur Verf\"ugung stehen.
 
-Sobald auf neue Freigabe geklickt wurde, öffnet sich der Assistent f\"ur
+Sobald auf neue Freigabe geklickt wurde, \"offnet sich der Assistent f\"ur
 die Freigabe, in dem ein Profil aus folgenden ausgewählt werden muss:
 
 \begin{itemize}
@@ -583,10 +583,10 @@ Testumgebung zwei DC Servers vorhanden sein werden, kann dies auf dem
 Master DC hinterlegt werden. Ein Praktischer Anwendungsfall wäre hier
 beispielsweise die Speicherung der Daten auf einem separaten Datei
 Server, da auf diesen entsprechende Sicherungen durchgef\"uhrt werden
-können.
+k\"onnen.
 
 Als nächstes wird der Freigabename abgefragt, welcher hier verwendet
-werden soll. Hier könnte man nun beispielsweise Abteilungsordner
+werden soll. Hier k\"onnte man nun beispielsweise Abteilungsordner
 anlegen, welche den Nutzer bei jeder Anmeldung zugewiesen werden, damit
 jeder Mitarbeiter auch eine Ablage f\"ur die Abteilung besitzt.
 
@@ -602,7 +602,7 @@ Remote Pfad zur Freigabe:
 \textbackslash{}\textbackslash{}w16dc01\textbackslash{}Leitung
 
 Nachdem der Freigabename definiert wurde, werden weitere \enquote{andere
-Einstellungen} abgefragt. Diese können f\"ur die Abteilungsfreigabeordner
+Einstellungen} abgefragt. Diese k\"onnen f\"ur die Abteilungsfreigabeordner
 auf dem Standard belassen werden. Im späteren Verlauf werden noch zwei
 Ordner \enquote{Profiles\$} und \enquote{Home\$} angelegt. Bei diesen beiden Freigaben
 handelt es sich um die Servergespeicherten Profile. Dabei ist hier die
@@ -611,7 +611,7 @@ Zwischenspeichern der Freigabe zulassen deaktiviert ist, sowie das \$ am
 Ende des Freigabenamens vorhanden ist. Nur mit diesem \$ Zeichen, wird
 diese Freigabe nicht f\"ur die Benutzer sichtbar sein.
 
-Damit nicht alle Nutzer Zugriff auf dieses Laufwerk erhalten können,
+Damit nicht alle Nutzer Zugriff auf dieses Laufwerk erhalten k\"onnen,
 werden entsprechende Berechtigungen definiert. Innerhalb des
 ActiveDirectory, werden Sicherheitsgruppen f\"ur jede Abteilung erstellt,
 worin die Benutzer der Abteilung Mitglieder sind.
@@ -644,8 +644,8 @@ Ordners festgelegt. Dies wird wie eine Klassifizierungsregel innerhalb
 der Datenverwaltungsrichtlinie festgelegt.
 
 Da es sich bei der Freigabe des Abteilungslaufwerks um eine
-Gruppenfreigabe (Benutzer sollen die Möglichkeit haben Daten
-untereinander austauschen zu können) handelt, muss dieses entsprechend
+Gruppenfreigabe (Benutzer sollen die M\"oglichkeit haben Daten
+untereinander austauschen zu k\"onnen) handelt, muss dieses entsprechend
 ausgewählt werden. Auch hier gibt es wieder die Besonderheit, bei den
 Profiles und Home Freigaben. Da es sich bei diesen beiden um Ordner
 handeln, die in der Regel nur von einem einzelnen Benutzer verwendet
@@ -656,7 +656,7 @@ werden. Hiermit wird der Speicherbereich limitiert, den der Benutzer zur
 Verf\"ugung gestellt bekommt. F\"ur die Abteilungslaufwerke ist dies nicht
 erforderlich. Wichtig ist dies in Bezug auf die Servergespeicherten
 Profile, sowie umgeleitete Ordner. Hierbei soll der Anwender nur eine
-maximale Menge von 200MB ablegen können, damit An- oder Abmeldungen
+maximale Menge von 200MB ablegen k\"onnen, damit An- oder Abmeldungen
 nicht lange dauern. Benutzer sollen in der Regel Daten, die sie während
 der Arbeit brauchen auf dem Abteilungslaufwerk ablegen.
 
@@ -667,11 +667,11 @@ angelegt. Das Ergebnis sollte wie folgt aussehen:
 
 \includegraphics[width=4.9375in,height=1.22917in]{figures/image7.png}
 
-Die Eigenschaften, welche zuvor festgelegt wurden, können nach
+Die Eigenschaften, welche zuvor festgelegt wurden, k\"onnen nach
 abschließen des Assistenten weiterhin bearbeitet und angepasst werden.
 
 Damit Servergespeicherte Profile innerhalb einer Freigabe abgelegt
-werden können, muss zunächst wie oben beschrieben jeweils eine Freigabe
+werden k\"onnen, muss zunächst wie oben beschrieben jeweils eine Freigabe
 f\"ur \enquote{profiles\$} und eines f\"ur \enquote{home\$} angelegt werden.
 
 Hier sollte die Berechtigung auf eine bestimmte Benutzergruppe limitiert
@@ -690,9 +690,9 @@ oder verändern.
 \subsection{Ressourcen-Manager}\label{ressourcen-manager}
 
 Über den Ressourcen Manager des Dateidienstes, hat der Administrator die
-Möglichkeit, verschiedene Kontingente zuzuweisen oder angepasste
+M\"oglichkeit, verschiedene Kontingente zuzuweisen oder angepasste
 Kontingente zu erstellen. Bei einer Überschreitung einer solchen
-Kontingentsverletzung, können verschiedene Aktionen durchgef\"uhrt werden.
+Kontingentsverletzung, k\"onnen verschiedene Aktionen durchgef\"uhrt werden.
 Beispielsweise kann dem Benutzer eine Systemerzeugte Meldung angezeigt
 oder eine Email an den Administrator oder dem Benutzer versendet werden.
 Vorausgesetzt es gibt ein Mailserver innerhalb der Umgebung, welcher als
@@ -716,12 +716,12 @@ und zeigt einen Link um den Server zum DomainController (DC)
 heraufzustufen. Anschließend muss die Art des Domänencontrollers
 festgelegt werden. Da es sich hierbei um eine neue Gesamtstruktur mit
 neuem DC handelt, muss hier \enquote{Neue Gesamtstruktur hinzuf\"ugen} ausgewählt
-werden. Der DC benötigt nun die Stammdomäne, welche \enquote{Mikado.Spiel}
+werden. Der DC ben\"otigt nun die Stammdomäne, welche \enquote{Mikado.Spiel}
 lautet. Dies kann der Fully Qualified Domain Name sein, muss mindestens
 jedoch eine Second-Level-Domain sein. Anschließend muss mit weiter
 bestätigt werden.
 
-Im nachfolgenden Dialog können Domänencontrolleroptionen eingestellt
+Im nachfolgenden Dialog k\"onnen Domänencontrolleroptionen eingestellt
 werden. Dabei muss nun f\"ur die Gesamtstrukturfunktionsebene, sowie der
 Domänenfunktionsebene der älteste DC definiert werden. Da innerhalb der
 Testumgebung sowohl ein DC auf einem Windows Server 2012R2 und einer auf
@@ -739,17 +739,17 @@ Objekte. Er speichert ausgewählte Attribute aller Objekte aus allen
 Domänen.
 
 Abschließend muss hier ein Wiederherstellungskennwort definiert werden,
-welches benötigt wird falls AD-Objekte gelöscht wurden um diese
+welches ben\"otigt wird falls AD-Objekte gel\"oscht wurden um diese
 wiederherzustellen. Das Kennwort muss nach dem booten in den
 Verzeichnisdienst Wiederherstellungsmodus eingegeben werden. Ohne dieses
-können gelöschte AD-Objekte nicht wiederhergestellt werden.
+k\"onnen gel\"oschte AD-Objekte nicht wiederhergestellt werden.
 
 Windows schlägt anschließend einen NetBIOS --Domänennamen vor, welcher
 sich aus dem ersten Bestandteil des FQDNs zusammensetzt. Dieser kann
 muss jedoch nicht angepasst werden.
 
 Nach erneutem bestätigen auf \enquote{weiter}, werden die Speicherorte f\"ur die
-AD DS Datenbanken, sowie Protokolldateien abgefragt. Diese können
+AD DS Datenbanken, sowie Protokolldateien abgefragt. Diese k\"onnen
 ebenfalls bei Bedarf angepasst werden. Die nächste Seite, zeigt nun eine
 Gesamt\"ubersicht der Änderungen an, welche zuvor definiert worden sind.
 Ebenfalls kann hieraus ein PowerShell Skript erzeugt werden, welches
@@ -757,7 +757,7 @@ ggf. angepasst werden kann.
 
 Abschließend \"uberpr\"uft die Installationsroutine ein letztes Mal, ob alle
 Einstellungen und Anforderungen erf\"ullt sind. Dabei werden bereits
-einige Warnung angezeigt, welche ignoriert werden können. Sobald die
+einige Warnung angezeigt, welche ignoriert werden k\"onnen. Sobald die
 Installationsroutine mit \enquote{installieren} durchgelaufen ist, wird der
 Lokale Administrator des Windows Servers automatisch Mitglied der
 Gruppen Organisations-, Schema- und Domänen-Admins und hat somit die
@@ -771,22 +771,22 @@ Directory}\label{edv-struktur-im-active-directory}
 
 Der Aufbau des Active Directory, sollte im Regelfall analog der
 Unternehmensstruktur aufgeteilt sein. Innerhalb des ADs werden diese in
-Organisationseinheiten aufgeteilt. Letztendlich können solche
+Organisationseinheiten aufgeteilt. Letztendlich k\"onnen solche
 Organisationseinheiten auch Standorte wiederspiegeln.
 Organisationseinheiten sollen bei den Verwaltungsaufgaben helfen. Jeder
 Angelegte Benutzer, welcher keiner Organisationseinheit hinterlegt wurde
 wird in den Container \enquote{User} abgelegt. Bei mehreren Hundert Nutzern
-wären diese alle in dem User Container enthalten. Dies könnte jedoch
+wären diese alle in dem User Container enthalten. Dies k\"onnte jedoch
 gerade in Bezug auf die Rechte vergabe Probleme verursachen, da
 unterschiedliche Nutzer auch unterschiedliche Berechtigungen erhalten.
-So könnte man je Organisationseinheit unterschiedliche Berechtigungen
+So k\"onnte man je Organisationseinheit unterschiedliche Berechtigungen
 zuweisen ohne jeden Nutzer einzeln verändern zu m\"ussen.
 
-Um neue Organisationseinheiten hinzuf\"ugen zu können, muss auf die Domäne
+Um neue Organisationseinheiten hinzuf\"ugen zu k\"onnen, muss auf die Domäne
 mit Rechtsklick \textgreater{} Neu \textgreater{} Organisationseinheit
 geklickt werden. Anschließend kann ein Name f\"ur diese
 Organisationseinheit festgelegt werden, sowie festgelegt werden, ob die
-Gruppe gelöscht werden kann. Dies soll das versehentliche Löschen der
+Gruppe gel\"oscht werden kann. Dies soll das versehentliche L\"oschen der
 Gruppe vorbeugen.
 
 Nachdem alle Organisationseinheiten definiert wurden, sieht die Struktur
@@ -798,14 +798,14 @@ Jede Abteilung hat eine einzelne Organisationseinheit zugewiesen
 bekommen. Unter dieser Abtrennung, werden anschließend zwei zusätzliche
 Organisationseinheiten angelegt, welche unter Benutzer und Computer
 unterschieden wird. Dies hat den Vorteil, dass im Späteren Verlauf die
-Gruppenrichtlinien auf einzelne Abteilungen beschränkt werden können. Um
-erweiterbare Funktionen einblenden lassen zu können, empfiehlt es sich
+Gruppenrichtlinien auf einzelne Abteilungen beschränkt werden k\"onnen. Um
+erweiterbare Funktionen einblenden lassen zu k\"onnen, empfiehlt es sich
 unter dem Punkt Ansicht die Erweiterten Features zu aktivieren.
 
 \subsection{Replikation}\label{replikation}
 
 Innerhalb einer Domäne sollte es immer zwei DomainController, sowie zwei
-DHCP Server geben. Falls einer der beiden Server ausfällt, können sich
+DHCP Server geben. Falls einer der beiden Server ausfällt, k\"onnen sich
 die Nutzer weiterhin Anmelden und erhalten weiterhin eine IP Adresse.
 
 Damit ein zusätzlicher Server in die Domäne integriert werden kann, muss
@@ -822,7 +822,7 @@ Domänencontroller zu einer vorhanden Domäne hinzuf\"ugen ausgewählt sein
 muss, damit der DC in die vorhandenen Mikado Domäne zugef\"ugt wird.
 
 Damit die Domäne ausgewählt werden kann, kann Rechts auf \enquote{auswählen}
-geklickt werden. Es öffnet sich ein Windows Anmeldefenster, wo die
+geklickt werden. Es \"offnet sich ein Windows Anmeldefenster, wo die
 Anmeldeinformationen von einer Domäne Administrator eingetragen werden
 m\"ussen. Wichtig ist hier, dass ein Benutzer eingetragen wird, welcher
 die Berechtigung hat, Computer oder Server in die Domäne aufnehmen zu
@@ -834,11 +834,11 @@ angezeigt.
 Nachdem die Domäne ausgewählt wurde, kann mit \enquote{weiter} bestätigt
 werden. Jeder Domain Controller, sollte gleichzeitig ein DNS Server
 beinhalten, sowie ein Globaler Katalog sein, damit hier abfragen
-schneller durchgef\"uhrt werden können. Der DNS Server auf dem zweiten
+schneller durchgef\"uhrt werden k\"onnen. Der DNS Server auf dem zweiten
 DomainController, kann zudem innerhalb der DHCP Konfiguration als
 Sekundärer DNS Server eingetragen werden. Auch hier muss wieder ein
 Wiederherstellungskennwort eingetragen werden, welches im Falle vom
-versehentlichen Löschen von Ordnern oder AD Strukturen benötigt wird.
+versehentlichen L\"oschen von Ordnern oder AD Strukturen ben\"otigt wird.
 
 Als nächsten Schritt muss die DNS Delegierung, sowie ausgewählt werden,
 von welchem DC repliziert werden soll. Da es zum aktuellen Zeitpunkt,
@@ -865,13 +865,13 @@ Administrator vom DC01 durchgef\"uhrt werden.
 \subsection{Benutzerkonten
 erstellen}\label{benutzerkonten-erstellen}}
 
-Benutzer können \"uber die Active Directory Benutzer und
+Benutzer k\"onnen \"uber die Active Directory Benutzer und
 Computerverwaltungs\"ubersicht manuell hinzugef\"ugt werden. Hierzu kann
 innerhalb einer OU mit Rechtsklick \textgreater{}Neu \textgreater{}
 Benutzer ein Benutzer hinzugef\"ugt werden. Der Benutzer wird nun direkt
 in die richtige OU angelegt.
 
-In dem dann neu eröffneten Fenster muss nun ein Vorname, Nachname und
+In dem dann neu er\"offneten Fenster muss nun ein Vorname, Nachname und
 Benutzername festgelegt werden. Der Benutzername muss innerhalb einer
 Domäne eindeutig sein und besteht bei der Firma Mikado als 5 stellige
 Personalnummer. Eine Personalnummer darf nie doppelt vergeben werden, da
@@ -884,19 +884,19 @@ nächsten Anmeldung ändern} sollte angehakt sein, damit der Anwender ein
 eigenes von ihm definierte Kennwort erstellen kann. Hier kann man
 beispielsweise nun ein Kennwort verwenden, welches der
 Standardrichtlinien entspricht. Als Beispiel wäre hier \enquote{Mikado2018!}
-möglich, da es sowohl klein-, Großbuchstaben, sowie Sonderzeichen und
+m\"oglich, da es sowohl klein-, Großbuchstaben, sowie Sonderzeichen und
 Zahlen enthält.
 
 Nachdem der Anwender sich hiermit an einem Rechner innerhalb der Domäne
 anmeldet, wird automatisch die Änderung des Kennworts verlangt. Ohne
-dieses ist keine Anmeldung an der Domäne möglich.
+dieses ist keine Anmeldung an der Domäne m\"oglich.
 
 Sollte es sich bei dem angelegten Nutzer um einen Service Account
 handeln, beispielsweise FTP Zugriff oder sonstiges, empfiehlt es sich
 hier, das Kennwort nicht ablaufen zu lassen, sowie das Kontrollhäckchen
 bei \enquote{Benutzer muss Kennwort bei der nächsten Anmeldung ändern}
 rauszunehmen, da andernfalls die Funktion dieses Service Accounts
-eingeschränkt sein könnte.
+eingeschränkt sein k\"onnte.
 
 Zum Schluss wird eine Übersicht \"uber den Nutzer angezeigt.
 
@@ -906,8 +906,8 @@ Zum Schluss wird eine Übersicht \"uber den Nutzer angezeigt.
 Ein Gruppenkonto, kann entweder in einer Abteilungs OU oder in dem
 Container User erstellt werden. Hierzu muss man innerhalb des
 gew\"unschten Verzeichnis mit der rechten Maustaste \textgreater{} Neu
-\textgreater{} Gruppe die Gruppe hinzuf\"ugen. Es öffnet sich ein neues
-Fenster, wo weitere Einstellungen vorgenommen werden können. In der
+\textgreater{} Gruppe die Gruppe hinzuf\"ugen. Es \"offnet sich ein neues
+Fenster, wo weitere Einstellungen vorgenommen werden k\"onnen. In der
 Regel muss hier zunächst ein Gruppen Namen definiert werden. Dabei
 sollte geachtet werden, dass der Gruppenname eindeutig zu der Funktion
 der Gruppe ist, da im späteren Verlauf nur der Gruppennamen angezeigt
@@ -957,17 +957,17 @@ In beliebigen Domänen\strut
 \end{longtable}
 
 Die zwei Gruppentypen sind unterteilt in \textbf{Sicherheit} und
-\textbf{Verteilung}. \textbf{Sicherheitsgruppen} können
-Sicherheitsrichtlinien zugewiesen werden und können somit den Zugriff
+\textbf{Verteilung}. \textbf{Sicherheitsgruppen} k\"onnen
+Sicherheitsrichtlinien zugewiesen werden und k\"onnen somit den Zugriff
 auf Ressourcen zulassen oder verweigern. Bei \textbf{Verteilungsgruppen}
 wird der Nutzer, welcher Mitglied dieser Gruppe ist in einen Verteiler,
 beispielsweise Mailverteiler hinzugef\"ugt. Verteilergruppen erhalten nach
 erstellen ebenfalls eine Email Adresse, an denen Benutzer beispielsweise
-eine Email schreiben könnten.
+eine Email schreiben k\"onnten.
 
 Nachdem eine Sicherheitsgruppe erstellt wurde, kann sie nachträglich mit
 einem doppelklick auf dieser bearbeitet werden. Unter den Reitern
-Mitglieder, können Benutzer hinzugef\"ugt werden. Dieser Änderungen werden
+Mitglieder, k\"onnen Benutzer hinzugef\"ugt werden. Dieser Änderungen werden
 bei Sicherheitsgruppen erst nach erneuter Anmeldung mit dem
 Benutzerkonto sichtbar.
 
@@ -980,12 +980,12 @@ sind, sind automatisch Mitglied dieser Sicherheitsgruppe.
 \subsection{Computerkonten
 erstellen}\label{computerkonten-erstellen}}
 
-Computerkonten können Analog wie auch die Benutzerkonten erstellt
+Computerkonten k\"onnen Analog wie auch die Benutzerkonten erstellt
 werden. Die Computerkonten, sollten auch hier unmittelbar direkt in der
 richtigen OU hinterlegt werden, damit Computerrichtlinien exakt
-angewandt werden können. Der Computername sollte ebenfalls wie auch der
+angewandt werden k\"onnen. Der Computername sollte ebenfalls wie auch der
 Benutzername eindeutig sein, damit hier innerhalb der Domäne keine
-Konflikte auftreten können. Zusätzlich zu dem Benutzernamen, muss
+Konflikte auftreten k\"onnen. Zusätzlich zu dem Benutzernamen, muss
 definiert werden, welcher Nutzergruppe den Computer in die Domäne
 integrieren kann. Dies ist in der Regel nicht f\"ur alle Nutzer gestattet.
 Wichtig bei der Namensgebung ist auch die Konvention f\"ur den DNS Server,
@@ -1018,16 +1018,16 @@ New-ADUser -Name 'Nikolai Luis' -SamAccountName 00003 -UserPrincipalName
 Das oben stehende PowerShell Skript, f\"ugt einen vordefinierten Benutzer
 an die angegebene OU und DC ein. Er erhält ein Passwort \enquote{XTi114!}
 welches nach der Anmeldung direkt geändert werden muss. Bedingt dadurch
-das die PS Eingabe keine Klartext Passwörter verwenden kann, muss dieses
+das die PS Eingabe keine Klartext Passw\"orter verwenden kann, muss dieses
 zuvor in einen Sicheren String umgewandelt werden.
 
 \hypertarget{anmeldeskript}{%
 \subsection{Anmeldeskript}\label{anmeldeskript}}
 
 Ein AnmeldeSkript wird während der Anmeldung eines Nutzers geladen und
-angewendet. In einem solchen, können beispielsweise Netzlaufwerke,
+angewendet. In einem solchen, k\"onnen beispielsweise Netzlaufwerke,
 Drucker oder Freigaben eingef\"ugt sein. Es gibt verschiedene
-Möglichkeiten, Benutzern ein Anmeldeskript zur Verf\"ugung zu stellen. Der
+M\"oglichkeiten, Benutzern ein Anmeldeskript zur Verf\"ugung zu stellen. Der
 einfachste Weg, wäre \"uber eine Gruppenrichtlinie das Anmeldeskript zur
 Verf\"ugung zu stellen. Es kann jedoch auch unmittelbar direkt an das
 Benutzerprofil beigef\"ugt oder an einen Computer zugewiesen werden.
@@ -1067,9 +1067,9 @@ Im Fall der Firma Mikado, werden Veränderbare Benutzerprofile verwendet,
 da im späteren Verlauf zusätzlich die Richtlinie angewandt wird, dass
 Benutzerprofile nach Abmelden vom Rechner entfernt werden.
 
-Um die Servergespeicherten Profile konfigurieren zu können, muss unter
+Um die Servergespeicherten Profile konfigurieren zu k\"onnen, muss unter
 der Verwaltungskonsole des Active Directorys, die Benutzereigenschaften
-aufgerufen werden. Diese Einstellungen können bereits während des
+aufgerufen werden. Diese Einstellungen k\"onnen bereits während des
 Anlegens oder mittels Anlegeskript erzeugt werden.
 
 Unter dem Reiter \enquote{Profil}, kann unter Profilpfad der Pfad zu der
@@ -1096,7 +1096,7 @@ Die entsprechenden Dokumente, sind f\"ur einen Benutzer anschließend \"uber
 ein Netzlaufwerk zu erreichen, wo unter anderem auch das Benutzerprofil
 abgelegt ist. Wichtig ist dabei, dass diese Ablage von dem Profilserver
 separiert ist, da andernfalls ein Benutzer an diese Daten nicht
-drankommen könnte, falls der Profilserver nicht erreicht wäre.
+drankommen k\"onnte, falls der Profilserver nicht erreicht wäre.
 Heimatverzeichnisse, bzw. Ordnerumleitung werden nicht in dem
 Benutzer-profil/-eigenschaft hinterlegt, sondern innerhalb einer
 Gruppenrichtlinie festgelegt. Diese kann anschließend entweder an einen
@@ -1104,20 +1104,20 @@ Nutzer oder aber Computer zugewiesen sein.
 
 Um die Umleitung der Ordner zu aktivieren, muss zunächst die Default
 Domain Policy angepasst werden. Hierzu wird unter Tools die
-Gruppenrichtlinienverwaltung geöffnet.
+Gruppenrichtlinienverwaltung ge\"offnet.
 
 \includegraphics[width=3.05208in,height=3.34375in]{figures/image12.png}
 
 Mit Rechtsklick auf Default Domain Policy, kann diese bearbeitet und
 angepasst werden. Es empfiehlt sich hier gegebenenfalls ein zusätzliches
 Gruppenrichtlinienobjekt anzulegen. Innerhalb diesem muss um die
-Ordnerumleitung verwalten zu können unter Benutzerkonfiguration
+Ordnerumleitung verwalten zu k\"onnen unter Benutzerkonfiguration
 \textgreater{} Windows-Einstellungen navigiert werden. Unter dem Punkt
 Ordnerumleitung, werden alle Benutzerordner angezeigt:
 
 \includegraphics[width=1.97917in,height=2.63542in]{figures/image13.png}
 
-Wichtig hierbei ist, dass die größten Ordner umgeleitet werden, wie
+Wichtig hierbei ist, dass die gr\"oßten Ordner umgeleitet werden, wie
 beispielsweise AppData, Desktop, Dokumente, Bilder, Musik etc. Um die
 Umleitung zu aktivieren, muss ein Ordner ausgewählt werden und
 anschließend \"uber Rechtsklick Eigenschaften bearbeitet werden.
@@ -1135,13 +1135,13 @@ Exemplarisch wurde dies f\"ur die AppDaten des Anwenders durchgef\"uhrt.
 Zusätzlich zu diesen Einstellungen, kann festgelegt werden, ob dem
 Nutzer exklusive Zugriffsrechte f\"ur Dokumente erteilt werden. Dies kann
 ein Nachteil f\"ur den Administrator sein, da dieser im Falle einer
-Problemlösung innerhalb des Profils den Besitz \"ubernehmen muss und
+Probleml\"osung innerhalb des Profils den Besitz \"ubernehmen muss und
 anschließend wieder zur\"uckschreiben muss. Sollten dabei Fehler
-unterlaufen, so könnte der Benutzer nicht mehr auf diese Daten
+unterlaufen, so k\"onnte der Benutzer nicht mehr auf diese Daten
 zugreifen. Die Einstellung \enquote{Den Inhalt von
 \textless{}Ordnername\textgreater{} an den neuen Speicherort
 verschieben} sollte aktiviert werden, da durch diesen der Ordner auf
-dem Rechner gelöscht und an den zuvor definierten Speicherort verschoben
+dem Rechner gel\"oscht und an den zuvor definierten Speicherort verschoben
 wird. Sollte diese Option nicht aktiviert sein, so verbleibt eine Kopie
 des Ordners auf dem Rechner. Im letzten Abschnitt kann festgelegt
 werden, was passieren sollen, falls die Richtlinie entfernt wird.
@@ -1157,7 +1157,7 @@ zuvor eingestellten Anpassungen, m\"ussen nun f\"ur die restlichen Ordner
 ebenfalls durchgef\"uhrt werden, damit die Ordnerumleitung auch auf die
 restlichen Aktiviert wird.
 
-Die Ordner Bilder, Musik und Videos, können dem Ordner Dokumente folgen,
+Die Ordner Bilder, Musik und Videos, k\"onnen dem Ordner Dokumente folgen,
 so muss f\"ur diese nicht zusätzlich ein Pfad mit angeben werden.
 
 Die Benutzerkonfiguration f\"ur die Ordnerumleitung ist nun abgeschlossen.
@@ -1166,7 +1166,7 @@ werden, damit auch der Computer f\"ur Servergespeicherte Profile
 konfiguriert ist. So m\"ussen beispielsweise Einstellungen vorgenommen
 werden, das der Computer auf das Netzwerk wartet, oder aber das die
 Sicherheitsgruppe \enquote{Administrator} dem Servergespeichertem Profil
-hinzugef\"ugt wird, damit hier bei einer Problemlösung am Benutzerprofil
+hinzugef\"ugt wird, damit hier bei einer Probleml\"osung am Benutzerprofil
 der Profilbesitzer nicht gewechselt werden muss.
 
 Diese Einstellungen, m\"ussen ebenfalls in der Default Domain Policy, oder
@@ -1210,10 +1210,10 @@ des Nutzerprofiles unter Eigenschaften \textgreater{} Profil
 Begrenzung}\label{speichervolumen-begrenzung}}
 
 Wie bereits in Kapitel Dateidienst/Freigaben einrichten erläutert, gibt
-es verschiedene Möglichkeiten, das Dateilimit innerhalb eines Ordners zu
+es verschiedene M\"oglichkeiten, das Dateilimit innerhalb eines Ordners zu
 limitieren. Die Anforderung der Firma Mikado besteht darin, dass ein
 Angestellter ein maximales Speichervolumen von 200MB besitzt. Um diese
-Kontingentgrenze definieren zu können, muss zunächst innerhalb des
+Kontingentgrenze definieren zu k\"onnen, muss zunächst innerhalb des
 Ressourcen Managers f\"ur Dateiserver, ein neues Kontingent angelegt
 werden. Hierzu kann eine bestehende Kontingentgrenze als Vorlage
 verwendet werden. Anschließend muss der Kontingentpfad angeben werden.
@@ -1239,7 +1239,7 @@ Weiche Kontingentgrenze:
 \item
   Die Speichergrenze kann \"uberschritten werden, eine Aktion, wie
   beispielsweise Email Versand, Fehler oder Befehl wird ausgef\"uhrt.
-  Speichererweiterung um 50MB möglich.
+  Speichererweiterung um 50MB m\"oglich.
 \item
   Dient nur der Überwachung
 \end{itemize}
@@ -1260,7 +1260,7 @@ Abschließend sehen die Kontingenteinträge wie folgt aus:
 Um eine Weiche Kontingentgrenze zu definieren, muss entsprechend in der
 Abbildung xy die Eigenschaft \enquote{Benutzerdefinierte Kontingentgrenze
 definieren} ausgewählt sein. Sobald auf Benutzerdefinierte Eigenschaft
-geklickt wird, öffnet sich ein neues Fenster, wo die Grenzen, wie
+geklickt wird, \"offnet sich ein neues Fenster, wo die Grenzen, wie
 weiche- oder harte Kontingentgrenze, sowie deren Aktion ausgewählt und
 definiert werden kann.
 
@@ -1280,17 +1280,17 @@ geben, so sollte hier der Punkt LPD-Dienst aktiviert werden.
 Nachdem die Rolle hinzugef\"ugt wurde, kann diese \"uber die Druckverwaltung
 administriert werden.
 
-Ein Druckerserver bietet die Möglichkeit, Netzwerkdrucker und deren
+Ein Druckerserver bietet die M\"oglichkeit, Netzwerkdrucker und deren
 Treiber zur Verf\"ugung zu stellen, so muss ein Client, welcher den
 Drucker \"uber ein Anmeldeskript zugewiesen bekommt die Installation nicht
 manuell anstoßen und Windows muss nicht die Windows Updates f\"ur die
-Druckertreiber durchsuchen. Druckertreiberaktualisierungen können so
+Druckertreiber durchsuchen. Druckertreiberaktualisierungen k\"onnen so
 Zentral gesteuert werden.
 
 \includegraphics[width=2.04167in,height=1.75in]{figures/image19.png}
 
-Über Rechtsklick, können unter \enquote{Drucker hinzuf\"ugen} weitere Drucker
-hinzugef\"ugt werden. Diese können anschließend \"uber die GPO dem Benutzer
+Über Rechtsklick, k\"onnen unter \enquote{Drucker hinzuf\"ugen} weitere Drucker
+hinzugef\"ugt werden. Diese k\"onnen anschließend \"uber die GPO dem Benutzer
 zur Verf\"ugung gestellt werden. Der Netzwerkdruckerassistent durchsucht
 eigenständig das Netzwerk, nach dem angegeben Druckern.
 
@@ -1303,11 +1303,11 @@ Gruppenrichtlinien bestehen aus zwei Teilen und sind ein mächtiges
 Verwaltungs. Der erste Teil, besteht aus der Computerkonfiguration.
 Diese zieht immer auf einem Computer, egal welcher Nutzer angemeldet
 ist. Der zweite Teil besteht aus der Benutzerkonfiguration, welche
-spezifisch f\"ur die Nutzer definiert werden können. Ein kleines Beispiel
+spezifisch f\"ur die Nutzer definiert werden k\"onnen. Ein kleines Beispiel
 soll dies verdeutlichen:
 
 Die Kennwortrichtlinie ist innerhalb der BenutzerKonfiguration so
-eingestellt, dass eine Komplexität von 8 Zeichen benötigt wird. Sobald
+eingestellt, dass eine Komplexität von 8 Zeichen ben\"otigt wird. Sobald
 ein Nutzer versucht das Kennwort auf dem Rechner anzupassen, kann dieser
 jedoch ein Kennwort mit nur einer Länge vergeben, da die
 Computerkonfiguration keine Richtlinie f\"ur das Kennwort vorgibt.
@@ -1315,7 +1315,7 @@ Computerkonfiguration keine Richtlinie f\"ur das Kennwort vorgibt.
 Gruppenrichtlinien, werden immer an eine Sicherheitsgruppe gebunden,
 welche anschließend einem Benutzer zugewiesen werden kann. Standardmäßig
 sind keine Richtlinien oder Einschränkungen festgelegt. Innerhalb einer
-Sicherheitsgruppe, können mehrere Gruppenrichtlinien zugewiesen sein.
+Sicherheitsgruppe, k\"onnen mehrere Gruppenrichtlinien zugewiesen sein.
 Wichtig ist hierbei die Verkn\"upfungsreihenfolge der einzelnen GPOs.
 Sollte in der ersten Gruppenrichtlinie etwas deaktiviert sein, jedoch in
 der zweiten aktiviert, so greift hier die Gruppenrichtlinie, welche an
@@ -1329,7 +1329,7 @@ festgelegt wurde.
 \section{Kontorichtlinien}\label{kontorichtlinien}}
 
 Kontorichtlinien, sind Vorgaben die ein Benutzer erf\"ullen muss. Sie
-können beispielsweise die Länge eines Kennworts sein oder andere
+k\"onnen beispielsweise die Länge eines Kennworts sein oder andere
 ähnliche Einstellungen.
 
 \hypertarget{kennwortrichtlinien}{%
@@ -1346,11 +1346,11 @@ Eigenschaft & Vorgabe\tabularnewline
 Kennwort erforderlich & Ja\tabularnewline
 Länge & 8 Zeichen\tabularnewline
 Alter & 50 Tage\tabularnewline
-Wiederbenutzbar & Nach 12 Kennwörtern\tabularnewline
+Wiederbenutzbar & Nach 12 Kennw\"ortern\tabularnewline
 \bottomrule
 \end{longtable}
 
-Um diese Kennwortrichtlinie festlegen zu können, muss entweder innerhalb
+Um diese Kennwortrichtlinie festlegen zu k\"onnen, muss entweder innerhalb
 der Standard Gruppenrichtlinie(Default Global Policy) oder in einer
 neuen zuvor definierten Gruppenrichtlinie folgende Werte unter
 Computerkonfiguration \textgreater{} Windows-Einstellungen
@@ -1373,7 +1373,7 @@ Einstellung, wird nicht in einer Gruppenrichtlinie definiert, sondern
 f\"ur jeden Benutzer innerhalb der Active Directory-Benutzer und Computer
 verwaltungsoberfläche festgelegt.
 
-Unter dem Reiter Konto \textgreater{} Anmeldezeiten, können die
+Unter dem Reiter Konto \textgreater{} Anmeldezeiten, k\"onnen die
 Anmeldezeiten durch auswählen festgelegt werden.
 
 \includegraphics[width=5.25in,height=3.30208in]{figures/image22.png}
@@ -1400,7 +1400,7 @@ stehend umbenannt werden.
 \includegraphics[width=6.3in,height=3.22236in]{figures/image23.png}
 
 Die Umbenennung soll helfen, damit Nutzer oder Schadsoftware das
-Administrator Konto schlechter finden können.
+Administrator Konto schlechter finden k\"onnen.
 
 \hypertarget{zugriffsrechte}{%
 \section{Zugriffsrechte}\label{zugriffsrechte}}
@@ -1408,14 +1408,14 @@ Administrator Konto schlechter finden können.
 Zugriffsrechte dienen in erster Linie, das System vor ungewollten
 Zugriff zu sch\"utzen. Sie sch\"utzen jedoch nicht nur den Computer, sondern
 auch das Netzwerk vor Schadsoftware, welche beispielsweise durch USB
-Massenspeichern auf den Rechner \"ubertragen werden können.
+Massenspeichern auf den Rechner \"ubertragen werden k\"onnen.
 
 \hypertarget{zugriff-auf-lokale-laufwerke}{%
 \subsection{Zugriff auf Lokale
 Laufwerke}\label{zugriff-auf-lokale-laufwerke}}
 
 Damit Benutzer am Rechner keine Viren in das Netzwerk einschleusen
-können, sollen Laufwerke, wie auch USB Massenspeicher am Rechner
+k\"onnen, sollen Laufwerke, wie auch USB Massenspeicher am Rechner
 Deaktiviert werden. Diese Einstellung wird innerhalb der
 Gruppenrichtline festgelegt. Damit beispielsweise nicht alle Nutzer von
 diesen Anpassungen betroffen sind, kann eine neue Gruppenrichtline
@@ -1423,7 +1423,7 @@ hierf\"ur definiert werden, welche nur an bestimmte Sicherheitsgruppen
 zugewiesen werden. Ausgenommen werden hier beispielsweise
 Administratoren oder die F\"uhrungsebene.
 
-Um diese Einschränkung festlegen zu können, muss unter
+Um diese Einschränkung festlegen zu k\"onnen, muss unter
 Benutzerkonfiguration \textgreater{} Richtlinie \textgreater{}
 Administrative Vorlage \textgreater{} System \textgreater{}
 Wechselmedienzugriff folgende Richtlinie aktiviert werden:
@@ -1457,7 +1457,7 @@ Systemadministration}\label{zugriff-auf-systemadministration}}
 
 Um den Zugriff auf Systemeinstellungen zu verbieten, damit hier keine
 Änderungen an dem Computersystem vorgenommen werden kann, wird diese
-Konfigurationsmöglichkeit, f\"ur jeden Benutzer deaktiviert. Damit kann
+Konfigurationsm\"oglichkeit, f\"ur jeden Benutzer deaktiviert. Damit kann
 ein Benutzer die Systemsteuerung, sowie Informationen zu Konfiguration
 des Computers nicht mehr abrufen oder verändern. Diese Richtlinie kann
 innerhalb der Gruppenrichtlinie unter Benutzerkonfiguration
@@ -1473,7 +1473,7 @@ F\"ur den Datenaustausch der Mitarbeitern, sowie Abteilungsleitern, sind
 folgende Anforderungen definiert worden:
 
 Die Abteilungsleiter untereinander uneingeschränkt Daten austauschen
-können.
+k\"onnen.
 
 Hierzu muss zunächst eine Sicherheitsgruppe \enquote{LGsAbteilungsleiter}
 erstellt werden, damit nicht jeder Mitarbeiter einzelnen in die Freigabe
@@ -1484,8 +1484,8 @@ Zusätzliche Gruppenrichtlinie an die Abteilungsleitern \"uber die
 Sicherheitsgruppe zugewiesen werden.
 
 Die nächste Anforderung ist, dass Abteilungsleitern, Aufträge f\"ur
-Mitarbeiter einstellen können, diese die Daten jedoch nur abrufen
-können.
+Mitarbeiter einstellen k\"onnen, diese die Daten jedoch nur abrufen
+k\"onnen.
 
 Hierzu muss zunächst eine Sicherheitsgruppe f\"ur die Mitarbeiter
 \enquote{LGsMitarbeiter} erstellt werden und zusätzlich eine Freigabe, welche
@@ -1496,7 +1496,7 @@ nur Leseberechtigung.
 
 Dies kann ebenfalls in umgekehrter Reihenfolge f\"ur Aufträge gemacht
 werden, welche Mitarbeiter den Abteilungsleitern lesend zur Verf\"ugung
-stellen. Eine zusätzliche Freigabe \enquote{beaAuftraege} wird benötigt.
+stellen. Eine zusätzliche Freigabe \enquote{beaAuftraege} wird ben\"otigt.
 
 Die Zuweisung der Laufwerksbuchstaben f\"ur die Clients, kann \"uber eine
 separate oder zuvor erstellte Gruppenrichtlinie zugewiesen werden. Die
@@ -1508,7 +1508,7 @@ Hinzugef\"ugt werden.
 
 \includegraphics[width=6.3in,height=4.85362in]{figures/image26.png}
 
-Hier hat der Administrator nun die Möglichkeit, den Speicherort f\"ur
+Hier hat der Administrator nun die M\"oglichkeit, den Speicherort f\"ur
 diese Freigabe festzulegen. Die Zuweisung der GPo als solches, wird \"uber
 die Sicherheitsrichtlinie \enquote{LGsMitarbeiter} und \enquote{LGsAbteilungsleiter}
 durchgef\"uhrt.
