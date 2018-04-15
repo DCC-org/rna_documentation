@@ -1236,50 +1236,48 @@ In diesem Fall:
 \begin{figure}[H]
   \centering
   \includegraphics[width=4.1875in,height=5.09375in]{figures/image16.png}
-  \caption{Erstellung eines neuen Kontingents}
-  \label{figure:gporedirec3}
+  \caption{Erstellung eines neuen Kontingents}\label{figure:gporedirec3}
 \end{figure}
 
-Nachdem der Pfad zu dem Kontingent angelegt wurde, muss die Vorlage
-automatisch Anwenden. Kontingente in Unterordern erstellen ausgew\"ahlt
-werden. Dies bedeutet, dass das Kontingentlimit nur auf die Unterordner
-bezogen wird, welche innerhalb dieses Ordners angelegt werden, jedoch
-nicht auf den gesamten Ordner. Dies hat den Vorteil, dass jeder Benutzer
-ein eigenes Kontingent von 200MB besitzt.
+Nachdem der Pfad zu dem Kontingent angelegt wurde, muss \enquote{Vorlage
+automatisch Anwenden. Kontingente in Unterordern erstellen} ausgew\"ahlt
+werden. Dies bedeutet, dass das Kontingentlimit nur auf die Unterordner bezogen
+wird, welche innerhalb dieses Ordners angelegt werden, jedoch nicht auf das
+gesamte Verzeichnis.  Dies hat den Vorteil, dass jeder Benutzer ein eigenes
+Kontingent von 200MB besitzt.
 
-Als Kontingenttyp wird hier hart ausgew\"ahlt. Der Unterschied zwischen
-harter Kontingent und weicher Kontingent ist der folgende:
+Als Kontingenttyp wird hier hart ausgew\"ahlt. Der Unterschied zwischen harter
+Kontingent und weicher Kontingent ist der folgende:
 
 Weiche Kontingentgrenze:
 
-\begin{itemize}
-\item
-  Die Speichergrenze kann \"uberschritten werden, eine Aktion, wie
+\begin{outline}
+  \1 Die Speichergrenze kann \"uberschritten werden, eine Aktion, wie
   beispielsweise Email Versand, Fehler oder Befehl wird ausgef\"uhrt.
   Speichererweiterung um 50MB m\"oglich.
-\item
-  Dient nur der Überwachung
-\end{itemize}
+  \1 Dient nur der Überwachung
+\end{outline}
 
 Harte Kontingentgrenze:
 
-\begin{itemize}
-\item
-  Die Speichergrenze kann nicht \"uberschritten werden
-\item
-  Limitierung des Speicherplatzes
-\end{itemize}
+\begin{outline}
+  \1 Die Speichergrenze kann nicht \"uberschritten werden
+  \1 Limitierung des Speicherplatzes
+\end{outline}
 
 Abschließend sehen die Kontingenteintr\"age wie folgt aus:
 
-\includegraphics[width=5.15625in,height=0.5625in]{figures/image17.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=5.15625in,height=0.5625in]{figures/image17.png}
+  \caption{Kontingenteintr\"age}\label{figure:gporedirect4}
+\end{figure}
 
-Um eine Weiche Kontingentgrenze zu definieren, muss entsprechend in der
-Abbildung xy die Eigenschaft \enquote{Benutzerdefinierte Kontingentgrenze
-definieren} ausgew\"ahlt sein. Sobald auf Benutzerdefinierte Eigenschaft
-geklickt wird, \"offnet sich ein neues Fenster, wo die Grenzen, wie
-weiche- oder harte Kontingentgrenze, sowie deren Aktion ausgew\"ahlt und
-definiert werden kann.
+Um eine Weiche Kontingentgrenze zu definieren, muss die Eigenschaft
+\enquote{Benutzerdefinierte Kontingentgrenze definieren} ausgew\"ahlt sein.
+Sobald auf Benutzerdefinierte Eigenschaft geklickt wird, \"offnet sich ein
+neues Fenster, wo die Grenzen, wie weiche- oder harte Kontingentgrenze, sowie
+deren Aktion ausgew\"ahlt und definiert werden kann.
 
 \hypertarget{einrichten-von-druckern}{%
 \section{Einrichten von Druckern}\label{einrichten-von-druckern}}
