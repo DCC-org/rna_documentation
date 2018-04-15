@@ -1101,131 +1101,137 @@ welcher mit seiner Benutzerkennung an einem Windows XP Client angemeldet war,
 kann sich mit diesem Profil nicht an einem Windows 7 Rechner anmelden. Die
 Struktur der Verzeichnisse ist unterschiedlich.
 
-\hypertarget{heimatverzeichnisse}{%
-\subsection{Heimatverzeichnisse}\label{heimatverzeichnisse}}
+\subsection{Heimatverzeichnisse}
 
-Zus\"atzlich zu Servergespeicherten Profilen, wird in der Regel auch eine
-Umleitung der Ordner Dokumente, Desktop etc. durchgef\"uhrt. Dies hat die
-Vorteile, dass eine An- und Abmeldung schneller durchgef\"uhrt werden
-kann, als wenn diese Ordner innerhalb des Profils gespeichert werden.
-Die entsprechenden Dokumente, sind f\"ur einen Benutzer anschließend \"uber
-ein Netzlaufwerk zu erreichen, wo unter anderem auch das Benutzerprofil
-abgelegt ist. Wichtig ist dabei, dass diese Ablage von dem Profilserver
-separiert ist, da andernfalls ein Benutzer an diese Daten nicht
+Zus\"atzlich zu servergespeicherten Profilen, wird in der Regel auch eine
+Umleitung der pers\"onlichen Verzeichnisse (Eigene Dokumente, Desktop)
+durchgef\"uhrt. Dies hat den Vorteil, dass eine An- und Abmeldung schneller
+durchgef\"uhrt werden kann, als wenn diese Ordner innerhalb des Profils
+gespeichert werden.  Die entsprechenden Dokumente sind f\"ur einen Benutzer
+anschließend \"uber ein Netzlaufwerk zu erreichen, wo unter anderem auch das
+Benutzerprofil abgelegt ist. Wichtig ist dabei, dass diese Ablage von dem
+Profilserver separiert ist, da andernfalls ein Benutzer an diese Daten nicht
 drankommen k\"onnte, falls der Profilserver nicht erreicht w\"are.
-Heimatverzeichnisse, bzw. Ordnerumleitung werden nicht in dem
-Benutzer-profil/-eigenschaft hinterlegt, sondern innerhalb einer
-Gruppenrichtlinie festgelegt. Diese kann anschließend entweder an einen
-Nutzer oder aber Computer zugewiesen sein.
+Heimatverzeichnisse und Ordnerumleitungen werden nicht in dem Pprofil des
+Benuters hinterlegt, sondern innerhalb einer Gruppenrichtlinie festgelegt.
+Diese kann anschließend entweder an einen Nutzer oder aber Computer zugewiesen
+sein.
 
-Um die Umleitung der Ordner zu aktivieren, muss zun\"achst die Default
-Domain Policy angepasst werden. Hierzu wird unter Tools die
+Um die Umleitung der Ordner zu aktivieren, muss zun\"achst die Default Domain
+Policy angepasst werden. Hierzu wird unter Tools die
 Gruppenrichtlinienverwaltung ge\"offnet.
 
-\includegraphics[width=3.05208in,height=3.34375in]{figures/image12.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[max width=\textwidth]{figures/image12.png}
+  \caption{Gruppenrichtlinienverwaltung innerhalb einer Dom\"ane}
+  \label{figure:gpofuu}
+\end{figure}
 
-Mit Rechtsklick auf Default Domain Policy, kann diese bearbeitet und
-angepasst werden. Es empfiehlt sich hier gegebenenfalls ein zus\"atzliches
+Mit Rechtsklick auf Default Domain Policy kann diese bearbeitet und angepasst
+werden. Es empfiehlt sich hier gegebenenfalls ein zus\"atzliches
 Gruppenrichtlinienobjekt anzulegen. Innerhalb diesem muss um die
 Ordnerumleitung verwalten zu k\"onnen unter Benutzerkonfiguration
-\textgreater{} Windows-Einstellungen navigiert werden. Unter dem Punkt
+\hyp{}\textgreater{} Windows-Einstellungen navigiert werden. Unter dem Punkt
 Ordnerumleitung, werden alle Benutzerordner angezeigt:
 
-\includegraphics[width=1.97917in,height=2.63542in]{figures/image13.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[max width=\textwidth]{figures/image13.png}
+  \caption{Ansicht der vorhandenen Ordnerumleitungen}
+  \label{figure:somethingsomethinggpo}
+\end{figure}
 
-Wichtig hierbei ist, dass die gr\"oßten Ordner umgeleitet werden, wie
-beispielsweise AppData, Desktop, Dokumente, Bilder, Musik etc. Um die
-Umleitung zu aktivieren, muss ein Ordner ausgew\"ahlt werden und
-anschließend \"uber Rechtsklick Eigenschaften bearbeitet werden.
+Wichtig hierbei ist, dass die gr\"oßten Ordner umgeleitet werden. Dazu
+geh\"oren AppData, Desktop, Dokumente, Bilder, Musik. Um die Umleitung zu
+aktivieren, muss ein Ordner ausgew\"ahlt werden und anschließend \"uber
+Rechtsklick Eigenschaften bearbeitet werden.
 
-Unter den Eigenschaften, kann nun das Ziel sowie Einstellungen
-vorgenommen werden. Unter dem Punkt Ziel muss zun\"achst als Zielordner:
-\enquote{Einen Ordner f\"ur jeden Benutzer im Stammpfad erstellen} ausgew\"ahlt
-sein. Anschließend wird das Stammverzeichnis unter Angabe des UNC-Pfads
-festgelegt. Unmittelbar nach Eingabe des UNC-Pfads, zeigt das Fenster
-bereits eine Vorschau des Pfades zu diesem Nutzer an:
+Unter den Eigenschaften kann nun das Ziel sowie Einstellungen vorgenommen
+werden. Unter dem Punkt Ziel muss zun\"achst als Zielordner \enquote{Einen
+Ordner f\"ur jeden Benutzer im Stammpfad erstellen} ausgew\"ahlt sein.
+Anschließend wird das Stammverzeichnis unter Angabe des UNC-Pfads festgelegt.
+Unmittelbar nach Eingabe des UNC-Pfads, zeigt das Fenster bereits eine Vorschau
+des Pfades zu diesem Nutzer an:
 
-\includegraphics[width=4.14583in,height=4.71875in]{figures/image14.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[max width=\textwidth]{figures/image14.png}
+  \caption{Eigenschaften der Ordnerumleitung f\"ur AppData 1}
+  \label{figure:gporedirect1}
+\end{figure}
 
 Exemplarisch wurde dies f\"ur die AppDaten des Anwenders durchgef\"uhrt.
-Zus\"atzlich zu diesen Einstellungen, kann festgelegt werden, ob dem
-Nutzer exklusive Zugriffsrechte f\"ur Dokumente erteilt werden. Dies kann
-ein Nachteil f\"ur den Administrator sein, da dieser im Falle einer
-Probleml\"osung innerhalb des Profils den Besitz \"ubernehmen muss und
-anschließend wieder zur\"uckschreiben muss. Sollten dabei Fehler
-unterlaufen, so k\"onnte der Benutzer nicht mehr auf diese Daten
-zugreifen. Die Einstellung \enquote{Den Inhalt von
-\textless{}Ordnername\textgreater{} an den neuen Speicherort
-verschieben} sollte aktiviert werden, da durch diesen der Ordner auf
-dem Rechner gel\"oscht und an den zuvor definierten Speicherort verschoben
-wird. Sollte diese Option nicht aktiviert sein, so verbleibt eine Kopie
-des Ordners auf dem Rechner. Im letzten Abschnitt kann festgelegt
-werden, was passieren sollen, falls die Richtlinie entfernt wird.
+Zus\"atzlich zu diesen Einstellungen kann festgelegt werden, ob dem Nutzer
+exklusive Zugriffsrechte f\"ur Dokumente erteilt werden. Dies kann ein Nachteil
+f\"ur den Administrator sein, da dieser im Falle einer Probleml\"osung
+innerhalb des Profils den Besitz \"ubernehmen muss und anschließend wieder
+zur\"uckschreiben muss. Sollten dabei Fehler unterlaufen, so k\"onnte der
+Benutzer nicht mehr auf diese Daten zugreifen. Die Einstellung \enquote{Den
+Inhalt von \textless{}Ordnername\textgreater{} an den neuen Speicherort
+verschieben} sollte aktiviert werden, da durch diesen der Ordner auf dem
+Rechner gel\"oscht und an den zuvor definierten Speicherort verschoben wird.
+Sollte diese Option nicht aktiviert sein, so verbleibt eine Kopie des Ordners
+auf dem Rechner. Im letzten Abschnitt kann festgelegt werden, was passieren
+sollen, falls die Richtlinie entfernt wird.
 
 Zum Abschluss sollten die Einstellungen wie folgt aussehen:
 
-\includegraphics[width=4.05208in,height=3.46875in]{figures/image15.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[max width=\textwidth]{figures/image15.png}
+  \caption{Eigenschaften der Ordnerumleitung f\"ur AppData 2}
+  \label{figure:gporedirect2}
+\end{figure}
 
 Nach Klicken auf \enquote{ok} wird eine Fehlermeldung ausgegeben, die f\"ur
-\"altere Betriebssysteme entscheiden ist. Diese kann jedoch bei Verwendung
-von Windows 7 oder neuer ignoriert und mit \enquote{Ja} best\"atigt werden. Die
+\"altere Betriebssysteme gedacht ist. Diese kann jedoch bei Verwendung von
+Windows 7 oder neuer ignoriert und mit \enquote{Ja} best\"atigt werden. Die
 zuvor eingestellten Anpassungen, m\"ussen nun f\"ur die restlichen Ordner
 ebenfalls durchgef\"uhrt werden, damit die Ordnerumleitung auch auf die
 restlichen Aktiviert wird.
 
-Die Ordner Bilder, Musik und Videos, k\"onnen dem Ordner Dokumente folgen,
-so muss f\"ur diese nicht zus\"atzlich ein Pfad mit angeben werden.
+Die Ordner Bilder, Musik und Videos, k\"onnen dem Ordner Dokumente folgen, so
+muss f\"ur diese nicht zus\"atzlich ein Pfad mit angeben werden.
 
 Die Benutzerkonfiguration f\"ur die Ordnerumleitung ist nun abgeschlossen.
 Nachtr\"aglich m\"ussen noch weitere Computerkonfigurationen vorgenommen
-werden, damit auch der Computer f\"ur Servergespeicherte Profile
-konfiguriert ist. So m\"ussen beispielsweise Einstellungen vorgenommen
-werden, das der Computer auf das Netzwerk wartet, oder aber das die
-Sicherheitsgruppe \enquote{Administrator} dem Servergespeichertem Profil
-hinzugef\"ugt wird, damit hier bei einer Probleml\"osung am Benutzerprofil
-der Profilbesitzer nicht gewechselt werden muss.
+werden, damit auch der Computer f\"ur Servergespeicherte Profile konfiguriert
+ist. So m\"ussen beispielsweise Einstellungen vorgenommen werden, das der
+Computer auf das Netzwerk wartet, oder aber das die Sicherheitsgruppe
+\enquote{Administrator} dem Servergespeichertem Profil hinzugef\"ugt wird,
+damit hier bei einer Probleml\"osung am Benutzerprofil der Profilbesitzer nicht
+gewechselt werden muss.
 
-Diese Einstellungen, m\"ussen ebenfalls in der Default Domain Policy, oder
-aber in der zuvor erstellten Policy unter dem Punkt
-Computerkonfiguration \textgreater{} Richtlinien \textgreater{}
-Administrative Vorlagen angepasst werden.
+Diese Einstellungen, m\"ussen ebenfalls in der Default Domain Policy, oder aber
+in der zuvor erstellten Policy unter dem Punkt Computerkonfiguration
+\textgreater{} Richtlinien \textgreater{} Administrative Vorlagen angepasst
+werden.
 
 Folgende Punkte m\"ussen hier f\"ur eine erfolgreiche Umleitung der Ordner
 eingerichtet werden:
 
-\begin{longtable}[]{@{}l@{}}
-\toprule
-\endhead
-\vtop{\hbox{\strut System \textgreater{} Benutzerprofile \textgreater{}
-Sicherheitsgruppe „Administrator`` zu servergespeicherten Profilen
-hinzuf\"ugen}\hbox{\strut System \textgreater{} Benutzerprofile
-\textgreater{} Zeitlimit f\"ur langsame Netzwerkverbindung f\"ur
-Benutzerprofile steuern}\hbox{\strut System \textgreater{} Anmelden
-\textgreater{} Beim Neustart des Computers und bei der Anmeldung immer
-auf das Netzwerk warten}\hbox{\strut Netzwerk \textgreater{}
-Offlinedateien \textgreater{} Alle Offlinedateien vor der Abmeldung
-synchronisieren}\hbox{\strut Netzwerk \textgreater{}Offlinedateien
-\textgreater{} Untergeordnete Ordner immer offline verf\"ugbar
-machen}}\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{outline}
+  \1 System \hyp{}\textgreater{} Benutzerprofile \hyp{}\textgreater{} Sicherheitsgruppe \enquote{Administrator} zu servergespeicherten Profilen hinzuf\"ugen
+  \1 System \hyp{}\textgreater{} Benutzerprofile \hyp{}\textgreater{} Zeitlimit f\"ur langsame Netzwerkverbindung f\"ur Benutzerprofile steuern
+  \1 System \hyp{}\textgreater{} Anmelden \hyp{}\textgreater{} Beim Neustart des Computers und bei der Anmeldung immer auf das Netzwerk warten
+  \1 Netzwerk \hyp{}\textgreater{} Offlinedateien \hyp{}\textgreater{} Alle Offlinedateien vor der Abmeldung synchronisieren
+  \1 Netzwerk \hyp{}\textgreater{} Offlinedateien \hyp{}\textgreater{} Untergeordnete Ordner immer offline verf\"ugbar machen
+\end{outline}
 
-Nachdem diese Einstellungen innerhalb der Computerkonfiguration
-aktiviert wurden, ist die Ordnerumleitung aktiviert und kann verwendet
-werden. Sollte hierbei eine Benutzerdefinierte Domain Policy verwendet
-worden sein, so muss diese zus\"atzlich noch f\"ur die einzelne Dom\"ane
-hinterlegt werden.
+Nachdem diese Einstellungen innerhalb der Computerkonfiguration aktiviert
+wurden, ist die Ordnerumleitung aktiviert und kann verwendet werden. Sollte
+hierbei eine Benutzerdefinierte Domain Policy verwendet worden sein, so muss
+diese zus\"atzlich noch f\"ur die einzelne Dom\"ane hinterlegt werden.
 
-Ein Heimatverzeichnis muss nicht mittels Anmeldeskript angebunden
-werden. Dieses kann ebenfalls \"uber eine Gruppenrichtlinie oder innerhalb
-des Nutzerprofiles unter Eigenschaften \textgreater{} Profil
-\textgreater{} Basisordner verlinkt werden.
+Ein Heimatverzeichnis muss nicht mittels Anmeldeskript angebunden werden.
+Dieses kann ebenfalls \"uber eine Gruppenrichtlinie oder innerhalb des
+Nutzerprofiles unter Eigenschaften \hyp{}\textgreater{} Profil
+\hyp{}\textgreater{} Basisordner verlinkt werden.
 
-\hypertarget{speichervolumen-begrenzung}{%
-\subsection{Speichervolumen
-Begrenzung}\label{speichervolumen-begrenzung}}
+\subsection{Speichervolumen Begrenzung}
 
-Wie bereits in Kapitel Dateidienst/Freigaben einrichten erl\"autert, gibt
+Wie bereits in Kapitel~\ref{dateidienstfreigaben-einrichten} erl\"autert, gibt
 es verschiedene M\"oglichkeiten, das Dateilimit innerhalb eines Ordners zu
 limitieren. Die Anforderung der Firma Mikado besteht darin, dass ein
 Angestellter ein maximales Speichervolumen von 200MB besitzt. Um diese
