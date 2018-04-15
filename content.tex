@@ -615,64 +615,59 @@ den Remotepfad zu dieser Freigabe an:
   \label{lst:share2}
 \end{listing}
 
-Nachdem der Freigabename definiert wurde, werden weitere \enquote{andere
-Einstellungen} abgefragt. Diese k\"onnen f\"ur die Abteilungsfreigabeordner
-auf dem Standard belassen werden. Im sp\"ateren Verlauf werden noch zwei
-Ordner \enquote{Profiles\$} und \enquote{Home\$} angelegt. Bei diesen beiden Freigaben
-handelt es sich um die Servergespeicherten Profile. Dabei ist hier die
+Nachdem der Freigabename definiert wurde, werden weitere Einstellungen
+abgefragt. Diese k\"onnen f\"ur die Abteilungsfreigabeordner auf dem Standard
+belassen werden. Im sp\"ateren Verlauf werden noch zwei Ordner
+\enquote{Profiles\$} und \enquote{Home\$} angelegt. Bei diesen beiden Freigaben
+handelt es sich um die servergespeicherten Profile. Dabei ist hier die
 Besonderheit, das bei dem Punkt \enquote{andere Einstellungen} das
-Zwischenspeichern der Freigabe zulassen deaktiviert ist, sowie das \$ am
-Ende des Freigabenamens vorhanden ist. Nur mit diesem \$ Zeichen, wird
-diese Freigabe nicht f\"ur die Benutzer sichtbar sein.
+Zwischenspeichern der Freigabe zulassen deaktiviert ist, sowie das \$ am Ende
+des Freigabenamens vorhanden ist. Nur mit diesem \$ Zeichen wird diese
+Freigabe nicht f\"ur die Benutzer sichtbar sein.
 
-Damit nicht alle Nutzer Zugriff auf dieses Laufwerk erhalten k\"onnen,
-werden entsprechende Berechtigungen definiert. Innerhalb des
-ActiveDirectory, werden Sicherheitsgruppen f\"ur jede Abteilung erstellt,
-worin die Benutzer der Abteilung Mitglieder sind.
+Damit nicht alle Nutzer Zugriff auf dieses Laufwerk erhalten k\"onnen, werden
+entsprechende Berechtigungen definiert. Innerhalb des ActiveDirectory werden
+Sicherheitsgruppen f\"ur jede Abteilung erstellt, worin die Benutzer der
+Abteilung Mitglieder sind.
 
 In diesem Beispiel w\"are das die Sicherheitsgruppe: LGs-Leitung
 
-Diese Gruppe soll Lese und Schreibberechtigung auf dieser Freigabe
-besitzen, dazu muss unter Berechtigungen anpassen \textgreater{}
-hinzuf\"ugen die Sicherheitsgruppe ausgew\"ahlt werden. Innerhalb dieses
-Fensters, kann die Berechtigung festgelegt werden, die diese Gruppe
-erh\"alt. Da in diesem Fall diese Gruppe Schreib und Leseberechtigung auf
-diese Freigabe erhalten sollen, wird folgende Berechtigung festgelegt:
+Diese Gruppe soll Lese und Schreibberechtigung auf dieser Freigabe besitzen,
+dazu muss unter Berechtigungen anpassen \hyp{}\textgreater{} hinzuf\"ugen die
+Sicherheitsgruppe ausgew\"ahlt werden. Innerhalb dieses Fensters, kann die
+Berechtigung festgelegt werden, die diese Gruppe erh\"alt. Da in diesem Fall
+diese Gruppe Schreib und Leseberechtigung auf diese Freigabe erhalten sollen,
+wird folgende Berechtigung festgelegt:
 
-\begin{itemize}
-\item
-  Lesen, ausf\"uhren
-\item
-  Ordnerinhalt auflisten
-\item
-  Lesen
-\item
-  Schreiben
-\end{itemize}
+\begin{outline}
+  \1 Lesen, ausf\"uhren
+  \1 Ordnerinhalt auflisten
+  \1 Lesen
+  \1 Schreiben
+\end{outline}
 
-Ändern, sowie Vollzugriff erhalten die Benutzer in diesem Falle nicht.
-Nach best\"atigen auf \enquote{weiter}, wird diese zuvor hinzugef\"ugte Gruppe den
-Berechtigungen hinzugef\"ugt. Im n\"achsten Schritt, wird die
-Ordnerverwaltungseigenschaft f\"ur den Verwendungszweck des Freigegeben
-Ordners festgelegt. Dies wird wie eine Klassifizierungsregel innerhalb
-der Datenverwaltungsrichtlinie festgelegt.
+\"Andern, sowie Vollzugriff erhalten die Benutzer in diesem Falle nicht. Nach
+best\"atigen auf \enquote{weiter}, wird diese zuvor hinzugef\"ugte Gruppe den
+Berechtigungen hinzugef\"ugt. Im n\"achsten Schritt wird die
+Ordnerverwaltungseigenschaft f\"ur den Verwendungszweck des Freigegeben Ordners
+festgelegt. Dies wird wie eine Klassifizierungsregel innerhalb der
+Datenverwaltungsrichtlinie festgelegt.
 
-Da es sich bei der Freigabe des Abteilungslaufwerks um eine
-Gruppenfreigabe (Benutzer sollen die M\"oglichkeit haben Daten
-untereinander austauschen zu k\"onnen) handelt, muss dieses entsprechend
-ausgew\"ahlt werden. Auch hier gibt es wieder die Besonderheit, bei den
-Profiles und Home Freigaben. Da es sich bei diesen beiden um Ordner
-handeln, die in der Regel nur von einem einzelnen Benutzer verwendet
-werden, muss hier die Benutzerdateien ausgew\"ahlt werden.
+Da es sich bei der Freigabe des Abteilungslaufwerks um eine Gruppenfreigabe
+(Benutzer sollen die M\"oglichkeit haben Daten untereinander austauschen zu
+k\"onnen) handelt, muss dieses entsprechend ausgew\"ahlt werden. Auch hier gibt
+es wieder die Besonderheit, bei den Profiles und Home Freigaben. Da es sich bei
+diesen beiden um Ordner handeln, die in der Regel nur von einem einzelnen
+Benutzer verwendet werden, muss hier die Benutzerdateien ausgew\"ahlt werden.
 
-Zum Schluss des Assistenten, kann ein Speicherkontingent festgelegt
-werden. Hiermit wird der Speicherbereich limitiert, den der Benutzer zur
-Verf\"ugung gestellt bekommt. F\"ur die Abteilungslaufwerke ist dies nicht
-erforderlich. Wichtig ist dies in Bezug auf die Servergespeicherten
-Profile, sowie umgeleitete Ordner. Hierbei soll der Anwender nur eine
-maximale Menge von 200MB ablegen k\"onnen, damit An- oder Abmeldungen
-nicht lange dauern. Benutzer sollen in der Regel Daten, die sie w\"ahrend
-der Arbeit brauchen auf dem Abteilungslaufwerk ablegen.
+Zum Schluss des Assistenten kann ein Speicherkontingent festgelegt werden.
+Hiermit wird der Speicherbereich limitiert, den der Benutzer zur Verf\"ugung
+gestellt bekommt. F\"ur die Abteilungslaufwerke ist dies nicht erforderlich.
+Wichtig ist dies in Bezug auf die Servergespeicherten Profile, sowie
+umgeleitete Ordner. Hierbei soll der Anwender nur eine maximale Menge von 200MB
+ablegen k\"onnen, damit An- oder Abmeldungen nicht lange dauern. Benutzer
+sollen in der Regel Daten, die sie w\"ahrend der Arbeit brauchen auf dem
+Abteilungslaufwerk ablegen.
 
 Abschließend erh\"alt der Administrator eine Übersicht \"uber die
 Freigabeeigenschaften. Sobald nun auf \enquote{erstellen} geklickt wird, wird
