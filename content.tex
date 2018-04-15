@@ -1345,41 +1345,47 @@ aktiviert, so greift hier die Gruppenrichtlinie, welche an erster Stelle steht.
 Unterschieden wird auch ob eine GPO erzwungen ist. Sollte eine GPO erzwungen
 werden, so greift stets die GPO wo diese Einstellung festgelegt wurde.
 
-\hypertarget{kontorichtlinien}{%
-\section{Kontorichtlinien}\label{kontorichtlinien}}
+\section{Kontorichtlinien}
 
-Kontorichtlinien, sind Vorgaben die ein Benutzer erf\"ullen muss. Sie
-k\"onnen beispielsweise die L\"ange eines Kennworts sein oder andere
-\"ahnliche Einstellungen.
+Kontorichtlinien, sind Vorgaben die ein Benutzer erf\"ullen muss. Sie k\"onnen
+beispielsweise die L\"ange eines Kennworts sein oder andere \"ahnliche
+Einstellungen.
 
-\hypertarget{kennwortrichtlinien}{%
-\subsection{Kennwortrichtlinien}\label{kennwortrichtlinien}}
+\subsection{Kennwortrichtlinien}
 
 F\"ur die Mikado.Spiel Dom\"ane als Testumgebung sind folgende
 Kennwortrichtlinien definiert worden:
 
-\begin{longtable}[]{@{}ll@{}}
+\begin{center}
+\begin{tabular}[]{ll}
 \toprule
-Eigenschaft & Vorgabe\tabularnewline
+Eigenschaft           & Vorgabe               \\
 \midrule
-\endhead
-Kennwort erforderlich & Ja\tabularnewline
-L\"ange & 8 Zeichen\tabularnewline
-Alter & 50 Tage\tabularnewline
-Wiederbenutzbar & Nach 12 Kennw\"ortern\tabularnewline
+Kennwort erforderlich & Ja                    \\
+L\"ange               & 8 Zeichen             \\
+Alter                 & 50 Tage               \\
+Wiederbenutzbar       & Nach 12 Kennw\"ortern \\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\captionof{table}{Kennwortrichtlinen}
+\end{center}
 
 Um diese Kennwortrichtlinie festlegen zu k\"onnen, muss entweder innerhalb
-der Standard Gruppenrichtlinie(Default Global Policy) oder in einer
+der Standard Gruppenrichtlinie (Default Global Policy) oder in einer
 neuen zuvor definierten Gruppenrichtlinie folgende Werte unter
-Computerkonfiguration \textgreater{} Windows-Einstellungen
-\textgreater{} Sicherheitseinstellungen \textgreater{} Kontorichtlinien
-ge\"andert werden:\\
-\includegraphics[width=5.38542in,height=1.53125in]{figures/image21.png}
+Computerkonfiguration \hyp{}\textgreater{} Windows-Einstellungen
+\hyp{}\textgreater{} Sicherheitseinstellungen \hyp{}\textgreater{} Kontorichtlinien
+ge\"andert werden:
 
-Nun ist die Kontorichtlinie f\"ur die Sicherheitsgruppe aktiv, f\"ur die
-diese Richtlinie zugewiesen ist.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=5.38542in,height=1.53125in]{figures/image21.png}
+  \caption{Realisierte Kennwortrichtlinie}\label{figure:passwordfoo}
+\end{figure}
+
+
+Nun ist die Kontorichtlinie f\"ur die Sicherheitsgruppe aktiv, f\"ur die diese
+Richtlinie zugewiesen ist.
 
 \hypertarget{anmelderichtlinien}{%
 \subsection{Anmelderichtlinien}\label{anmelderichtlinien}}
