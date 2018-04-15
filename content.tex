@@ -1432,38 +1432,37 @@ umbenannt werden.
 Die Umbenennung soll helfen, damit Nutzer oder Schadsoftware das Administrator
 Konto schlechter finden k\"onnen.
 
-\hypertarget{zugriffsrechte}{%
-\section{Zugriffsrechte}\label{zugriffsrechte}}
+\section{Zugriffsrechte}
 
-Zugriffsrechte dienen in erster Linie, das System vor ungewollten
-Zugriff zu sch\"utzen. Sie sch\"utzen jedoch nicht nur den Computer, sondern
-auch das Netzwerk vor Schadsoftware, welche beispielsweise durch USB
-Massenspeichern auf den Rechner \"ubertragen werden k\"onnen.
+Zugriffsrechte dienen in erster Linie dazu das System vor ungewollten Zugriff
+zu sch\"utzen. Sie sch\"utzen jedoch nicht nur den Computer, sondern auch das
+Netzwerk vor Schadsoftware, welche unter anderem durch USB Massenspeicher auf
+den Rechner \"ubertragen werden k\"onnen.
 
-\hypertarget{zugriff-auf-lokale-laufwerke}{%
-\subsection{Zugriff auf Lokale
-Laufwerke}\label{zugriff-auf-lokale-laufwerke}}
+\subsection{Zugriff auf Lokale Laufwerke}
 
-Damit Benutzer am Rechner keine Viren in das Netzwerk einschleusen
-k\"onnen, sollen Laufwerke, wie auch USB Massenspeicher am Rechner
-Deaktiviert werden. Diese Einstellung wird innerhalb der
-Gruppenrichtline festgelegt. Damit beispielsweise nicht alle Nutzer von
-diesen Anpassungen betroffen sind, kann eine neue Gruppenrichtline
-hierf\"ur definiert werden, welche nur an bestimmte Sicherheitsgruppen
-zugewiesen werden. Ausgenommen werden hier beispielsweise
+Damit Benutzer am Rechner keine Viren in das Netzwerk einschleusen k\"onnen,
+sollen Laufwerke, wie auch USB Massenspeicher am Rechner deaktiviert werden.
+Diese Einstellung wird innerhalb der Gruppenrichtline festgelegt. Damit nicht
+alle Nutzer von diesen Anpassungen betroffen sind, kann eine neue
+Gruppenrichtline hierf\"ur definiert werden, welche nur an bestimmte
+Sicherheitsgruppen zugewiesen werden. Ausgenommen werden hier beispielsweise
 Administratoren oder die F\"uhrungsebene.
 
 Um diese Einschr\"ankung festlegen zu k\"onnen, muss unter
-Benutzerkonfiguration \textgreater{} Richtlinie \textgreater{}
-Administrative Vorlage \textgreater{} System \textgreater{}
-Wechselmedienzugriff folgende Richtlinie aktiviert werden:
+Benutzerkonfiguration \hyp{}\textgreater{} Richtlinie \hyp{}\textgreater{} Administrative
+Vorlage \hyp{}\textgreater{} System \hyp{}\textgreater{} Wechselmedienzugriff folgende
+Richtlinie aktiviert werden:
 
-\includegraphics[width=6.3in,height=2.23548in]{figures/image24.png}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=6.3in,height=2.23548in]{figures/image24.png}
+  \caption{Konfiguration f\"ur Wechselmedienzugriff}\label{figure:passwordfoo2143}
+\end{figure}
 
-Sollte diese Regel aktiviert werden, so sind alle Wechseldatentr\"ager an
-diesem Rechner, wo der Benutzer angemeldet ist deaktiviert. Diese Regel
-greift, bevor andere Regeln f\"ur spezifische Wechseldatentr\"ager definiert
-wurden.
+Sollte diese Regel aktiviert werden, sind alle Wechseldatentr\"ager an diesem
+Rechner, wo der Benutzer angemeldet ist, deaktiviert. Diese Regel greift, bevor
+andere Regeln f\"ur spezifische Wechseldatentr\"ager definiert wurden.
 
 \hypertarget{zugriff-auf-eingabeaufforderung}{%
 \subsection{Zugriff auf
