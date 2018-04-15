@@ -505,12 +505,17 @@ abgeschaltet und der Client neugestartet. Nach dem Neustart des Clients, wurde
 erneut der oben stehende Befehl abgesetzt. Das Ergebnis sieht danach wie folgt
 aus:
 
-\includegraphics[width=4.59318in,height=1.46857in]{figures/image5.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics{figures/image5.png}
+  \caption{IP Konfiguration eines Interfaces}
+  \label{figure:ipconfig2}
+\end{figure}
 
-Der Client halt selbst\"andig \"uber den DHCP Broadcast festgestellt, dass
-der Prim\"are Server nicht erreichbar ist und vom Sekund\"aren Server die IP
-Adresse, sowie die Leasetime erhalten. Der Sekund\"are Server hat somit
-die Aufgaben des Prim\"aren DHCP Servers \"ubernommen.
+Der Client halt selbst\"andig \"uber den DHCPDISCOVER festgestellt, dass der
+prim\"are Server nicht erreichbar ist und vom sekund\"aren Server die IP
+Adresse, sowie die Leasetime erhalten. Der Sekund\"are Server hat somit die
+Aufgaben des Prim\"aren DHCP Servers \"ubernommen.
 
 \section{Einrichtung DNS Dienst}\label{einrichtung-dns-dienst}
 
