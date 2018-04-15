@@ -524,29 +524,27 @@ der DNS Dienst angelegt und bereits vorkonfiguriert. Er ist so
 eingestellt, dass dieser automatisch aktualisiert wird. Zus\"atzlich zu
 den automatischen Aktualisierungen, k\"onnen manuelle Eintr\"age als Host A
 Eintrag hinzugef\"ugt werden. Diese Eintr\"age k\"onnen \"uber den DNS-Manager
-verwaltet werden. Es gibt zwei Arten der DNS Eintr\"age:
+verwaltet werden. Es gibt zwei Arten der Forward DNS Eintr\"age:
 
-\begin{itemize}
-\item
-  Host A
-\item
-  Host AAAA
-\end{itemize}
+\begin{outline}
+  \1 Host A
+  \1 Host AAAA
+\end{outline}
 
-Host A definiert eine IPv4 Adresse und Host AAAA definiert eine IPv6
-Adresse. Wenn ein DNS Eintrag manuell eingetragen wird, so muss der FQDN
-des Servers/Rechners und deren IP Adresse angegeben werden.
+Host A definiert eine IPv4 Adresse und Host AAAA definiert eine IPv6 Adresse.
+Wenn ein DNS Eintrag manuell eingetragen wird, muss der FQDN des
+Servers/Rechners und deren IP Adresse angegeben werden.
 
-Jede Dom\"ane sollte einen DNS Server haben. Gibt es innerhalb einer
-Dom\"ane unter Dom\"anen, so muss dem DNS Server der obergeordneten Dom\"ane
-dies mitteilen, damit dieser den DNS Server kennt. DNS Server arbeiten
-in der Regel nach dem Prinzip, wissen wo etwas zu finden ist. Sollte der
-DNS Server beispielsweise keinen Eintrag in der eigenen \enquote{Datenbank}
-finden, so pr\"uft er hier die obergeordnete DNS Struktur, ob ihm dieser
-Name bekannt ist. DNS Server haben mehrere Zonen, eine Prim\"are und eine
-Sekund\"are Zone. Eine Sekund\"are Zone wird meist dann verwendet, wenn eine
-Dom\"ane auf eine andere Dom\"ane Zugreifen muss. Die Sekund\"are Zone
-erstellt eine Kopie dieser und legt sie auf den Server ab.
+Jede Dom\"ane sollte einen DNS Server haben. Gibt es innerhalb einer Dom\"ane
+weitere Dom\"anen, so muss dem DNS Server der obergeordneten Dom\"ane dies
+mitteilen, damit dieser den DNS Server kennt. DNS Server arbeiten in der Regel
+nach dem Prinzip, wissen wo etwas zu finden ist. Sollte der DNS Server
+beispielsweise keinen Eintrag in der eigenen Datenbank finden, so pr\"uft er
+hier die obergeordnete DNS Struktur, ob ihm dieser Name bekannt ist.  DNS
+Server haben mehrere Zonen, eine Prim\"are und eine Sekund\"are Zone. Eine
+Sekund\"are Zone wird meist dann verwendet, wenn eine Dom\"ane auf eine andere
+Dom\"ane Zugreifen muss. Die Sekund\"are Zone erstellt eine Kopie dieser und
+legt sie auf den Server ab.
 
 \section{Dateidienst/Freigaben
 einrichten}\label{dateidienstfreigaben-einrichten}
