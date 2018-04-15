@@ -715,22 +715,25 @@ Ressourcen Manager kann zus\"atzlich zu diesen Funktionen auch Logs erzeugen,
 sowie Klassifizierungen der Inhalte durchf\"uhren. Hierzu kann entsprechend ein
 Zeitplan festgelegt werden, indem das System diese Ordner \"uberpr\"uft.
 
-\includegraphics[width=6.3in,height=2.63333in]{figures/image8.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[max width=\textwidth]{figures/image8.png}
+  \caption{Kontingentvorlagen im Ressourcen-Manager f\"ur Dateiserver}
+  \label{figure:sharescontingent}
+\end{figure}
 
-\section{Active Directory
-Dom\"anendienst}\label{active-directory-domuxe4nendienst}
+\section{Active Directory Dom\"anendienst}
 
-Nachdem die Grundinstallation abgeschlossen wurde, kann mit der
-eigentlichen Konfiguration begonnen werden. Bereits nach der Basis
-Installation, makelt der Windows Server \enquote{Konfiguration erforderlich} an
-und zeigt einen Link um den Server zum DomainController (DC)
-heraufzustufen. Anschließend muss die Art des Dom\"anencontrollers
-festgelegt werden. Da es sich hierbei um eine neue Gesamtstruktur mit
-neuem DC handelt, muss hier \enquote{Neue Gesamtstruktur hinzuf\"ugen} ausgew\"ahlt
-werden. Der DC ben\"otigt nun die Stammdom\"ane, welche \enquote{Mikado.Spiel}
-lautet. Dies kann der Fully Qualified Domain Name sein, muss mindestens
-jedoch eine Second-Level-Domain sein. Anschließend muss mit weiter
-best\"atigt werden.
+Nachdem die Grundinstallation abgeschlossen wurde, kann mit der eigentlichen
+Konfiguration begonnen werden. Bereits nach der Basis Installation, makelt der
+Windows Server \enquote{Konfiguration erforderlich} an und zeigt einen Link um
+den Server zum DomainController (DC) heraufzustufen. Anschließend muss die Art
+des Dom\"anencontrollers festgelegt werden. Da es sich hierbei um eine neue
+Gesamtstruktur mit neuem DC handelt, muss hier \enquote{Neue Gesamtstruktur
+hinzuf\"ugen} ausgew\"ahlt werden. Der DC ben\"otigt nun die Stammdom\"ane,
+welche \enquote{Mikado.Spiel} lautet. Dies kann der Fully Qualified Domain Name
+sein, muss mindestens jedoch eine Second-Level-Domain sein. Anschließend muss
+mit weiter best\"atigt werden.
 
 Im nachfolgenden Dialog k\"onnen Dom\"anencontrolleroptionen eingestellt
 werden. Dabei muss nun f\"ur die Gesamtstrukturfunktionsebene, sowie der
