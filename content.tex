@@ -1010,22 +1010,19 @@ Mitglied dieser Sicherheitsgruppe.
 
 \subsection{Computerkonten erstellen}
 
-Computerkonten k\"onnen Analog wie auch die Benutzerkonten erstellt
-werden. Die Computerkonten, sollten auch hier unmittelbar direkt in der
-richtigen OU hinterlegt werden, damit Computerrichtlinien exakt
-angewandt werden k\"onnen. Der Computername sollte ebenfalls wie auch der
-Benutzername eindeutig sein, damit hier innerhalb der Dom\"ane keine
-Konflikte auftreten k\"onnen. Zus\"atzlich zu dem Benutzernamen, muss
-definiert werden, welcher Nutzergruppe den Computer in die Dom\"ane
-integrieren kann. Dies ist in der Regel nicht f\"ur alle Nutzer gestattet.
-Wichtig bei der Namensgebung ist auch die Konvention f\"ur den DNS Server,
-da unmittelbar nach Anlegen des Computers, dieser ebenfalls dem DNS
-bekannt wird. Sobald dieser sich im Netzwerk meldet, wird er \"uber den
-DHCP Server in die Zone aufgenommen und hinterlegt.
+Computerkonten k\"onnen analog zu den Benutzerkonten erstellt werden. Die
+Computerkonten sollten auch hier unmittelbar direkt in der richtigen OU
+hinterlegt werden, damit Computerrichtlinien exakt angewandt werden k\"onnen.
+Der Computername sollte ebenfalls wie auch der Benutzername eindeutig sein,
+damit hier innerhalb der Dom\"ane keine Konflikte auftreten k\"onnen.
+Zus\"atzlich zu dem Benutzernamen muss definiert werden, welcher Nutzergruppe
+den Computer in die Dom\"ane integrieren kann. Dies ist in der Regel nicht
+f\"ur alle Nutzer gestattet. Wichtig bei der Namensgebung ist auch die
+Konvention f\"ur den DNS Server, da unmittelbar nach Anlegen des Computers,
+dieser ebenfalls dem DNS bekannt wird. Sobald dieser sich im Netzwerk meldet,
+wird er \"uber den DHCP Server in die Zone aufgenommen und hinterlegt.
 
-\hypertarget{skript-zum-anlegen-von-nutzern-computern}{%
-\subsection{Skript zum Anlegen von Nutzern,
-Computern}\label{skript-zum-anlegen-von-nutzern-computern}}
+\subsection{Skript zum Anlegen von Nutzern, Computern}
 
 Anlegen von Nutzern oder Computern und Zuweisung f\"ur deren Richtlinie,
 kann entweder manuell durchgef\"uhrt werden oder aber mittels Script~\cite{Microsoft_technet}
