@@ -1066,43 +1066,40 @@ nacheinander ab.
 Die Anmeldeskripte werden nach dem Hinterlegen im Netlogon Verzeichnis auf die
 anderen DCs repliziert, sodass alle DCs die gleichen Skripte besitzen.
 
-\hypertarget{servergespeicherte-benutzerprofile}{%
-\subsection{Servergespeicherte
-Benutzerprofile}\label{servergespeicherte-benutzerprofile}}
+\subsection{Servergespeicherte Benutzerprofile}
 
-Servergespeicherte Benutzerprofile werden immer dann wichtig sein, wenn
-sich ein Benutzer an mehreren unterschiedlichen Rechnern anmeldet. Die
-Erzeugten und bearbeiteten Daten oder Dokumente, werden beim Abmelden
-auf den Server zur\"uckgesichert. Meldet sich ein Benutzer an einem
-anderen Rechner wieder an, so werden die Daten bzw. das Profil vom
-Server heruntergeladen. Es gibt insgesamt zwei Arten von
-Servergespeicherten Profilen. Einmal die Ver\"anderbaren Benutzerprofile,
-dabei werden alle Änderungen innerhalb der Sitzung zum Server
-zur\"uckgesichert beim Abmeldet. Die andere Art sind verbindliche Profile.
-Diese aktualisieren ein bereits vorhandenes Profil mit den Neuerungen,
-welche auf dem Server vorhanden sind.
+Servergespeicherte Benutzerprofile werden immer dann wichtig sein, wenn sich
+ein Benutzer an mehreren unterschiedlichen Rechnern anmeldet. Die erzeugten und
+bearbeiteten Daten oder Dokumente werden beim Abmelden auf den Server
+zur\"uckgesichert. Meldet sich ein Benutzer an einem anderen Rechner wieder an,
+werden die Daten und das Profil vom Server heruntergeladen. Es gibt insgesamt
+zwei Arten von Servergespeicherten Profilen. Einmal die ver\"anderbaren
+Benutzerprofile, dabei werden alle Änderungen innerhalb der Sitzung zum Server
+zur\"uckgesichert. Die andere Art sind verbindliche Profile.  Diese
+aktualisieren ein bereits vorhandenes Profil mit den Neuerungen, welche auf dem
+Server vorhanden sind.
 
-Im Fall der Firma Mikado, werden Ver\"anderbare Benutzerprofile verwendet,
-da im sp\"ateren Verlauf zus\"atzlich die Richtlinie angewandt wird, dass
+Im Fall der Firma Mikado, werden Ver\"anderbare Benutzerprofile verwendet, da
+im sp\"ateren Verlauf zus\"atzlich die Richtlinie angewandt wird, dass
 Benutzerprofile nach Abmelden vom Rechner entfernt werden.
 
-Um die Servergespeicherten Profile konfigurieren zu k\"onnen, muss unter
-der Verwaltungskonsole des Active Directorys, die Benutzereigenschaften
-aufgerufen werden. Diese Einstellungen k\"onnen bereits w\"ahrend des
-Anlegens oder mittels Anlegeskript erzeugt werden.
+Um die Servergespeicherten Profile konfigurieren zu k\"onnen, muss unter der
+Verwaltungskonsole des Active Directorys die Benutzereigenschaften aufgerufen
+werden. Diese Einstellungen k\"onnen bereits w\"ahrend des Anlegens oder
+mittels Anlegeskript erzeugt werden.
 
-Unter dem Reiter \enquote{Profil}, kann unter Profilpfad der Pfad zu der
+Unter dem Reiter \enquote{Profil} kann unter Profilpfad der Pfad zu der
 Freigabe eingetragen werden. Wichtig ist hierbei die Variable
-\%username\%. Damit weiß das Active Directory, das diese Stelle durch
-den Benutzernamen, in unserem Fall die Personalnummer ersetzt werden
+\enquote{\%username\%}. Damit weiß das Active Directory, dass diese Stelle
+durch den Benutzernamen, in unserem Fall die Personalnummer ersetzt werden
 soll. Sobald ein Benutzer sich nun mit seinem Benutzernamen an einem
-Dom\"anenrechner anmeldet, wird f\"ur ihn ein entsprechendes Profil
-innerhalb des Profiles Ordner angelegt.
+Dom\"anenrechner anmeldet, wird f\"ur ihn ein entsprechendes Profil innerhalb
+des Profiles Ordner angelegt.
 
-Benutzerprofile sind immer Windows Version abh\"angig. Ein Nutzer, welcher
-mit seiner Benutzerkennung an einem Windows XP Client angemeldet war,
-kann sich mit diesem Profil nicht an einem Windows 7 Rechner anmelden,
-da hier die Struktur der Ordner unterschiedlich ist.
+Benutzerprofile sind immer von der Windows Version abh\"angig. Ein Nutzer,
+welcher mit seiner Benutzerkennung an einem Windows XP Client angemeldet war,
+kann sich mit diesem Profil nicht an einem Windows 7 Rechner anmelden. Die
+Struktur der Verzeichnisse ist unterschiedlich.
 
 \hypertarget{heimatverzeichnisse}{%
 \subsection{Heimatverzeichnisse}\label{heimatverzeichnisse}}
