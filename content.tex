@@ -606,7 +606,7 @@ den Remotepfad zu dieser Freigabe an:
 \begin{listing}[ht]
   \inputminted[fontsize=\small]{text}{listings/share1.txt}
   \caption{Lokaler Pfad zur Freigabe}
-  \label{lst:share2}
+  \label{lst:share1}
 \end{listing}
 
 \begin{listing}[ht]
@@ -765,8 +765,8 @@ Nach erneutem best\"atigen auf \enquote{weiter}, werden die Speicherorte f\"ur
 die AD DS Datenbanken, sowie Protokolldateien abgefragt. Diese k\"onnen
 ebenfalls bei Bedarf angepasst werden. Die n\"achste Seite, zeigt nun eine
 Gesamt\"ubersicht der Änderungen an, welche zuvor definiert worden sind.
-Ebenfalls kann hieraus ein PowerShell Skript erzeugt werden, welches ggf.
-angepasst werden kann.
+Ebenfalls kann hieraus ein PowerShell Skript erzeugt werden, welches
+gegebenefalls angepasst werden kann.
 
 Abschließend \"uberpr\"uft die Installationsroutine ein letztes Mal, ob alle
 Einstellungen und Anforderungen erf\"ullt sind. Dabei werden bereits einige
@@ -924,24 +924,34 @@ andernfalls die Funktion dieses Service Accounts eingeschr\"ankt sein k\"onnte.
 
 Zum Schluss wird eine Übersicht \"uber den Nutzer angezeigt.
 
-\hypertarget{gruppenkonten-erstellen}{%
-\subsection{Gruppenkonten erstellen}\label{gruppenkonten-erstellen}}
+\subsection{Gruppenkonten erstellen}
 
-Ein Gruppenkonto, kann entweder in einer Abteilungs OU oder in dem
-Container User erstellt werden. Hierzu muss man innerhalb des
-gew\"unschten Verzeichnis mit der rechten Maustaste \textgreater{} Neu
-\textgreater{} Gruppe die Gruppe hinzuf\"ugen. Es \"offnet sich ein neues
-Fenster, wo weitere Einstellungen vorgenommen werden k\"onnen. In der
-Regel muss hier zun\"achst ein Gruppen Namen definiert werden. Dabei
-sollte geachtet werden, dass der Gruppenname eindeutig zu der Funktion
-der Gruppe ist, da im sp\"ateren Verlauf nur der Gruppennamen angezeigt
-wird, jedoch nicht deren Funktion. Zus\"atzlich ist gegebenenfalls
-hilfreich anzugeben, f\"ur welche Abteilung dieses Gruppe ist.
+Ein Gruppenkonto, kann entweder in einer Abteilungs OU oder in dem Container
+User erstellt werden. Hierzu muss man innerhalb des gew\"unschten Verzeichnis
+mit der rechten Maustaste \textgreater{} Neu \textgreater{} Gruppe die Gruppe
+hinzuf\"ugen. Es \"offnet sich ein neues Fenster, wo weitere Einstellungen
+vorgenommen werden k\"onnen. In der Regel muss hier zun\"achst ein Gruppen
+Namen definiert werden. Dabei sollte geachtet werden, dass der Gruppenname
+eindeutig zu der Funktion der Gruppe ist, da im sp\"ateren Verlauf nur der
+Gruppennamen angezeigt wird, jedoch nicht deren Funktion. Zus\"atzlich ist
+gegebenenfalls hilfreich anzugeben, f\"ur welche Abteilung dieses Gruppe ist.
 
-Gruppen haben drei Gruppenbereiche und zwei Gruppentypen zur Auswahl.
-Die Gruppenbereiche geben an, welche Benutzerkonten und Computerkonten
-Mitglied von dieser Gruppe sein d\"urfen und von welcher Dom\"ane. Hierzu
-gibt es folgende Erl\"auterung:
+Gruppen haben drei Gruppenbereiche und zwei Gruppentypen zur Auswahl. Die
+Gruppenbereiche geben an, welche Benutzerkonten und Computerkonten Mitglied von
+dieser Gruppe sein d\"urfen und von welcher Dom\"ane. Hierzu gibt es folgende
+Erl\"auterung:
+
+%%\begin{center}
+%%  \begin{tabular}{lpl}
+%%    \toprule
+%%    Gruppenbereich & Mitgliedschaft & Verwendbarkeit \\
+%%    \midrule
+%%    Lokal (in Dom\"ane) & Benutzer- und Computerkonten beliebiger Dom\"anen, globale und universelle Gruppen beliebiger Dom\"anen, lokale Gruppen derselben Dom\"ane & Nur in derselben Dom\"ane \\
+%%    Global & Benutzer- und Computerkonten derselben Dom\"ane, globale Gruppen derselben Dom\"ane & In beliebigen Dom\"anen \\
+%%    Universal & Benutzer- und Computerkonten beliebiger Dom\"anen, globale und universale Gruppen beliebiger Dom\"anen & In beliebigen Dom\"anen \\
+%%  \end{tabular}
+%%  \captionof{table}{Gruppenbereiche in Dom\"amen}
+%%\end{center}
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule
@@ -982,27 +992,23 @@ In beliebigen Dom\"anen\strut
 
 Die zwei Gruppentypen sind unterteilt in \textbf{Sicherheit} und
 \textbf{Verteilung}. \textbf{Sicherheitsgruppen} k\"onnen
-Sicherheitsrichtlinien zugewiesen werden und k\"onnen somit den Zugriff
-auf Ressourcen zulassen oder verweigern. Bei \textbf{Verteilungsgruppen}
-wird der Nutzer, welcher Mitglied dieser Gruppe ist in einen Verteiler,
-beispielsweise Mailverteiler hinzugef\"ugt. Verteilergruppen erhalten nach
-erstellen ebenfalls eine Email Adresse, an denen Benutzer beispielsweise
-eine Email schreiben k\"onnten.
+Sicherheitsrichtlinien zugewiesen werden und k\"onnen somit den Zugriff auf
+Ressourcen zulassen oder verweigern. Bei \textbf{Verteilungsgruppen} wird der
+Nutzer, welcher Mitglied dieser Gruppe ist, in einen Verteiler hinzugef\"ugt.
+Verteilergruppen erhalten nach dem Erstellen ebenfalls eine Email Adresse, an
+denen Benutzer beispielsweise eine Email schreiben k\"onnten.
 
 Nachdem eine Sicherheitsgruppe erstellt wurde, kann sie nachtr\"aglich mit
-einem doppelklick auf dieser bearbeitet werden. Unter den Reitern
-Mitglieder, k\"onnen Benutzer hinzugef\"ugt werden. Dieser Änderungen werden
-bei Sicherheitsgruppen erst nach erneuter Anmeldung mit dem
-Benutzerkonto sichtbar.
+einem doppelklick auf dieser bearbeitet werden. Unter den Reitern Mitglieder,
+k\"onnen Benutzer hinzugef\"ugt werden. Dieser Änderungen werden bei
+Sicherheitsgruppen erst nach erneuter Anmeldung mit dem Benutzerkonto sichtbar.
 
-Bereits beim Anlegen der einzelnen Organisationseinheiten, hat das
-Active Directory automatisch Sicherheitsgruppen mit dem selbigen Namen
-angelegt. Alle Benutzer, die in den einzelnen Organisationseinheiten
-sind, sind automatisch Mitglied dieser Sicherheitsgruppe.
+Bereits beim Anlegen der einzelnen Organisationseinheiten, hat das Active
+Directory automatisch Sicherheitsgruppen mit dem selbigen Namen angelegt. Alle
+Benutzer, die in den einzelnen Organisationseinheiten sind, sind automatisch
+Mitglied dieser Sicherheitsgruppe.
 
-\hypertarget{computerkonten-erstellen}{%
-\subsection{Computerkonten
-erstellen}\label{computerkonten-erstellen}}
+\subsection{Computerkonten erstellen}
 
 Computerkonten k\"onnen Analog wie auch die Benutzerkonten erstellt
 werden. Die Computerkonten, sollten auch hier unmittelbar direkt in der
