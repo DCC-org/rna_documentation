@@ -1494,8 +1494,7 @@ Vorlagen \hyp{}\textgreater{} Systemsteuerung aktiviert werden.
   \caption{GPO Editor f\"ur Zugriff auf die Systemsteuerung}\label{figure:passwordfoo546456}
 \end{figure}
 
-\hypertarget{datenaustausch}{%
-\section{Datenaustausch}\label{datenaustausch}}
+\section{Datenaustausch}
 
 F\"ur den Datenaustausch der Mitarbeitern, sowie Abteilungsleitern, sind
 folgende Anforderungen definiert worden:
@@ -1504,16 +1503,15 @@ Die Abteilungsleiter untereinander uneingeschr\"ankt Daten austauschen
 k\"onnen.
 
 Hierzu muss zun\"achst eine Sicherheitsgruppe \enquote{LGsAbteilungsleiter}
-erstellt werden, damit nicht jeder Mitarbeiter einzelnen in die Freigabe
+erstellt werden, damit nicht jeder Mitarbeiter einzeln in die Freigabe
 ausgew\"ahlt werden muss. Anschließend muss eine Freigabe erstellt werden
 \enquote{ExchangeAbt} auf die die Sicherheitsgruppe Lese, sowie
-Schreibberechtigung besitzt. Dieses Laufwerk kann nun \"uber eine
-Zus\"atzliche Gruppenrichtlinie an die Abteilungsleitern \"uber die
-Sicherheitsgruppe zugewiesen werden.
+Schreibberechtigung besitzt. Dieses Laufwerk kann nun \"uber eine zus\"atzliche
+Gruppenrichtlinie an die Abteilungsleitern \"uber die Sicherheitsgruppe
+zugewiesen werden.
 
 Die n\"achste Anforderung ist, dass Abteilungsleitern, Auftr\"age f\"ur
-Mitarbeiter einstellen k\"onnen, diese die Daten jedoch nur abrufen
-k\"onnen.
+Mitarbeiter einstellen k\"onnen, diese die Daten jedoch nur abrufen k\"onnen.
 
 Hierzu muss zun\"achst eine Sicherheitsgruppe f\"ur die Mitarbeiter
 \enquote{LGsMitarbeiter} erstellt werden und zus\"atzlich eine Freigabe, welche
@@ -1522,24 +1520,27 @@ Hierzu muss zun\"achst eine Sicherheitsgruppe f\"ur die Mitarbeiter
 Mitarbeiter erhalten hier mit der Sicherheitsgruppe \enquote{LGsMitarbeiter}
 nur Leseberechtigung.
 
-Dies kann ebenfalls in umgekehrter Reihenfolge f\"ur Auftr\"age gemacht
-werden, welche Mitarbeiter den Abteilungsleitern lesend zur Verf\"ugung
-stellen. Eine zus\"atzliche Freigabe \enquote{beaAuftraege} wird ben\"otigt.
+Dies kann ebenfalls in umgekehrter Reihenfolge f\"ur Auftr\"age gemacht werden,
+welche Mitarbeiter den Abteilungsleitern lesend zur Verf\"ugung stellen. Eine
+zus\"atzliche Freigabe \enquote{beaAuftraege} wird ben\"otigt.
 
 Die Zuweisung der Laufwerksbuchstaben f\"ur die Clients, kann \"uber eine
 separate oder zuvor erstellte Gruppenrichtlinie zugewiesen werden. Die
 Richtlinie/Konfiguration ist hierzu unter Benutzerkonfiguration
-\textgreater{} Einstellungen \textgreater{} Windows-Einstellungen
-\textgreater{} Laufwerkszuordnung \textgreater{} neu
+\hyp{}\textgreater{} Einstellungen \hyp{}\textgreater{} Windows-Einstellungen
+\hyp{}\textgreater{} Laufwerkszuordnung \hyp{}\textgreater{} neu hinzugef\"ugt
+werden.
 
-Hinzugef\"ugt werden.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=6.3in,height=4.85362in]{figures/image26.png}
+  \caption{GPO Editor f\"ur Laufwerkseigenschaften}\label{figure:moregpofoo}
+\end{figure}
 
-\includegraphics[width=6.3in,height=4.85362in]{figures/image26.png}
-
-Hier hat der Administrator nun die M\"oglichkeit, den Speicherort f\"ur
-diese Freigabe festzulegen. Die Zuweisung der GPo als solches, wird \"uber
-die Sicherheitsrichtlinie \enquote{LGsMitarbeiter} und \enquote{LGsAbteilungsleiter}
-durchgef\"uhrt.
+Hier hat der Administrator nun die M\"oglichkeit, den Speicherort f\"ur diese
+Freigabe festzulegen. Die Zuweisung der GPo als solches, wird \"uber die
+Sicherheitsrichtlinie \enquote{LGsMitarbeiter} und
+\enquote{LGsAbteilungsleiter} durchgef\"uhrt.
 
 \chapter{Fazit}
 
