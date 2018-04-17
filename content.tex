@@ -930,54 +930,17 @@ Gruppenbereiche geben an, welche Benutzerkonten und Computerkonten Mitglied von
 dieser Gruppe sein d\"urfen und von welcher Dom\"ane. Hierzu gibt es folgende
 Erl\"auterung:
 
-%%\begin{center}
-%%  \begin{tabular}{lpl}
-%%    \toprule
-%%    Gruppenbereich & Mitgliedschaft & Verwendbarkeit \\
-%%    \midrule
-%%    Lokal (in Dom\"ane) & Benutzer- und Computerkonten beliebiger Dom\"anen, globale und universelle Gruppen beliebiger Dom\"anen, lokale Gruppen derselben Dom\"ane & Nur in derselben Dom\"ane \\
-%%    Global & Benutzer- und Computerkonten derselben Dom\"ane, globale Gruppen derselben Dom\"ane & In beliebigen Dom\"anen \\
-%%    Universal & Benutzer- und Computerkonten beliebiger Dom\"anen, globale und universale Gruppen beliebiger Dom\"anen & In beliebigen Dom\"anen \\
-%%  \end{tabular}
-%%  \captionof{table}{Gruppenbereiche in Dom\"amen}
-%%\end{center}
-
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-Gruppenbereich & Mitgliedschaft & Verwendbarkeit\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.30\columnwidth}\raggedright
-Lokal (in Dom\"ane)\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-Benutzer- und Computerkonten beliebiger Dom\"anen,
-
-globale und universelle Gruppen beliebiger Dom\"anen,
-
-lokale Gruppen derselben Dom\"ane\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-Nur in derselben Dom\"ane\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.30\columnwidth}\raggedright
-Global\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-Benutzer- und Computerkonten derselben Dom\"ane,
-
-globale Gruppen derselben Dom\"ane\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-In beliebigen Dom\"anen\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.30\columnwidth}\raggedright
-Universal\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-Benutzer- und Computerkonten beliebiger Dom\"anen,
-
-globale und universale Gruppen beliebiger Dom\"anen\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-In beliebigen Dom\"anen\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{center}
+  \begin{tabu}{X[-1]X[1]X[-1]}
+    \toprule
+    Gruppenbereich & Mitgliedschaft & Verwendbarkeit \\
+    \midrule
+    Lokal (in Dom\"ane) & Benutzer- und Computerkonten beliebiger Dom\"anen, globale und universelle Gruppen beliebiger Dom\"anen, lokale Gruppen derselben Dom\"ane & Nur in derselben Dom\"ane \\
+    Global & Benutzer- und Computerkonten derselben Dom\"ane, globale Gruppen derselben Dom\"ane & In beliebigen Dom\"anen \\
+    Universal & Benutzer- und Computerkonten beliebiger Dom\"anen, globale und universale Gruppen beliebiger Dom\"anen & In beliebigen Dom\"anen \\
+  \end{tabu}
+  \captionof{table}{Gruppenbereiche in Dom\"amen}
+\end{center}
 
 Die zwei Gruppentypen sind unterteilt in \textbf{Sicherheit} und
 \textbf{Verteilung}. \textbf{Sicherheitsgruppen} k\"onnen
