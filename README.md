@@ -54,6 +54,8 @@ this is for all figures (pictures, pdf, svg)
 
 tables, obvious?
 
+contains all the tables. You find some explanations on how it works [online](https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_tabular)
+
 ### listings.tex
 
 source code, text
