@@ -153,14 +153,15 @@ ebenfalls die entsprechenden Windows Server vorhanden sein werden.
 \section{DNS-Namensraum}\label{dns-namensraum}
 
 Die Firma Mikado hat bereits den Dom\"anennamen mikado.spiel erworben. Dieser
-kann f\"ur die Dom\"anen Struktur verwendet werden. \ mikado ist in diesem Fall die
-Second-Level-Domain der DNS Namensaufl\"osung und spiel die First-Level-Domain.
-Es k\"onnen weitere Subdomains (Third\hyp{}Level\hyp{}Domains) wie beispielsweise
-verkauf, konstruktion oder einkauf hinzugef\"ugt werden. Die DNS Namensaufl\"osung
-ist f\"ur die Aufl\"osung von FQDNs in eine IP Adresse und umgekehrt. Jeder
-Rechnername in der internen Dom\"ane ist ebenfalls im DNS eingetragen und kann
-von diesem aufgel\"ost werden. Der Windows Server 2016, welcher den Domain
-Controller besitzt, ist gleichzeitig auch ein DNS Server. Dadurch k\"onnen die
+kann f\"ur die Dom\"anen Struktur verwendet werden. Mikado ist in diesem Fall
+die Second-Level-Domain der DNS Namensaufl\"osung und spiel die
+First-Level-Domain. Es k\"onnen weitere Subdomains
+(Third\hyp{}Level\hyp{}Domains) wie beispielsweise verkauf, konstruktion oder
+einkauf hinzugef\"ugt werden. Die DNS Namensaufl\"osung ist f\"ur die
+Aufl\"osung von FQDNs in eine IP Adresse und umgekehrt. Jeder Rechnername in
+der internen Dom\"ane ist ebenfalls im DNS eingetragen und kann von diesem
+aufgel\"ost werden. Der Windows Server 2016, welcher den Domain Controller
+besitzt, ist gleichzeitig auch ein DNS Server. Dadurch k\"onnen die
 entsprechenden Eintr\"age unmittelbar durch den Domain Controller an den DNS
 Server weitergeben werden.
 
@@ -1503,6 +1504,15 @@ Hier hat der Administrator nun die M\"oglichkeit, den Speicherort f\"ur diese
 Freigabe festzulegen. Die Zuweisung der GPo als solches, wird \"uber die
 Sicherheitsrichtlinie \enquote{LGsMitarbeiter} und
 \enquote{LGsAbteilungsleiter} durchgef\"uhrt.
+
+\chapter{Fazit}
+In diesem Projekt wurde gezeigt, wie man ein ein Windows Active Directory
+aufsetzt. Die eigentliche Installation auf einem Windows Server 2016 verlief
+problemlos. Zum Aufzeigen der Flexibilität wurde eine Replizierung auf einen
+Windows Server 2012 R2 eingerichtet. Ein Active Directory hängt von einigen
+Diensten ab, dazu gehört ein DNS- und DHCP Service. Diese wurden ebenfalls
+konfiguriert und dokumentiert. Die komplette Einrichtung verlief ohne größere
+Probleme. Das Ergebnis ist eine flexible und skalierbare Windows Umgebung.
 
 \printglossaries%
 
